@@ -55,3 +55,4 @@
 | C49 | repository-level code completion 可利用初步生成结果迭代检索更多相关上下文 | [RepoCoder](https://aclanthology.org/2023.emnlp-main.151/) | 2023-12 | EMNLP 原始论文 | 证据针对代码补全基准，迁移到问题调研属于机制类比 |
 | C50 | 软件问题可先按仓库结构定位文件，再按符号骨架和局部位置逐级收窄，并以 patch validation 结束 | [Agentless](https://arxiv.org/abs/2407.01489) | 2024-10-29 v2 | 原始预印本与开源实现 | 结论绑定其流程与 SWE-bench 设置；不引用旧榜单作产品比较 |
 | C51 | Agent 搜索和修改代码的效果不仅取决于模型，也取决于动作、反馈、结果长度限制与 guardrail 等接口设计 | [SWE-agent](https://papers.neurips.cc/paper_files/paper/2024/file/5a7c947568c1b1328ccc5230172e1e7c-Paper-Conference.pdf) | NeurIPS 2024 | 同行评审原始论文与 ablation | 具体接口对不同模型和任务的收益需重新验证 |
+| C52 | p-limit v7.3.2 运行中把 concurrency 降到 activeCount 以下不会取消活跃任务，队列在 activeCount 低于新上限后继续 | [X01 陌生仓库迁移实验](../evidence/X01-p-limit陌生仓库迁移实验.md) | 2026-09-05 | 固定 commit 源码、上游测试位置与独立 Node 运行实验 | 未运行上游完整测试；结论仅绑定 v7.3.2 和实验覆盖情形 |

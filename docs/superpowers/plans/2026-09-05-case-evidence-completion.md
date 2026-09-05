@@ -36,31 +36,31 @@
 - Consumes: `docs/templates/evidence-lineage.md` 六节点格式。
 - Produces: 精确版本、搜索日志、源码/测试位置、运行事件序列和迁移实验复盘。
 
-- [ ] **Step 1: 固定 Research Brief 与版本**
+- [x] **Step 1: 固定 Research Brief 与版本**
 
 研究问题固定为：“`p-limit` 运行中把 `limit.concurrency` 调低到当前 `activeCount` 以下时，已经运行的任务是否取消，新任务何时继续启动？”记录候选答案、排除范围、所需证据和停止条件；clone 后保存 commit SHA、许可证和 package version。
 
-- [ ] **Step 2: 先做地图与第一轮定位**
+- [x] **Step 2: 先做地图与第一轮定位**
 
 只读取目录、README、`package.json`、入口和测试布局；保存实际使用的 `rg` 查询、命中数、候选文件及错误跳转，不先阅读全文。
 
-- [ ] **Step 3: 用第一轮真实词汇进行第二轮检索**
+- [x] **Step 3: 用第一轮真实词汇进行第二轮检索**
 
 沿 `concurrency` setter、`activeCount`、`pendingCount`、queue resume 和相应测试定位实现；记录新符号怎样改变查询，并把“文档承诺、源码行为、测试覆盖”分开。
 
-- [ ] **Step 4: 编写最小运行实验**
+- [x] **Step 4: 编写最小运行实验**
 
 脚本创建受控 deferred tasks，初始并发设为 3，三个任务启动后降为 1，逐个释放活跃任务；JSON 记录 `start/end` 顺序、每一步 `activeCount/pendingCount/concurrency`，并断言活跃任务未被取消且队列只在活跃数回落后继续。
 
-- [ ] **Step 5: 运行原仓测试与最小实验**
+- [x] **Step 5: 运行原仓测试与最小实验**
 
 使用仓库声明的 package manager 安装和执行相关测试；再运行 `concurrency-change.mjs`。若安装或全量测试不可行，保存失败原因并至少执行独立实验，不能把静态阅读写成运行事实。
 
-- [ ] **Step 6: 写证据切片并审计**
+- [x] **Step 6: 写证据切片并审计**
 
 在 X01 中记录六节点谱系、两轮查询、源码/测试精确位置、commit、文件哈希、JSON 结果、错误路径、人工判断和证据上限。更新导航与缺口矩阵。
 
-- [ ] **Step 7: 验证并提交**
+- [x] **Step 7: 验证并提交**
 
 运行 JSON 解析、脚本断言、链接/路径检查和 `git diff`/`git diff --check`；确认没有提交 `tmp/p-limit` 或依赖目录后提交本阶段。
 
