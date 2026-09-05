@@ -4,7 +4,7 @@
 
 | ID | 材料中的主张 | 主要来源 | 来源日期 | 证据性质 | 适用边界 |
 |---|---|---|---|---|---|
-| C01 | 深度研究应先明确目标和来源，再规划、多步搜索、综合并检查引用 | [OpenAI Deep Research](https://help.openai.com/en/articles/10500283-deep-research-in-chatgpt) | 持续更新 | 官方产品流程 | 不能据此证明输出总是准确 |
+| C01 | Deep Research 让用户明确目标和来源、检查计划、跟踪多步研究，并输出带引用或来源链接的结构化报告供用户核验 | [OpenAI Deep Research](https://help.openai.com/en/articles/10500283-deep-research-in-chatgpt) | 持续更新；2026-09-05 复核 | 官方产品流程 | 文档没有证明系统已自动检查每条引用正确性，也不能证明输出总是准确 |
 | C02 | 多代理研究适合可并行的广度问题，并需要明确分工、CitationAgent、评测和成本控制 | [Anthropic multi-agent research](https://www.anthropic.com/engineering/multi-agent-research-system) | 2025-06-13 | 官方工程复盘 | 内部评价与成本数据未必迁移到其他系统 |
 | C03 | 查询扩展用于解决用户查询与文档词汇不匹配 | [Query Expansion survey](https://arxiv.org/abs/1708.00247) | 2019 | 同行评审综述 | 扩展可能带来 query drift |
 | C04 | 从种子资料做前后向引用追踪可系统扩展文献集合 | [Wohlin snowballing](https://www.wohlin.eu/ease14.pdf) | 2014 | 软件工程论文 | 迁移到 GitHub 生态属于方法类比 |

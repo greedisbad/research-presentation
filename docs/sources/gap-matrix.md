@@ -5,7 +5,7 @@
 | AI 深度研究是多步过程，不是一次搜索 | OpenAI Deep Research 官方文档 | 高 | 产品文档不能证明结果始终准确 | 补独立引用正确性研究 |
 | 查询扩展能提高技术资料发现率 | Query Expansion 综述；本地 65 词矩阵 | 中高 | 扩展词也可能引入漂移 | 已补饱和与停止条件；仍可补 relevance feedback 实验 |
 | 从种子资料滚雪球适合软件工程调研 | Wohlin 论文 | 高 | 原本用于系统文献研究，迁移到开源生态属于推论 | 在演讲中明确为方法迁移 |
-| 基于来源回答仍可能出现引用错位或缺失支持 | FACTS Grounding、LongFact/SAFE、ALCE、AIS、DeepResearch Bench/DeepTRACE | 高（问题存在） | benchmark 不完全等于真实工具；后两者含预印本和 LLM judge 局限 | 已建立主张级审计协议；下一步抽查本项目 10 个高影响主张 |
+| 基于来源回答仍可能出现引用错位或缺失支持 | FACTS Grounding、LongFact/SAFE、ALCE、AIS、DeepResearch Bench/DeepTRACE；A01 本项目审计 | 高（问题存在） | 首批 10 条为人为选择的高影响样本，不能视为仓库准确率 | 已修订 C01；下一步抽查长尾主张并在最终 PPT 逐条复核 |
 | AI 编程收益依赖任务和组织环境 | DORA 2025、METR RCT、微软现场实验 | 高 | 工具版本与人群差异大 | 并列呈现，不给统一效率数字 |
 | 仓库内知识和反馈回路提高 Agent 能力 | OpenAI Harness、Sora Android、Anthropic best practices | 中高 | 厂商自述，有选择偏差 | 用本地 WPS 案例佐证 |
 | AI 可从资料搜索进入科学/工程执行 | Google ERA、AlphaEvolve、OpenAI scientific computing | 高 | 先进实验与日常开发差距大 | 只用于展示上限与设计原则 |
