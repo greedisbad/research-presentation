@@ -132,6 +132,16 @@
 | A | [LaToza 等：Software Development at Microsoft Observed](https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/tr-2005-140.pdf) | 企业现场研究报告 | 源码、调试器、变更历史、运行结果与社会知识共同参与理解；设计缘由常未沉淀 | 支撑多证据载体和负知识归档 |
 | A | [Wyrich：Source Code Comprehension](https://arxiv.org/abs/2310.11301) | 概念研究论文 | “理解”必须通过任务和测量具体化，不能由一段摘要替代 | 用于约束“模型理解源码”的过强表述 |
 
+## 引用归因与 Deep Research 审计
+
+| 等级 | 来源 | 类型 | 支持的观点 | 建议用法 |
+|:---:|---|---|---|---|
+| S | [Gao et al.：ALCE](https://aclanthology.org/2023.emnlp-main.398/) | EMNLP 2023 论文 | 流畅度、答案正确性和引用质量需要分开评价；引用还要检查覆盖和相关性 | 支撑“有引用不等于完整支持” |
+| S | [Rashkin et al.：AIS](https://aclanthology.org/2023.cl-4.2/) | Computational Linguistics 论文 | 外部世界主张应能归因到明确、独立提供的来源 | 支撑主张—来源逐项审计 |
+| A | [DeepResearch Bench](https://arxiv.org/abs/2506.11763) | 2025 预印本 | 把报告质量与有效引用、引用准确性分开评价 | 展示新兴评价框架，不引用产品排名 |
+| B | [DeepTRACE](https://arxiv.org/abs/2509.04499) | 2025 预印本 | statement-level 分解和 citation/factual-support 矩阵 | 转译为本项目审计表 |
+| B | [DeepFact](https://arxiv.org/abs/2603.05912) | 2026 预印本 | 分歧提交证据、审计裁决并版本化修订 benchmark | 支撑“人是审计员，不是永不犯错的金标准” |
+
 ## 本地案例书签
 
 | 推荐度 | 来源 | 类型 | 回答什么问题 | 演示用途 |
