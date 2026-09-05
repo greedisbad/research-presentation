@@ -48,3 +48,6 @@
 | C42 | 技术报告可拆为原子主张，通过 FULL/PARTIAL/CONFLICT/NONE 记录来源支持并修订表述 | [AIS](https://aclanthology.org/2023.cl-4.2/)、[ALCE](https://aclanthology.org/2023.emnlp-main.398/)、[DeepTRACE](https://arxiv.org/abs/2509.04499) | 2023–2025 | 归因框架、citation metrics 与 statement-level 审计的工程转译 | 四档协议是本项目设计，尚未进行跨审计员一致性测量 |
 | C43 | 决策记录应保存上下文、选择、状态和后果，被替代的历史决定仍有保留价值 | [Nygard ADR](https://cognitect.com/blog/2011/11/15/documenting-architecture-decisions) | 2011 | 原始实践文章 | 是轻量实践格式，不是受控效果研究 |
 | C44 | 源码与 diff 往往不足以解释变更理由，开发者会从历史、讨论和同事处寻找 rationale | [决策理由与负知识来源卡](cards/decision-rationale-negative-knowledge.md) | 2005–2022 | 企业观察与同行评审混合方法研究 | 具体渠道和频率随组织、工具与年代变化 |
+| C45 | 调研谱系可以用 Entity、Activity、Agent 及派生关系表达 | [W3C PROV-O](https://www.w3.org/TR/prov-o/) | 2013-04-30；访问于 2026-09-05 | W3C Recommendation | 标准表达 provenance，不评价结论真实性；轻量六节点链是本项目迁移 |
+| C46 | 可复跑的检索记录应保留渠道/平台、完整查询、限制、日期、补充搜索与去重等信息 | [PRISMA-S](https://doi.org/10.1186/s13643-020-01542-z) | 2021-01-26；访问于 2026-09-05 | 同行评审报告指南 | 面向系统综述；指南明确不用于评价检索质量 |
+| C47 | Deep Research 报告的引用覆盖与引用准确性应分开评价 | [DeepResearch Bench](https://arxiv.org/abs/2506.11763) | 2025-06-13；访问于 2026-09-05 | 原始基准论文 | 具体系统和结果受测试时间、设置与自动评价方法限制 |

@@ -38,6 +38,8 @@
 | A | [Spotify：Dataset migrations with Honk](https://engineering.atspotify.com/2026/4/background-coding-agents-dataset-migrations-honk-part-4) | 企业工程复盘 | 先通过 lineage 与 code search 识别范围，再让 Agent 迁移，并把人工判断边界写入细粒度指令 | 展示“搜索范围就是实施范围”的案例 |
 | S | [Google Research：Empirical Research Assistance](https://research.google/blog/empirical-research-assistance-era-from-nature-publication-to-catalyzing-computational-discovery/) | 官方研究系统 | 给定科学问题和成功度量后，系统搜索文献、写代码、组合技术并评价结果 | 最贴近“先找资料，再动手验证”的高级案例 |
 | A | [Google DeepMind：AlphaEvolve](https://deepmind.google/blog/alphaevolve-a-gemini-powered-coding-agent-for-designing-advanced-algorithms/) | 官方研究系统 | LLM 生成候选代码，自动 evaluator 运行评分，优秀候选进入下一轮 | 支持“自动化必须绑定可量化评价” |
+| A | [W3C PROV-O](https://www.w3.org/TR/prov-o/) | 正式 provenance 标准 | Entity、Activity、Agent 及派生/引用/修订关系 | 支撑轻量证据谱系，不当作质量评价标准 |
+| A | [PRISMA-S](https://doi.org/10.1186/s13643-020-01542-z) | 同行评审检索报告指南 | 16 项透明报告字段，可迁移为查询与筛选日志 | 强调报告完整不等于搜索质量 |
 | A | [Google Research：DS-STAR](https://research.google/blog/ds-star-a-state-of-the-art-versatile-data-science-agent/) | 官方研究系统 | 先检查目录与数据文件形成摘要，再循环进行规划、编码和验证 | 数据分析领域的“先理解材料再执行”案例 |
 | A | [GitHub：Secret Protection with Copilot](https://github.blog/ai-and-ml/github-copilot/how-we-accelerated-secret-protection-engineering-with-copilot/) | 官方工程案例 | 人先完成研究和规划，再由 coding agent 转成可评审 PR | 可作为短例子，不必展开 |
 
