@@ -126,12 +126,12 @@
 
 | 推荐度 | 来源 | 类型 | 回答什么问题 | 演示用途 |
 |:---:|---|---|---|---|
-| S | `<本地案例目录>/deckgl-rotation/IMPLEMENTATION-NOTES.md` | 本地工程复盘 | 生成失败后，如何用文档、同版本源码和对照实验完成定向调研 | Deck.gl 核心案例；正文讲方法，具体 API 留附录 |
-| A | `<本地案例目录>/deckgl-rotation/.ua/knowledge-graph.json` | 本地知识图谱 | 实验入口、共享运行时、测试和研究文档如何关联 | 课后导航或备份页，不作为事实来源替代原文件 |
-| A | `<本地案例目录>/dice-game/docs/research/2026-08-31-session-retrospective.md` | 本地会话复盘 | 从视觉审计、外部调研到规格、计划和交接的完整链条 | 提取研究—实施—验证转换，不讲游戏代码 |
-| A | `<本地案例目录>/dice-game/docs/research/2026-09-01-session-retrospective.md` | 本地会话复盘 | 风险优先纵向切片、避免重复搜索和 fallback 如何落地 | Dice 短案例核心材料 |
-| A | `<本地案例目录>/dice-game/docs/research/2026-09-02-session-retrospective.md` | 本地会话复盘 | 任务 brief、评审证据裁决和跨模块验收如何组织 | 用于“评审也是待核验信息”与交接方法 |
-| B | `<本地案例目录>/dice-game/.ua/knowledge-graph.json` | 本地知识图谱 | 调研证据、计划、复盘和配置文档的关系 | 课后资料导航；游戏实现已在扫描中降权 |
+| S | `/Users/wang/Documents/ChatGPT/deckgl-rotation/IMPLEMENTATION-NOTES.md` | 本地工程复盘 | 生成失败后，如何用文档、同版本源码和对照实验完成定向调研 | Deck.gl 核心案例；正文讲方法，具体 API 留附录 |
+| A | `/Users/wang/Documents/ChatGPT/deckgl-rotation/.ua/knowledge-graph.json` | 本地知识图谱 | 实验入口、共享运行时、测试和研究文档如何关联 | 课后导航或备份页，不作为事实来源替代原文件 |
+| A | `/Users/wang/Documents/Codex/2026-08-30/wo/dice-game/docs/research/2026-08-31-session-retrospective.md` | 本地会话复盘 | 从视觉审计、外部调研到规格、计划和交接的完整链条 | 提取研究—实施—验证转换，不讲游戏代码 |
+| A | `/Users/wang/Documents/Codex/2026-08-30/wo/dice-game/docs/research/2026-09-01-session-retrospective.md` | 本地会话复盘 | 风险优先纵向切片、避免重复搜索和 fallback 如何落地 | Dice 短案例核心材料 |
+| A | `/Users/wang/Documents/Codex/2026-08-30/wo/dice-game/docs/research/2026-09-02-session-retrospective.md` | 本地会话复盘 | 任务 brief、评审证据裁决和跨模块验收如何组织 | 用于“评审也是待核验信息”与交接方法 |
+| B | `/Users/wang/Documents/Codex/2026-08-30/wo/dice-game/.ua/knowledge-graph.json` | 本地知识图谱 | 调研证据、计划、复盘和配置文档的关系 | 课后资料导航；游戏实现已在扫描中降权 |
 
 | 等级 | 文件 | 支持的观点 |
 |:---:|---|---|

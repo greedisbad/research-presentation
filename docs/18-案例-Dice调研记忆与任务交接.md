@@ -6,9 +6,9 @@ Dice 项目的游戏代码不是本次演讲重点。三份会话复盘值得保
 
 原始材料：
 
-- `<本地案例目录>/dice-game/docs/research/2026-08-31-session-retrospective.md`
-- `<本地案例目录>/dice-game/docs/research/2026-09-01-session-retrospective.md`
-- `<本地案例目录>/dice-game/docs/research/2026-09-02-session-retrospective.md`
+- `/Users/wang/Documents/Codex/2026-08-30/wo/dice-game/docs/research/2026-08-31-session-retrospective.md`
+- `/Users/wang/Documents/Codex/2026-08-30/wo/dice-game/docs/research/2026-09-01-session-retrospective.md`
+- `/Users/wang/Documents/Codex/2026-08-30/wo/dice-game/docs/research/2026-09-02-session-retrospective.md`
 
 ## 一、它补充了“搜索之后怎么办”
 

@@ -8,7 +8,7 @@
 
 原始需求是让 Deck.gl 图标持续旋转，同时保持可拾取、接近 60 FPS、避免每帧重建图层，并产出多种可独立运行的 HTML 实验。早期生成结果看似完整，却没有达到实际运行效果。真正的转折不是换一句 Prompt，而是把现象拆成研究问题，分别寻找文档、同版本源码和运行时证据。
 
-原始复盘：`<本地案例目录>/deckgl-rotation/IMPLEMENTATION-NOTES.md`。
+原始复盘：`/Users/wang/Documents/ChatGPT/deckgl-rotation/IMPLEMENTATION-NOTES.md`。
 
 ## 一、从模糊失败提取可搜索问题
 

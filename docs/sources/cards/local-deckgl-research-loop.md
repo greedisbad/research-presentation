@@ -3,7 +3,7 @@
 - 标题：Deck.gl 台风图标旋转实验：实现与验证链路复盘
 - 发布者：本地项目实践
 - 日期：访问于 2026-09-05
-- 位置：`<本地案例目录>/deckgl-rotation/IMPLEMENTATION-NOTES.md`
+- 位置：`/Users/wang/Documents/ChatGPT/deckgl-rotation/IMPLEMENTATION-NOTES.md`
 - 来源等级：L1/L2 本地实现、测试与工程复盘
 - 演示推荐度：S
 

@@ -3,7 +3,7 @@
 - 标题：3D 重制、KayKit 管线与词汇惩罚三阶段任务复盘
 - 发布者：本地项目实践
 - 日期：2026-08-31 至 2026-09-02；访问于 2026-09-05
-- 位置：`<本地案例目录>/dice-game/docs/research/`
+- 位置：`/Users/wang/Documents/Codex/2026-08-30/wo/dice-game/docs/research/`
 - 来源等级：L1/L2 本地提交、测试、运行记录与工程复盘
 - 演示推荐度：A
 

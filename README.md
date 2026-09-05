@@ -90,8 +90,8 @@ AI 的价值不只是替人搜索，而是把“定义问题、发现参考、�
 |---|---|---|
 | `tmp/wps-ai-plugin-main/` | WPS AI 插件源码、研究、计划、测试和复盘 | 只读证据库 |
 | `tmp/docs-ditto/` | B 站搜索、123 份视频转写、聚合洞察与总结流程 | 只读证据库 |
-| `<本地案例目录>/deckgl-rotation/` | Deck.gl 四路线实验、运行时验证和实现复盘 | 外部只读案例证据 |
-| `<本地案例目录>/dice-game/docs/research/` | 三阶段会话复盘与研究交接 | 只抽取方法，不展开游戏代码 |
+| `/Users/wang/Documents/ChatGPT/deckgl-rotation/` | Deck.gl 四路线实验、运行时验证和实现复盘 | 外部只读案例证据 |
+| `/Users/wang/Documents/Codex/2026-08-30/wo/dice-game/docs/research/` | 三阶段会话复盘与研究交接 | 只抽取方法，不展开游戏代码 |
 
 桌面的 `docs1.zip` 与 `docs2.zip` SHA-256 完全一致，属于同一份材料。
 
