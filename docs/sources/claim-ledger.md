@@ -57,3 +57,4 @@
 | C51 | Agent 搜索和修改代码的效果不仅取决于模型，也取决于动作、反馈、结果长度限制与 guardrail 等接口设计 | [SWE-agent](https://papers.neurips.cc/paper_files/paper/2024/file/5a7c947568c1b1328ccc5230172e1e7c-Paper-Conference.pdf) | NeurIPS 2024 | 同行评审原始论文与 ablation | 具体接口对不同模型和任务的收益需重新验证 |
 | C52 | p-limit v7.3.2 运行中把 concurrency 降到 activeCount 以下不会取消活跃任务，队列在 activeCount 低于新上限后继续 | [X01 陌生仓库迁移实验](../evidence/X01-p-limit陌生仓库迁移实验.md) | 2026-09-05 | 固定 commit 源码、上游测试位置与独立 Node 运行实验 | 未运行上游完整测试；结论仅绑定 v7.3.2 和实验覆盖情形 |
 | C53 | 无公共字幕的视频仍可经“平台元数据—音频—抽样 ASR—同作者文字回链”转成可检索候选语料，但专名、数字和未覆盖段落必须降级或人工复核 | [V02 单视频原始链](../evidence/V02-BV1DVwLz2EGv单视频原始链.md) | 2026-09-05 | 一个真实 BV 的平台 JSON、完整音频哈希、三个固定窗口 ASR 与作者文章 | 仅抽样 270 秒；没有人耳回听；同作者文章不是独立互证；不证明旧批次 123/123 |
+| C54 | 外部项目的 Design Token 与 Content Schema 可先按 WPS 宿主约束筛选，再转化为共享 Theme、SlideSpec、语义工具和可自动测试的 adapter | [W04 WPS 模板迁移门禁](../evidence/W04-WPS模板迁移到运行门禁.md) | 2026-09-05 | 本地调研/代码快照指纹、theme smoke、58 项测试和生产构建 | 下载包无独立 Git 历史；mock 不等于 WPS 真机；视觉质量未验收 |

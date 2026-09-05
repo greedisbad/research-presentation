@@ -10,6 +10,7 @@
 | W01 | WPS | 开源参考的价值在于拆成可迁移资产，而不是整仓照搬 | 较完整 | S |
 | W02 | WPS | 提示词约束失败时，应把规则下沉到工具接口 | 较完整 | S |
 | W03 | WPS | 失败路线和运行时反证也应成为可复用知识 | 较完整 | S |
+| W04 | WPS | 搜索结果需经宿主约束筛选，并沉淀为协议、实现和分层门禁 | 较完整 | S |
 | V01 | B 站视频 | 视频要经过发现、转写、主题重组和外证回链才能成为技术资料 | 部分完整 | S |
 | V02 | B 站单视频 | 网页失败后可经 API、音频、本地 ASR 与作者文章恢复部分证据链 | 较完整 | S |
 | A01 | 全资料库 | 带链接不等于主张获得完整支持，审计会直接改变表述 | 完整 | A |
@@ -19,6 +20,7 @@
 ## 可重复运行的证据
 
 - Deck.gl：[`scripts/deckgl_runtime_capture.py`](scripts/deckgl_runtime_capture.py) 重跑四个浏览器实验；[`runtime/deckgl/runtime-report.json`](runtime/deckgl/runtime-report.json) 与同目录截图记录 2026-09-05 的一次通过结果。
+- WPS：[`runtime/wps/runtime-report.json`](runtime/wps/runtime-report.json) 保存源码指纹、主题 smoke、测试/构建结果和未执行的真机边界。
 - 运行快照只证明当次目标环境结果；脚本、指标和错误列表一并保留，便于演示前重新采集，而不是把截图当永久事实。
 
 ## 完整度定义

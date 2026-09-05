@@ -10,7 +10,7 @@
 | 仓库内知识和反馈回路提高 Agent 能力 | OpenAI Harness、Sora Android、Anthropic best practices | 中高 | 厂商自述，有选择偏差 | 用本地 WPS 案例佐证 |
 | AI 可从资料搜索进入科学/工程执行 | Google ERA、AlphaEvolve、OpenAI scientific computing | 高 | 先进实验与日常开发差距大 | 只用于展示上限与设计原则 |
 | 视频可转换为 source-grounded 语料 | NotebookLM 官方文档、本地 B 站管线；V01；V02 已恢复一个 BV 的平台 JSON、音频和 270 秒抽样 ASR | 中高 | 仍无法复核旧批次 123/123；抽样未经人耳回听；base ASR 对日期与专名错误明显 | 正文展示单样本降级链和错误；逐字引用前人工回听，旧批量数字继续标本地记录 |
-| “不造轮子”应理解为局部模式复用 | WPS 11 项目调研→可行方案→实现映射 | 高 | 下载包缺原始 Git 历史，部分版本信息不可恢复 | 继续补 commit/tag 或明确证据上限 |
+| “不造轮子”应理解为局部模式复用 | WPS 11 项目调研→可行方案→Theme/SlideSpec/apply_template→58 项测试与构建 | 高 | 下载包缺原始 Git 历史；Browser mock 不能证明 WPS 真机与视觉质量 | 上台展示筛选与协议化；真机结果继续标待验收 |
 | 公开仓库不等于可直接复制或依赖 | GitHub Licensing、Dependency Graph、OpenSSF、OSV；PPTAgent/PptxGenJS/Marp 实例 | 高 | 自动评分和漏洞库存在盲区；不是法律意见 | 已补真实样例；下一步在 WPS 做 PptxGenJS spike |
 | Code/Issue/PR/Release 可组成实现证据链 | GitHub Code Search、Issue Search、Blame、Release 文档 | 高 | 并非所有项目用 GitHub Release | 在 WPS 或外部库上跑通一个完整例子 |
 | 搜索 Agent 会遭遇间接提示注入 | NIST AI 600-1、Anthropic、Microsoft、OWASP | 高 | 防御持续变化，没有单项措施可保证安全 | 设计一个无害注入演示与工具层阻断 |
