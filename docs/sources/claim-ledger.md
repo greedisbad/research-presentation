@@ -42,3 +42,5 @@
 | C36 | 研究自动化应保存命令、增量修改、使用版本控制并通过断言/测试提高可复现性 | [Wilson et al. 2014](https://doi.org/10.1371/JOURNAL.PBIO.1001745) | 2014 | 开放获取同行评审论文 | 面向科学计算；不是 AI Agent 专属证据 |
 | C37 | Agent 上下文应保留高信号地图并按需加载原文，长任务使用结构化笔记等方式控制上下文污染 | [Anthropic Context Engineering](https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents) | 2025-09-29 | 官方工程复盘 | 厂商实践；具体策略随模型和工具变化 |
 | C38 | Agent 架构应从最简单可行模式开始，明确任务优先固定 workflow，开放问题才增加自主循环 | [Anthropic Building Effective Agents](https://www.anthropic.com/engineering/building-effective-agents) | 2024-12-19 | 官方跨客户工程总结 | 不是独立对照研究，但包含适用边界与成本权衡 |
+| C39 | 专业分析过程可理解为信息觅食与意义建构两个相互作用的循环，资料需要被重组到适合任务的表示中才能支持洞察与产出 | [Pirolli & Card 2005](cards/pirolli-card-sensemaking.md) | 2005 | 情报分析认知任务研究 | 迁移到 AI 技术调研属于方法类比，不是 AI 效率实证 |
+| C40 | 程序理解由任务相关的问题驱动，开发者会从定位焦点逐步扩展到关系、局部行为与跨模块模型，并组合源码、历史和运行证据 | [开发者源码信息需求来源卡](cards/developer-code-information-needs.md) | 2005–2023 | 多项观察、定性与概念研究的综合 | 样本与工具环境不同；只使用问题结构，不外推固定频率或 AI 理解能力 |

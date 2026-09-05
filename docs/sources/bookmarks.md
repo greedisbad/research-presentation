@@ -122,6 +122,16 @@
 | A | [PptxGenJS](https://github.com/gitbrent/PptxGenJS) | JS/浏览器侧 OOXML 与 slide API，适合做 spike | 跨渲染器 Issue、偏手工测试与当前依赖告警需验收 |
 | S | [Marp CLI converter](https://github.com/marp-team/marp-cli/blob/main/src/converter.ts) | 清楚展示 Markdown→渲染→PPTX 管线 | 默认 PPTX 为逐页位图；editable 路径依赖 LibreOffice 且不保证完全可复现 |
 
+## 信息觅食与程序理解
+
+| 等级 | 来源 | 类型 | 支持的观点 | 建议用法 |
+|:---:|---|---|---|---|
+| S | [Pirolli & Card：The Sensemaking Process](https://www.researchgate.net/profile/Peter-Pirolli/publication/215439203_The_sensemaking_process_and_leverage_points_for_analyst_technology_as_identified_through_cognitive_task_analysis/links/02bfe50f09ca94efc0000000/The-sensemaking-process-and-leverage-points-for-analyst-technology-as-identified-through-cognitive-task-analysis.pdf) | 原始认知任务研究 | 信息觅食与意义建构是相互作用的循环；证据需要被重组为 schema 才能形成洞察 | 核心方法论页，明确从情报分析迁移 |
+| S | [Ko 等：Information Needs in Collocated Software Development Teams](https://www.cs.cmu.edu/~marmalade/papers/Ko2007InformationNeeds.pdf) | ICSE 观察研究 | 开发者的信息需求包括设计缘由、程序行为和状态因果，且会被信息不可得阻塞 | 支撑“先提出可回答的源码问题” |
+| S | [Sillito 等：Questions Programmers Ask](https://citeseerx.ist.psu.edu/document?doi=3dda5d9a5e4eb27760e8a4a381a1057ce0ba7d65&repid=rep1&type=pdf) | FSE 定性研究 | 44 类问题可归为焦点、扩展、局部子图和跨子图整合 | 转译成 AI 源码问题树，不在主 PPT 罗列全集 |
+| A | [LaToza 等：Software Development at Microsoft Observed](https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/tr-2005-140.pdf) | 企业现场研究报告 | 源码、调试器、变更历史、运行结果与社会知识共同参与理解；设计缘由常未沉淀 | 支撑多证据载体和负知识归档 |
+| A | [Wyrich：Source Code Comprehension](https://arxiv.org/abs/2310.11301) | 概念研究论文 | “理解”必须通过任务和测量具体化，不能由一段摘要替代 | 用于约束“模型理解源码”的过强表述 |
+
 ## 本地案例书签
 
 | 推荐度 | 来源 | 类型 | 回答什么问题 | 演示用途 |
