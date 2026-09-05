@@ -1,0 +1,8 @@
+# Imported case-study material and extraction scratch space
+tmp/
+
+# Local presentation build artifacts
+dist/
+output/
+
+.DS_Store
