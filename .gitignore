@@ -5,4 +5,7 @@ tmp/
 dist/
 output/
 
+# Isolated execution worktrees
+.worktrees/
+
 .DS_Store
