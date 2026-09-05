@@ -56,3 +56,4 @@
 | C50 | 软件问题可先按仓库结构定位文件，再按符号骨架和局部位置逐级收窄，并以 patch validation 结束 | [Agentless](https://arxiv.org/abs/2407.01489) | 2024-10-29 v2 | 原始预印本与开源实现 | 结论绑定其流程与 SWE-bench 设置；不引用旧榜单作产品比较 |
 | C51 | Agent 搜索和修改代码的效果不仅取决于模型，也取决于动作、反馈、结果长度限制与 guardrail 等接口设计 | [SWE-agent](https://papers.neurips.cc/paper_files/paper/2024/file/5a7c947568c1b1328ccc5230172e1e7c-Paper-Conference.pdf) | NeurIPS 2024 | 同行评审原始论文与 ablation | 具体接口对不同模型和任务的收益需重新验证 |
 | C52 | p-limit v7.3.2 运行中把 concurrency 降到 activeCount 以下不会取消活跃任务，队列在 activeCount 低于新上限后继续 | [X01 陌生仓库迁移实验](../evidence/X01-p-limit陌生仓库迁移实验.md) | 2026-09-05 | 固定 commit 源码、上游测试位置与独立 Node 运行实验 | 未运行上游完整测试；结论仅绑定 v7.3.2 和实验覆盖情形 |
+| C53 | 无公共字幕的视频仍可经“平台元数据—音频—抽样 ASR—同作者文字回链”转成可检索候选语料，但专名、数字和未覆盖段落必须降级或人工复核 | [V02 单视频原始链](../evidence/V02-BV1DVwLz2EGv单视频原始链.md) | 2026-09-05 | 一个真实 BV 的平台 JSON、完整音频哈希、三个固定窗口 ASR 与作者文章 | 仅抽样 270 秒；没有人耳回听；同作者文章不是独立互证；不证明旧批次 123/123 |
