@@ -1,0 +1,152 @@
+{
+  "captured_at": "2026-09-05T08:48:22.129894+00:00",
+  "base_url": "http://127.0.0.1:8765",
+  "browser": "/Users/wang/Library/Caches/ms-playwright/chromium-1234/chrome-mac-x64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing",
+  "routes": [
+    {
+      "route": "01-update-triggers.html",
+      "http_status": 200,
+      "metrics": {
+        "title": "路线 01 · 属性失效驱动",
+        "fps": 61,
+        "frames": 319,
+        "changes": 5,
+        "pixelSamples": 5,
+        "staticInits": 1,
+        "submits": 315,
+        "autoPick": "true",
+        "deckError": "",
+        "pixelStatus": "旋转已检测 · 像素持续变化"
+      },
+      "paused": "true",
+      "checks": {
+        "http_ok": true,
+        "frames_gt_60": true,
+        "pixel_changes_gte_2": true,
+        "static_layer_initialized_once": true,
+        "icon_pickable": true,
+        "pause_control": true,
+        "no_deck_error": true,
+        "no_page_error": true,
+        "no_functional_http_error": true,
+        "no_console_error": true
+      },
+      "page_errors": [],
+      "console_errors": [],
+      "ignored_nonfunctional_console_errors": [],
+      "http_errors": [],
+      "ignored_nonfunctional_errors": [],
+      "screenshot": "01-update-triggers.png",
+      "passed": true
+    },
+    {
+      "route": "02-transitions.html",
+      "http_status": 200,
+      "metrics": {
+        "title": "路线 02 · 低频过渡驱动",
+        "fps": 61,
+        "frames": 319,
+        "changes": 4,
+        "pixelSamples": 5,
+        "staticInits": 1,
+        "submits": 2,
+        "autoPick": "true",
+        "deckError": "",
+        "pixelStatus": "旋转已检测 · 像素持续变化"
+      },
+      "paused": "true",
+      "checks": {
+        "http_ok": true,
+        "frames_gt_60": true,
+        "pixel_changes_gte_2": true,
+        "static_layer_initialized_once": true,
+        "icon_pickable": true,
+        "pause_control": true,
+        "no_deck_error": true,
+        "no_page_error": true,
+        "no_functional_http_error": true,
+        "no_console_error": true
+      },
+      "page_errors": [],
+      "console_errors": [],
+      "ignored_nonfunctional_console_errors": [],
+      "http_errors": [],
+      "ignored_nonfunctional_errors": [],
+      "screenshot": "02-transitions.png",
+      "passed": true
+    },
+    {
+      "route": "03-shader-animation.html",
+      "http_status": 200,
+      "metrics": {
+        "title": "路线 03 · GPU 时间驱动",
+        "fps": 60,
+        "frames": 316,
+        "changes": 4,
+        "pixelSamples": 4,
+        "staticInits": 1,
+        "submits": 0,
+        "autoPick": "true",
+        "deckError": "",
+        "pixelStatus": "旋转已检测 · 像素持续变化"
+      },
+      "paused": "true",
+      "checks": {
+        "http_ok": true,
+        "frames_gt_60": true,
+        "pixel_changes_gte_2": true,
+        "static_layer_initialized_once": true,
+        "icon_pickable": true,
+        "pause_control": true,
+        "no_deck_error": true,
+        "no_page_error": true,
+        "no_functional_http_error": true,
+        "no_console_error": true
+      },
+      "page_errors": [],
+      "console_errors": [],
+      "ignored_nonfunctional_console_errors": [],
+      "http_errors": [],
+      "ignored_nonfunctional_errors": [],
+      "screenshot": "03-shader-animation.png",
+      "passed": true
+    },
+    {
+      "route": "04-baseline-radians.html",
+      "http_status": 200,
+      "metrics": {
+        "title": "路线 04 · 单位错误对照",
+        "fps": 61,
+        "frames": 319,
+        "changes": 4,
+        "pixelSamples": 4,
+        "staticInits": 1,
+        "submits": 319,
+        "autoPick": "true",
+        "deckError": "",
+        "pixelStatus": "旋转已检测 · 像素持续变化"
+      },
+      "paused": "true",
+      "checks": {
+        "http_ok": true,
+        "frames_gt_60": true,
+        "pixel_changes_gte_2": true,
+        "static_layer_initialized_once": true,
+        "icon_pickable": true,
+        "pause_control": true,
+        "no_deck_error": true,
+        "no_page_error": true,
+        "no_functional_http_error": true,
+        "no_console_error": true
+      },
+      "page_errors": [],
+      "console_errors": [],
+      "ignored_nonfunctional_console_errors": [],
+      "http_errors": [],
+      "ignored_nonfunctional_errors": [],
+      "screenshot": "04-baseline-radians.png",
+      "passed": true
+    }
+  ],
+  "passed": true
+}

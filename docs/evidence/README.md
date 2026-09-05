@@ -13,6 +13,11 @@
 | V01 | B 站视频 | 视频要经过发现、转写、主题重组和外证回链才能成为技术资料 | 部分完整 | S |
 | A01 | 全资料库 | 带链接不等于主张获得完整支持，审计会直接改变表述 | 完整 | A |
 
+## 可重复运行的证据
+
+- Deck.gl：[`scripts/deckgl_runtime_capture.py`](scripts/deckgl_runtime_capture.py) 重跑四个浏览器实验；[`runtime/deckgl/runtime-report.json`](runtime/deckgl/runtime-report.json) 与同目录截图记录 2026-09-05 的一次通过结果。
+- 运行快照只证明当次目标环境结果；脚本、指标和错误列表一并保留，便于演示前重新采集，而不是把截图当永久事实。
+
 ## 完整度定义
 
 - **完整**：问题、原始证据、转化、当前可重复验证和边界齐全。
