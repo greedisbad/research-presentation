@@ -142,6 +142,14 @@
 | B | [DeepTRACE](https://arxiv.org/abs/2509.04499) | 2025 预印本 | statement-level 分解和 citation/factual-support 矩阵 | 转译为本项目审计表 |
 | B | [DeepFact](https://arxiv.org/abs/2603.05912) | 2026 预印本 | 分歧提交证据、审计裁决并版本化修订 benchmark | 支撑“人是审计员，不是永不犯错的金标准” |
 
+## 决策理由与负知识
+
+| 等级 | 来源 | 类型 | 支持的观点 | 建议用法 |
+|:---:|---|---|---|---|
+| A | [Michael Nygard：Documenting Architecture Decisions](https://cognitect.com/blog/2011/11/15/documenting-architecture-decisions) | 原始实践文章 | 用短小 ADR 保存 Context、Decision、Status 和 Consequences；被替代记录仍保留 | 映射到 Agent 可读的决策文件，不宣称量化收益 |
+| A | [Safwan & Servant：Developers’ need for commit rationale](https://doi.org/10.1016/j.jss.2022.111320) | 同行评审混合方法研究 | 开发者在多类任务中需要寻找变更理由，且会遇到获取障碍 | 支撑“diff 不等于 rationale” |
+| A | [Bjørnson & Dingsøyr：Knowledge management in software engineering](https://doi.org/10.1016/j.infsof.2008.03.006) | 系统综述 | 软件工程是知识密集工作，显性知识与隐性知识都需要考虑 | 给知识沉淀部分提供边界 |
+
 ## 本地案例书签
 
 | 推荐度 | 来源 | 类型 | 回答什么问题 | 演示用途 |

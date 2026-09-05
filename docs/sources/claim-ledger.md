@@ -46,3 +46,5 @@
 | C40 | 程序理解由任务相关的问题驱动，开发者会从定位焦点逐步扩展到关系、局部行为与跨模块模型，并组合源码、历史和运行证据 | [开发者源码信息需求来源卡](cards/developer-code-information-needs.md) | 2005–2023 | 多项观察、定性与概念研究的综合 | 样本与工具环境不同；只使用问题结构，不外推固定频率或 AI 理解能力 |
 | C41 | 引用存在、引用对主张的支持程度和重要主张的引用覆盖率是不同维度，不能因报告带链接就视为证据完整 | [引用归因与 Deep Research 审计来源卡](cards/citation-attribution-audit.md) | 2023–2026 | 同行评审研究与新兴预印本的综合 | 旧 benchmark 和当前产品不同；预印本数值不用于产品准确率结论 |
 | C42 | 技术报告可拆为原子主张，通过 FULL/PARTIAL/CONFLICT/NONE 记录来源支持并修订表述 | [AIS](https://aclanthology.org/2023.cl-4.2/)、[ALCE](https://aclanthology.org/2023.emnlp-main.398/)、[DeepTRACE](https://arxiv.org/abs/2509.04499) | 2023–2025 | 归因框架、citation metrics 与 statement-level 审计的工程转译 | 四档协议是本项目设计，尚未进行跨审计员一致性测量 |
+| C43 | 决策记录应保存上下文、选择、状态和后果，被替代的历史决定仍有保留价值 | [Nygard ADR](https://cognitect.com/blog/2011/11/15/documenting-architecture-decisions) | 2011 | 原始实践文章 | 是轻量实践格式，不是受控效果研究 |
+| C44 | 源码与 diff 往往不足以解释变更理由，开发者会从历史、讨论和同事处寻找 rationale | [决策理由与负知识来源卡](cards/decision-rationale-negative-knowledge.md) | 2005–2022 | 企业观察与同行评审混合方法研究 | 具体渠道和频率随组织、工具与年代变化 |
