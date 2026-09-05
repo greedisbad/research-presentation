@@ -52,3 +52,6 @@
 | C46 | 可复跑的检索记录应保留渠道/平台、完整查询、限制、日期、补充搜索与去重等信息 | [PRISMA-S](https://doi.org/10.1186/s13643-020-01542-z) | 2021-01-26；访问于 2026-09-05 | 同行评审报告指南 | 面向系统综述；指南明确不用于评价检索质量 |
 | C47 | Deep Research 报告的引用覆盖与引用准确性应分开评价 | [DeepResearch Bench](https://arxiv.org/abs/2506.11763) | 2025-06-13；访问于 2026-09-05 | 原始基准论文 | 具体系统和结果受测试时间、设置与自动评价方法限制 |
 | C48 | 同一谱系模板可以暴露本地案例中不同类型的断点：失败历史缺失、实现因果不可恢复、原始媒体链缺失 | [P01 三条主张谱系审计](../evidence/P01-三条主张的证据谱系审计.md) | 2026-09-05 | 本地文件、哈希、行号与运行快照审计 | 尚未由第二位独立读者执行冷读回查；不证明记录谱系的效率收益 |
+| C49 | repository-level code completion 可利用初步生成结果迭代检索更多相关上下文 | [RepoCoder](https://aclanthology.org/2023.emnlp-main.151/) | 2023-12 | EMNLP 原始论文 | 证据针对代码补全基准，迁移到问题调研属于机制类比 |
+| C50 | 软件问题可先按仓库结构定位文件，再按符号骨架和局部位置逐级收窄，并以 patch validation 结束 | [Agentless](https://arxiv.org/abs/2407.01489) | 2024-10-29 v2 | 原始预印本与开源实现 | 结论绑定其流程与 SWE-bench 设置；不引用旧榜单作产品比较 |
+| C51 | Agent 搜索和修改代码的效果不仅取决于模型，也取决于动作、反馈、结果长度限制与 guardrail 等接口设计 | [SWE-agent](https://papers.neurips.cc/paper_files/paper/2024/file/5a7c947568c1b1328ccc5230172e1e7c-Paper-Conference.pdf) | NeurIPS 2024 | 同行评审原始论文与 ablation | 具体接口对不同模型和任务的收益需重新验证 |

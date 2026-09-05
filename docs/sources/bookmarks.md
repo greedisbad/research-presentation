@@ -48,6 +48,9 @@
 | 等级 | 来源 | 类型 | 支持的观点 | 建议用法 |
 |:---:|---|---|---|---|
 | S | [Gao et al.：Enabling LLMs to Generate Text with Citations](https://aclanthology.org/2023.emnlp-main.398/) | EMNLP 原始论文 | 回答正确、引用正确、引用完整是不同评价维度；有引用不等于所有陈述有支持 | 反幻觉页核心证据 |
+| S | [RepoCoder](https://aclanthology.org/2023.emnlp-main.151/) | EMNLP 原始论文 | 初次生成可参与下一轮仓库检索，迭代检索优于论文中的一次 RAG 基线 | 支撑“搜索结果要改写下一轮查询” |
+| S | [Agentless](https://arxiv.org/abs/2407.01489) | 软件工程原始研究 | 用仓库结构、符号骨架、局部位置三级定位，再修复与验证 | 支撑简单固定研究流程，不做模型排名 |
+| S | [SWE-agent](https://papers.neurips.cc/paper_files/paper/2024/file/5a7c947568c1b1328ccc5230172e1e7c-Paper-Conference.pdf) | NeurIPS 原始论文 | Agent 专用接口应提供简单动作、简洁反馈、结果上限与 guardrail | 支撑“工具接口也是调研方法的一部分” |
 | S | [Google DeepMind：Long-form factuality / SAFE](https://deepmind.google/research/publications/85420/) | 原始研究 | 把长回答拆成原子事实，再逐项搜索与判断支持关系 | 直接转化成演示中的验证流程 |
 | S | [Google DeepMind：FACTS Grounding](https://deepmind.google/blog/facts-grounding-a-new-benchmark-for-evaluating-the-factuality-of-large-language-models/) | 原始研究与 benchmark | 评价回答是否忠实于给定来源，并避免超出资料编造 | 支持 source-grounded 概念 |
 | S | [NIST：Generative AI Profile, AI 600-1](https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf) | 政府风险框架 | 持续核验来源、引用、RAG 数据与输出 grounding | 将验证从个人习惯提升为治理要求 |
