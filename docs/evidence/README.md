@@ -16,11 +16,14 @@
 | A01 | 全资料库 | 带链接不等于主张获得完整支持，审计会直接改变表述 | 完整 | A |
 | P01 | Deck.gl / WPS / 视频 | 谱系审计能区分完整闭环、历史缺口与原始链断裂 | 完整 | A |
 | X01 | p-limit | 陌生仓库可由地图、迭代检索和最小实验收敛为可核验结论 | 完整 | A |
+| T01 | Tabloom | 先把决策拆成信息缺口，再把问题路由到匹配证据源 | 较完整 | S |
+| T02 | Tabloom | mock 与结构校验通过不等于真实模型结果具有业务价值 | 较完整 | A |
 
 ## 可重复运行的证据
 
 - Deck.gl：[`scripts/deckgl_runtime_capture.py`](scripts/deckgl_runtime_capture.py) 重跑四个浏览器实验；[`runtime/deckgl/runtime-report.json`](runtime/deckgl/runtime-report.json) 与同目录截图记录 2026-09-05 的一次通过结果。
 - WPS：[`runtime/wps/runtime-report.json`](runtime/wps/runtime-report.json) 保存源码指纹、主题 smoke、测试/构建结果和未执行的真机边界。
+- Tabloom：[`runtime/tabloom/source-and-runtime-report.json`](runtime/tabloom/source-and-runtime-report.json) 保存本地原始材料指纹，以及默认旧 Node 失败、Node 24 下 37 项测试和扩展验证通过的结果。
 - 运行快照只证明当次目标环境结果；脚本、指标和错误列表一并保留，便于演示前重新采集，而不是把截图当永久事实。
 
 ## 完整度定义

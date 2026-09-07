@@ -1,0 +1,40 @@
+{
+  "capturedAt": "2026-09-07T21:59:25+08:00",
+  "source": {
+    "path": "/Users/wang/Documents/ChatGPT/chrome-ai-tab-grouper",
+    "branch": "main",
+    "head": "6d9304f",
+    "workingTreeCleanBeforeRun": true,
+    "files": {
+      "docs/AGENT-RESEARCH-TRACE.md": "15f7c21fc37b65569a5134e63f847e492d1d779540a1912ded7fdbbf8b203fc9",
+      "docs/DEVELOPMENT-RETROSPECTIVE.md": "472bfde14730120fea33a3fd3ee80c5fb12bf003182c7bf9229bffbaaa7b2206",
+      "docs/superpowers/specs/2026-09-05-ai-tab-grouper-design.md": "f764a045052728d8e641629d7a880a594cf9e53af974e08e1d0450e17234abd5",
+      "docs/superpowers/plans/2026-09-05-ai-tab-grouper.md": "e6c58a1c468d30923fb00600d342652b2bea02ce7090aa56465eef7b8bd7e6ac"
+    }
+  },
+  "verification": [
+    {
+      "command": "npm test && npm run verify",
+      "environment": "default shell Node 14.17.6",
+      "exitCode": 1,
+      "result": "node: bad option: --test; test runner did not start"
+    },
+    {
+      "command": "PATH=<bundled-node-24>:$PATH npm test",
+      "environment": "Node v24.19.0 with system npm 6.14.15",
+      "exitCode": 0,
+      "result": "37 tests passed; 0 failed; 0 skipped"
+    },
+    {
+      "command": "PATH=<bundled-node-24>:$PATH npm run verify",
+      "environment": "Node v24.19.0 with system npm 6.14.15",
+      "exitCode": 0,
+      "result": "Manifest V3, entry files, local-script policy, permissions and Chrome version checks passed"
+    }
+  ],
+  "notRun": [
+    "DeepSeek live test because it requires a local ignored API key and produces variable external results",
+    "fresh manual Chrome end-to-end test",
+    "independent reconstruction of every historical web query and tool output"
+  ]
+}

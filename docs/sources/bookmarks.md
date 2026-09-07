@@ -165,6 +165,10 @@
 | A | `/Users/wang/Documents/Codex/2026-08-30/wo/dice-game/docs/research/2026-09-01-session-retrospective.md` | 本地会话复盘 | 风险优先纵向切片、避免重复搜索和 fallback 如何落地 | Dice 短案例核心材料 |
 | A | `/Users/wang/Documents/Codex/2026-08-30/wo/dice-game/docs/research/2026-09-02-session-retrospective.md` | 本地会话复盘 | 任务 brief、评审证据裁决和跨模块验收如何组织 | 用于“评审也是待核验信息”与交接方法 |
 | B | `/Users/wang/Documents/Codex/2026-08-30/wo/dice-game/.ua/knowledge-graph.json` | 本地知识图谱 | 调研证据、计划、复盘和配置文档的关系 | 课后资料导航；游戏实现已在扫描中降权 |
+| S | `/Users/wang/Documents/ChatGPT/chrome-ai-tab-grouper/docs/AGENT-RESEARCH-TRACE.md` | 本地 Agent 研究轨迹 | 信息缺口、来源路由、证据等级、16 阶段决策变化和可审计边界 | 方法论元案例；优先展示问题—来源—行动链 |
+| A | `/Users/wang/Documents/ChatGPT/chrome-ai-tab-grouper/docs/DEVELOPMENT-RETROSPECTIVE.md` | 本地工程复盘 | 原型、草稿模型、缺陷调研、真实 API、发布审计与改进项 | 为 T01/T02 提供实现背景，细节留附录 |
+| A | `/Users/wang/Documents/ChatGPT/chrome-ai-tab-grouper/docs/superpowers/specs/2026-09-05-ai-tab-grouper-design.md` | 本地设计文档 | 用户反馈如何转成状态、不变量、安全与测试边界 | 展示“调研结果转为设计约束” |
+| A | `/Users/wang/Documents/ChatGPT/chrome-ai-tab-grouper/docs/superpowers/plans/2026-09-05-ai-tab-grouper.md` | 本地实施计划 | 设计如何继续转成逐文件、逐接口、逐门禁任务 | 展示“资料最终变成可执行开发资源” |
 
 | 等级 | 文件 | 支持的观点 |
 |:---:|---|---|

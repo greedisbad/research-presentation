@@ -1,0 +1,58 @@
+# 每个重大决策复制一份；未知项写 null，不要补写成已发生事实。
+timestamp: null
+decision_id: null
+decision: null
+status: investigating # investigating | decided | superseded
+
+information_need:
+  - question: null
+    evidence_type: null # user | official_doc | code | runtime | git | process_rule
+    risk_if_wrong: null
+
+hypotheses:
+  - statement: null
+    confidence_before: null # low | medium | high
+    falsifier: null
+
+sources:
+  - type: null
+    title: null
+    reference: null # URL、commit、文件路径、错误 ID 或实验产物
+    accessed_at: null
+    timing: contemporaneous # contemporaneous | retrospective_review
+    exact_location: null # 行号、页码、时间戳、symbol
+    sha256_or_version: null
+
+actions:
+  - tool_or_method: null
+    input_summary: null
+    output_reference: null
+    result: null
+    limitations: null
+
+evidence_assessment:
+  supports:
+    - null
+  contradicts:
+    - null
+  unresolved:
+    - null
+  confidence_after: null
+
+decision_result:
+  choice: null
+  rationale: null
+  rejected_options:
+    - option: null
+      reason: null
+  implementation_or_doc_change: null
+  verification: null
+  rollback_or_revisit_trigger: null
+
+privacy_and_reproducibility:
+  uses_real_user_data: false
+  secrets_logged: false
+  fixed_fixture: null
+  replay_command: null
+  non_committed_artifacts: []
+
