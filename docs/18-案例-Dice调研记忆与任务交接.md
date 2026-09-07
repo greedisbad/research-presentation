@@ -10,6 +10,8 @@ Dice 项目的游戏代码不是本次演讲重点。三份会话复盘值得保
 - `/Users/wang/Documents/Codex/2026-08-30/wo/dice-game/docs/research/2026-09-01-session-retrospective.md`
 - `/Users/wang/Documents/Codex/2026-08-30/wo/dice-game/docs/research/2026-09-02-session-retrospective.md`
 
+演示证据切片：[`DI01：已确认、已排除与待验证`](evidence/DI01-Dice已确认已排除与待验证.md)。
+
 ## 一、它补充了“搜索之后怎么办”
 
 常见 AI 调研流程停在“找到资料并总结”。Dice 复盘显示，资料只有进入以下链条，才会在长期工程中持续产生价值：
