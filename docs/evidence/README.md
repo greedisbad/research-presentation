@@ -32,6 +32,7 @@
 
 - Deck.gl：[`scripts/deckgl_runtime_capture.py`](scripts/deckgl_runtime_capture.py) 重跑四个浏览器实验；[`runtime/deckgl/runtime-report.json`](runtime/deckgl/runtime-report.json) 与同目录截图记录 2026-09-05 的一次通过结果。
 - WPS：[`runtime/wps/runtime-report.json`](runtime/wps/runtime-report.json) 保存源码指纹、主题 smoke、测试/构建结果和未执行的真机边界。
+- WPS 真机：[`runtime/wps/true-host-capture-protocol.md`](runtime/wps/true-host-capture-protocol.md) 记录已探测宿主版本、固定输入、隐私边界、截图清单和升级门禁。
 - Tabloom：[`runtime/tabloom/source-and-runtime-report.json`](runtime/tabloom/source-and-runtime-report.json) 保存本地原始材料指纹，以及默认旧 Node 失败、Node 24 下 37 项测试和扩展验证通过的结果。
 - 运行快照只证明当次目标环境结果；脚本、指标和错误列表一并保留，便于演示前重新采集，而不是把截图当永久事实。
 
