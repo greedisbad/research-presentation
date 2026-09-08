@@ -8,6 +8,8 @@
 
 5 个 S 级切片逐句能说到什么强度、哪些表述必须降级，见 [`S-level-claim-audit-2026-09-08.md`](S-level-claim-audit-2026-09-08.md)。
 
+产品能力、官方链接、目标版本、依赖、许可证与动态数字的冻结日检查见 [`../sources/volatile-fact-check-2026-09-08.md`](../sources/volatile-fact-check-2026-09-08.md)。
+
 ## 当前切片
 
 | ID | 案例 | 支持的演讲主张 | 完整度 | 上台推荐度 |

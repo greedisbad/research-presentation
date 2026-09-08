@@ -90,3 +90,5 @@
 - 当时的全部搜索式、网页快照和首次 linking error 日志未保存。
 - 浏览器报告是一次目标环境快照，不是跨平台性能基准。
 - 此切片支持“证据分工和升级”，不支持“读源码总比读文档好”。
+
+2026-09-08 易变事实复核确认：官方 `v9.1.12` tag 仍存在，IconLayer shader 的 degree→radian、BrushingExtension 的 `setShaderModuleProps` 与相邻 shader module 的 `uniformTypes` 均可从该 tag 重新取得。当前官网已随主线版本演进，因此演讲中的实现事实继续绑定 9.1.12，而不以当前文档替代版本源码。详见[易变事实复核](../sources/volatile-fact-check-2026-09-08.md)。

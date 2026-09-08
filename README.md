@@ -74,6 +74,7 @@ AI 的价值不只是替人搜索，而是把“定义问题、发现参考、�
 | [S 级主张证据审计](docs/evidence/S-level-claim-audit-2026-09-08.md) | 5 个核心切片的 FULL/PARTIAL/NONE、可安全上台表述与冻结前动作 | 核心 |
 | [WPS 真机证据采集协议](docs/evidence/runtime/wps/true-host-capture-protocol.md) | 本机宿主版本、固定输入、截图/报告字段与成功失败门禁 | 待执行 |
 | [OpenAI Deep Research 官方页快照](docs/sources/snapshots/openai-deep-research-help-2026-09-08.md) | 访问日官方能力边界与 A01 可引用范围 | 备选 |
+| [易变事实复核](docs/sources/volatile-fact-check-2026-09-08.md) | Deck.gl/Chrome/WPS/B 站的版本、链接、许可证与数字冻结检查 | 核心 |
 | [书签与来源评分](docs/sources/bookmarks.md) | 外部来源、用途、可信度和推荐度 | 备查 |
 | [证据缺口矩阵](docs/sources/gap-matrix.md) | 当前证据强度、冲突、缺口和后续动作 | 备查 |
 | [主张—来源账本](docs/sources/claim-ledger.md) | 核心主张的来源、日期与适用边界 | 备查 |

@@ -44,3 +44,5 @@ AI 技术调研不应从宽泛主题搜索开始，而应先把当前决策拆�
 ```
 
 推荐度：S。具体 Chrome API、九色枚举和提交哈希留在完整案例或附录。
+
+2026-09-08 复核 Chrome 官方 Side Panel、tabGroups 与 extension service worker 文档：三条平台入口仍可用，动态 `import()` 的限制仍有官方说明。它们只支持平台边界，不替代产品价值与真实模型行为证据。详见[易变事实复核](../sources/volatile-fact-check-2026-09-08.md)。
