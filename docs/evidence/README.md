@@ -6,6 +6,8 @@
 
 统一的 S/A/B/D 裁决、重复观点簇和主/辅证据归属见 [`priority-and-overlap-audit.md`](priority-and-overlap-audit.md)。
 
+5 个 S 级切片逐句能说到什么强度、哪些表述必须降级，见 [`S-level-claim-audit-2026-09-08.md`](S-level-claim-audit-2026-09-08.md)。
+
 ## 当前切片
 
 | ID | 案例 | 支持的演讲主张 | 完整度 | 上台推荐度 |

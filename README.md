@@ -71,6 +71,7 @@ AI 的价值不只是替人搜索，而是把“定义问题、发现参考、�
 | [演示证据切片索引](docs/evidence/README.md) | 从原始案例中选取能支持单个演讲主张的最小证据组合 | 核心 |
 | [精确来源与候选视觉素材](docs/evidence/visual-source-inventory.md) | 每个切片的原始位置、可用截图、重画方案、缺口和捕获优先级 | 核心 |
 | [证据切片优先级与重复观点审计](docs/evidence/priority-and-overlap-audit.md) | 15 个切片的 S/A/B/D、重复簇和唯一主观点归属 | 核心 |
+| [S 级主张证据审计](docs/evidence/S-level-claim-audit-2026-09-08.md) | 5 个核心切片的 FULL/PARTIAL/NONE、可安全上台表述与冻结前动作 | 核心 |
 | [书签与来源评分](docs/sources/bookmarks.md) | 外部来源、用途、可信度和推荐度 | 备查 |
 | [证据缺口矩阵](docs/sources/gap-matrix.md) | 当前证据强度、冲突、缺口和后续动作 | 备查 |
 | [主张—来源账本](docs/sources/claim-ledger.md) | 核心主张的来源、日期与适用边界 | 备查 |
