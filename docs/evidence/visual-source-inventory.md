@@ -26,19 +26,19 @@
 |---|---|---|---|
 | D01 | “不转”现象被改写成五类信息缺口 | `DIAGRAM` + `READY-SCREENSHOT` | 主体 S |
 | D02 | 假设—文档—版本源码—相邻范式—运行实验梯 | `DIAGRAM` + `READY-CROP` | 主体 S |
-| D03 | 三条生产路线与一条诊断基线的决策矩阵 | `READY-SCREENSHOT` + `DIAGRAM` | 长版 A，现场可附录 |
+| D03 | 三条生产路线与一条诊断基线的决策矩阵 | `READY-SCREENSHOT` + `DIAGRAM` | 长版/附录 B |
 | DI01 | Confirmed / Rejected / Unverified 三栏和状态迁移 | `DIAGRAM` + `READY-CROP` | 短案例 A |
-| W01 | 11 个参考项目经宿主约束后分为四类可迁移资产 | `READY-CROP` + `DIAGRAM` | 主体 S |
-| W02 | Prompt 约束与工具 schema 约束的前后对照 | `READY-CROP` + `DIAGRAM` | 主体 S/A |
-| W03 | 相邻 API 假设—WPS 反证—修复—项目规则 | `READY-CROP` + `DIAGRAM` | 主体 A |
+| W01 | 11 个参考项目经宿主约束后分为四类可迁移资产 | `READY-CROP` + `DIAGRAM` | 长版/前置 A |
+| W02 | Prompt 约束与工具 schema 约束的前后对照 | `READY-CROP` + `DIAGRAM` | 主体/转场 A |
+| W03 | 相邻 API 假设—WPS 反证—修复—项目规则 | `READY-CROP` + `DIAGRAM` | 跨案例支持 B |
 | W04 | 候选筛选—Token/Schema—adapter—自动门禁—WPS 真机缺口 | `READY-CROP` + `NEEDS-CAPTURE` | 主体 S |
-| V01 | 65 查询—候选—ASR—问题视图，并把缺失原始转写标成断点 | `READY-CROP` + `DIAGRAM` | 主体 S |
+| V01 | 65 查询—候选—ASR—问题视图，并把缺失原始转写标成断点 | `READY-CROP` + `DIAGRAM` | 规模化前后景 A |
 | V02 | 412—API—无字幕—音频—抽样 ASR—作者文章回链 | `READY-CROP` + `DIAGRAM` | 主体 S |
 | T01 | 问题类型到官方文档/用户/源码/运行/Git/Skill 的路由表 | `READY-CROP` + `DIAGRAM` | 方法论 S |
-| T02 | mock 全绿、schema 合法，但真实 JSON 为空分组 | `READY-CROP` + `DIAGRAM` | 验证段 A |
+| T02 | mock 全绿、schema 合法，但真实 JSON 为空分组 | `READY-CROP` + `DIAGRAM` | 验证段 B |
 | X01 | README 词汇—源码符号—上游测试—本地事件序列 | `READY-CROP` + `DIAGRAM` | 60 秒迁移证据 A |
-| A01 | “提供引用供用户验证”被误升级为“系统已检查引用” | `READY-CROP` + `DIAGRAM` | 审计示例 A |
-| P01 | Deck.gl / WPS / 视频的 FULL / PARTIAL / 断点比较 | `READY-CROP` + `DIAGRAM` | 附录 A/B |
+| A01 | “提供引用供用户验证”被误升级为“系统已检查引用” | `READY-CROP` + `DIAGRAM` | 审计示例 B |
+| P01 | Deck.gl / WPS / 视频的 FULL / PARTIAL / 断点比较 | `READY-CROP` + `DIAGRAM` | 附录 B |
 
 ## Deck.gl
 
