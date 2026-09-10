@@ -1,0 +1,51 @@
+{
+  "capturedAt": "2026-09-05T13:08:42Z",
+  "source": {
+    "path": "/Users/wang/Documents/ChatGPT/research-presentation/tmp/wps-ai-plugin-main",
+    "kind": "downloaded snapshot without independent Git metadata",
+    "researchSha256": "2079f75cb2c6bd940336eb4216dcdf9a254f8929bdccde335e7225f11e677d19",
+    "feasiblePlansSha256": "0d5e0d540ca8a2c685e236b34a9febce3504e20dfe53294a2932a7e833fbc8cd",
+    "themesSha256": "c566280cdc0a9b9e77418079b046ab5d2a1f2dc9cbda85b923b1bec15250919e",
+    "slideToolAdapterSha256": "90b0ecbb05aeb210175d048265f5595a5edf8299e038e882b223164777b8e346",
+    "toolsSha256": "402ae564ea263490c5ddefcc9ef4a95a70b00fc32258a1a6ffae8673bd2fb92f",
+    "browserAdapterSha256": "3b2be77879de8d3e92fb0ef40eda2ca25ce238de095571f3bfe55fdeec375d40",
+    "wpsAdapterSha256": "ccbc23e688205f2f9411914b26162ee102b946f18ff9b2a5e7b967dca384a187"
+  },
+  "environment": {
+    "node": "v24.19.0",
+    "pnpm": "11.19.0",
+    "executionCopy": "temporary copy outside the repository"
+  },
+  "gates": [
+    {
+      "name": "frozen dependency install",
+      "exitCode": 1,
+      "result": "dependencies linked, but pnpm ended with ERR_PNPM_IGNORED_BUILDS for core-js, esbuild and fsevents"
+    },
+    {
+      "name": "themeToPrompt smoke check",
+      "exitCode": 0,
+      "result": "8 themes; tech selected; expected background emitted; unknown key fell back to business"
+    },
+    {
+      "name": "focused adapter and tool tests",
+      "exitCode": 0,
+      "result": "2 files passed; 49 tests passed"
+    },
+    {
+      "name": "full PPT agent tests",
+      "exitCode": 0,
+      "result": "3 files passed; 58 tests passed"
+    },
+    {
+      "name": "PPT package production build",
+      "exitCode": 0,
+      "result": "7018 modules transformed; build completed in 20.20s with sourcemap, eval and large-chunk warnings"
+    },
+    {
+      "name": "WPS true-host rendering",
+      "exitCode": null,
+      "result": "not executed; available tests use BrowserSlideAdapter in jsdom and do not exercise window.Application.ActivePresentation"
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>AI 辅助技术调研实践 · 编辑部研究报告</title>
+  <style>
+    /* === THEME: EDITORIAL RESEARCH DOSSIER === */
+    :root{--stage-bg:#201f1b;--slide-bg:#f4efe3;--ink:#171713;--muted:#6e685d;--red:#c83326;--rule:#b8af9e;--paper:#f4efe3;--mono:"SFMono-Regular","Menlo",monospace;--serif:"Songti SC","STSong",serif;--sans:"PingFang SC","Hiragino Sans GB",sans-serif;--ease:cubic-bezier(.16,1,.3,1)}
+    *{box-sizing:border-box}html,body{width:100%;height:100%;margin:0;overflow:hidden;background:var(--stage-bg)}
+    /* === FIXED 16:9 STAGE: MANDATORY BASE STYLES === */
+    .deck-viewport{position:fixed;inset:0;overflow:hidden;background:var(--stage-bg)}
+    .deck-stage{position:absolute;left:0;top:0;width:1920px;height:1080px;overflow:hidden;transform-origin:0 0;background:var(--slide-bg)}
+    .slide{position:absolute;inset:0;width:1920px;height:1080px;overflow:hidden;display:block;visibility:hidden;opacity:0;pointer-events:none;background:var(--slide-bg)}
+    .slide.active,.slide.visible{visibility:visible;opacity:1;pointer-events:auto;z-index:1}
+    img,video,canvas,svg{max-width:100%;max-height:100%}.deck-controls{position:fixed;left:50%;bottom:22px;transform:translateX(-50%);z-index:1000}
+    @media print{html,body{width:1920px;height:auto;overflow:visible;background:#fff}.deck-viewport{position:static;overflow:visible;background:#fff}.deck-stage{position:static;width:auto;height:auto;transform:none!important;background:none}.slide{position:relative;display:block!important;visibility:visible!important;opacity:1!important;pointer-events:auto!important;width:1920px;height:1080px;break-after:page;page-break-after:always}.slide:last-child{break-after:auto;page-break-after:auto}.deck-controls{display:none!important}}
+    @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.2s!important}}
+    /* === PAPER CHROME === */
+    .slide{padding:76px 92px 72px;font-family:var(--sans);color:var(--ink);background:linear-gradient(90deg,transparent 0 72px,rgba(200,51,38,.16) 72px 74px,transparent 74px),repeating-linear-gradient(0deg,rgba(23,23,19,.018) 0 1px,transparent 1px 5px),var(--paper)}
+    .folio{position:absolute;right:92px;top:70px;font:700 18px var(--mono);letter-spacing:.12em;color:var(--red)}
+    .kicker{font:700 20px var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--red)}
+    h1,h2,p{margin:0}h1{font:900 124px/1.03 var(--serif);letter-spacing:-.055em;max-width:1450px}h2{font:900 78px/1.08 var(--serif);letter-spacing:-.04em;max-width:1380px}.lede{font:400 34px/1.55 var(--sans);color:var(--muted);max-width:1240px}
+    .headline-rule{width:100%;height:2px;background:var(--ink);margin:34px 0 42px;position:relative}.headline-rule::after{content:"";position:absolute;width:220px;height:8px;background:var(--red);top:-3px}
+    .stamp{display:inline-block;border:3px solid var(--red);color:var(--red);padding:10px 18px;font:700 20px var(--mono);transform:rotate(-3deg)}
+    .quote{margin-top:96px;border-left:12px solid var(--red);padding-left:48px;font:900 62px/1.28 var(--serif);max-width:1450px}.annotations{position:absolute;right:100px;bottom:90px;width:420px;border-top:2px solid var(--ink);padding-top:18px;font:500 22px/1.5 var(--mono);color:var(--muted)}
+    /* === CONTENT GRIDS === */
+    .route{display:grid;grid-template-columns:360px 1fr;gap:0;margin-top:58px;border-top:2px solid var(--ink)}.route div{padding:26px 20px;border-bottom:1px solid var(--rule);font-size:30px}.route .q{font:700 24px var(--mono);color:var(--red)}
+    .pipeline{display:grid;grid-template-columns:repeat(5,1fr);gap:18px;margin-top:78px}.node{min-height:300px;border:2px solid var(--ink);padding:28px;display:flex;flex-direction:column;justify-content:space-between}.node b{font:900 38px/1.15 var(--serif)}.node small{font:600 19px var(--mono);color:var(--red)}.node.active{background:var(--red);color:var(--paper);border-color:var(--red)}.node.active small{color:var(--paper)}
+    .chain{display:flex;align-items:center;gap:12px;margin-top:90px}.chain span{border:2px solid var(--ink);padding:24px 22px;font:700 25px var(--mono);white-space:nowrap}.chain i{font:900 34px var(--serif);color:var(--red)}.chain .bad{background:var(--red);color:white;border-color:var(--red)}
+    .takeaway{position:absolute;left:92px;bottom:90px;font:900 66px/1.18 var(--serif);max-width:1370px}.takeaway em{font-style:normal;color:var(--red)}
+    /* === ENTRANCE MOTION === */
+    .reveal{opacity:0;transform:translateY(28px);transition:opacity .65s var(--ease),transform .65s var(--ease)}.visible .reveal{opacity:1;transform:none}.visible .reveal:nth-child(2){transition-delay:.08s}.visible .reveal:nth-child(3){transition-delay:.16s}.visible .reveal:nth-child(4){transition-delay:.24s}
+    /* === OUTSIDE-STAGE NAVIGATION === */
+    .hud{position:fixed;right:18px;bottom:16px;z-index:2000;color:#fff7e8;background:#171713dd;border:1px solid #ffffff33;padding:9px 13px;font:600 12px var(--mono);border-radius:2px}.progress{position:fixed;left:0;bottom:0;height:4px;background:var(--red);z-index:2100;transition:width .35s var(--ease)}
+  </style>
+</head>
+<body>
+<div class="deck-viewport"><main class="deck-stage" id="deckStage">
+  <!-- === 01 TITLE === -->
+  <section class="slide active"><span class="folio">01 / 06</span><div class="kicker reveal">RESEARCH PRACTICE · 2026</div><div class="headline-rule reveal"></div><h1 class="reveal">AI 辅助<br>技术调研实践</h1><p class="lede reveal" style="margin-top:44px">把“找巨人肩膀”从偶然技巧，变成可追溯、可验证、可复用的工程流程。</p><div class="annotations">搜索 · 筛选 · 原始证据<br>结构化整理 · 工程转化</div></section>
+  <!-- === 02 BAD PROMPT === -->
+  <section class="slide"><span class="folio">02 / 06</span><div class="kicker reveal">CASE FILE / STARTING POINT</div><h2 class="reveal" style="margin-top:56px">一个听起来很正常的 Prompt</h2><div class="quote reveal">“帮我调研一下，如何用 AI 在 WPS 中生成 PPT。”</div><div class="annotations"><span class="stamp">证据不足</span><br><br>版本不明 · 边界不明<br>产物不明 · 验收不明</div></section>
+  <!-- === 03 ROUTING === -->
+  <section class="slide"><span class="folio">03 / 06</span><div class="kicker reveal">METHOD / EVIDENCE ROUTING</div><h2 class="reveal" style="margin-top:38px">信息缺口，决定去哪里找</h2><div class="route reveal"><div class="q">平台事实</div><div>官方文档、标准与版本说明</div><div class="q">代码事实</div><div>源码、类型、Issue、PR 与 Release</div><div class="q">运行事实</div><div>目标环境中的最小实验</div><div class="q">产品事实</div><div>原型、用户反馈与人工验收</div></div></section>
+  <!-- === 04 WPS === -->
+  <section class="slide"><span class="folio">04 / 06</span><div class="kicker reveal">CASE / WPS</div><h2 class="reveal" style="margin-top:38px;font-size:68px;max-width:1640px">搜索结果不是答案，宿主约束才是筛选函数</h2><div class="pipeline reveal"><div class="node"><small>01</small><b>11 个<br>候选项目</b></div><div class="node"><small>02</small><b>宿主约束<br>淘汰</b></div><div class="node active"><small>03</small><b>Token<br>+ Schema</b></div><div class="node"><small>04</small><b>Adapter<br>实现</b></div><div class="node"><small>05</small><b>分层<br>门禁</b></div></div></section>
+  <!-- === 05 VIDEO === -->
+  <section class="slide"><span class="folio">05 / 06</span><div class="kicker reveal">CASE / VIDEO AS EVIDENCE</div><h2 class="reveal" style="margin-top:38px">不可搜索的媒介，先变成候选语料</h2><div class="chain reveal"><span>网页 412</span><i>→</i><span>平台 API</span><i>→</i><span>无字幕</span><i>→</i><span>音频</span><i>→</i><span>本地 ASR</span><i>→</i><span class="bad">2025 → 2005</span></div><p class="lede reveal" style="margin-top:60px">转写降低观看成本；回链、回听与降级，决定它能否成为证据。</p></section>
+  <!-- === 06 END === -->
+  <section class="slide"><span class="folio">06 / 06</span><div class="kicker reveal">THE OPERATING PRINCIPLE</div><div class="takeaway reveal">让 AI 替你<em>找、读、整理和实验</em>；<br>不要让它替你相信。</div><div class="annotations">定义问题 → 扩展检索 → 原始证据<br>交叉验证 → 工程转化 → 可复用资产</div></section>
+</main></div><div class="hud"><span id="counter">01 / 06</span>　← → / Space</div><div class="progress" id="progress"></div>
+<script>
+/* === PRESENTATION CONTROLLER === */
+class SlidePresentation{constructor(){this.slides=[...document.querySelectorAll('.slide')];this.i=0;this.stage=document.getElementById('deckStage');this.lastWheel=0;this.scale();addEventListener('resize',()=>this.scale());addEventListener('keydown',e=>{if(['ArrowRight','ArrowDown',' ','PageDown'].includes(e.key)){e.preventDefault();this.show(this.i+1)}if(['ArrowLeft','ArrowUp','PageUp'].includes(e.key)){e.preventDefault();this.show(this.i-1)}if(e.key==='Home')this.show(0);if(e.key==='End')this.show(this.slides.length-1)});addEventListener('wheel',e=>{if(Date.now()-this.lastWheel<500)return;this.lastWheel=Date.now();this.show(this.i+(e.deltaY>0?1:-1))},{passive:true});let x=0;addEventListener('touchstart',e=>x=e.touches[0].clientX,{passive:true});addEventListener('touchend',e=>{const d=e.changedTouches[0].clientX-x;if(Math.abs(d)>60)this.show(this.i+(d<0?1:-1))},{passive:true});this.show(0)}scale(){const s=Math.min(innerWidth/1920,innerHeight/1080),x=(innerWidth-1920*s)/2,y=(innerHeight-1080*s)/2;this.stage.style.transform=`translate(${x}px,${y}px) scale(${s})`}show(n){this.i=Math.max(0,Math.min(n,this.slides.length-1));this.slides.forEach((s,j)=>{s.classList.toggle('active',j===this.i);s.classList.toggle('visible',j===this.i)});counter.textContent=`${String(this.i+1).padStart(2,'0')} / ${String(this.slides.length).padStart(2,'0')}`;progress.style.width=`${(this.i+1)/this.slides.length*100}%`}}
+new SlidePresentation();
+</script>
+</body></html>

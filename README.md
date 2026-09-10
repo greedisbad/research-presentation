@@ -18,6 +18,7 @@ AI 的价值不只是替人搜索，而是把“定义问题、发现参考、�
 - [x] 建立 WPS 参考资产到最终代码的第一版逐项映射
 - [x] 纳入 Deck.gl“失败—文档—源码—实验”案例
 - [x] 纳入 Dice 跨会话调研记忆与任务交接案例
+- [x] 纳入 Tabloom“信息缺口—来源路由—反馈再调研”元案例
 - [x] 建立案例证据层与演讲抽象层的双层归档
 - [x] 按 2026-09-20 演讲日期建立倒排交付计划
 - [x] 补充 Information Foraging / Sensemaking 双循环理论
@@ -66,7 +67,18 @@ AI 的价值不只是替人搜索，而是把“定义问题、发现参考、�
 | [决策记录与负知识](docs/23-决策记录与负知识.md) | 保存决策上下文、失败条件、未知与跨会话交接状态 | 推荐 |
 | [调研可复现性与证据谱系](docs/24-调研可复现性与证据谱系.md) | 用来源—活动—责任主体追踪答案如何产生 | 推荐 |
 | [AI 如何在代码库中找到上下文](docs/25-AI如何在代码库中找到上下文.md) | 地图、分层定位、迭代检索与工具反馈怎样协同 | 核心 |
+| [案例：Tabloom 信息搜集与决策轨迹](docs/26-案例-Tabloom信息搜集与决策轨迹.md) | 调研如何贯穿原型、实现、调试、真实模型实验和发布 | 核心 |
 | [演示证据切片索引](docs/evidence/README.md) | 从原始案例中选取能支持单个演讲主张的最小证据组合 | 核心 |
+| [精确来源与候选视觉素材](docs/evidence/visual-source-inventory.md) | 每个切片的原始位置、可用截图、重画方案、缺口和捕获优先级 | 核心 |
+| [证据切片优先级与重复观点审计](docs/evidence/priority-and-overlap-audit.md) | 15 个切片的 S/A/B/D、重复簇和唯一主观点归属 | 核心 |
+| [S 级主张证据审计](docs/evidence/S-level-claim-audit-2026-09-08.md) | 5 个核心切片的 FULL/PARTIAL/NONE、可安全上台表述与冻结前动作 | 核心 |
+| [WPS 真机证据采集协议](docs/evidence/runtime/wps/true-host-capture-protocol.md) | 本机宿主版本、固定输入、截图/报告字段与成功失败门禁 | 待执行 |
+| [OpenAI Deep Research 官方页快照](docs/sources/snapshots/openai-deep-research-help-2026-09-08.md) | 访问日官方能力边界与 A01 可引用范围 | 备选 |
+| [易变事实复核](docs/sources/volatile-fact-check-2026-09-08.md) | Deck.gl/Chrome/WPS/B 站的版本、链接、许可证与数字冻结检查 | 核心 |
+| [外部研究冻结清单](docs/29-外部研究冻结清单.md) | 已满足的问题槽位、停止理由、解冻条件与剩余实验缺口 | 核心 |
+| [完整长版故事板](docs/30-完整长版故事板.md) | 55 页内容母版、八幕结构与全部 S/A 切片覆盖 | 核心 |
+| [长版故事板逐页制作规格](docs/31-长版故事板逐页制作规格.md) | 55 页 takeaway、转场、展示档位、证据强度、必要性和压缩方式 | 核心 |
+| [逐页演讲文稿母版](docs/32-逐页演讲文稿母版.md) | 55 页屏幕文字、画面建议、完整口播、转场、证据入口与编排标签 | 核心 |
 | [书签与来源评分](docs/sources/bookmarks.md) | 外部来源、用途、可信度和推荐度 | 备查 |
 | [证据缺口矩阵](docs/sources/gap-matrix.md) | 当前证据强度、冲突、缺口和后续动作 | 备查 |
 | [主张—来源账本](docs/sources/claim-ledger.md) | 核心主张的来源、日期与适用边界 | 备查 |
@@ -96,6 +108,7 @@ AI 的价值不只是替人搜索，而是把“定义问题、发现参考、�
 | [Research Brief](docs/templates/research-brief.md) | 在搜索前定义决策、边界、输出与停止条件 |
 | [来源卡](docs/templates/source-card.md) | 记录事实、推断、限制和工程转化 |
 | [验证清单](docs/templates/research-verification-checklist.md) | 检查搜索、引用、实验和沉淀是否合格 |
+| [决策研究日志](docs/templates/decision-research-log.yaml) | 记录信息缺口、假设、来源、置信度变化、行动和复现边界 |
 
 ## 原始案例
 
@@ -105,6 +118,7 @@ AI 的价值不只是替人搜索，而是把“定义问题、发现参考、�
 | `tmp/docs-ditto/` | B 站搜索、123 份视频转写、聚合洞察与总结流程 | 只读证据库 |
 | `/Users/wang/Documents/ChatGPT/deckgl-rotation/` | Deck.gl 四路线实验、运行时验证和实现复盘 | 外部只读案例证据 |
 | `/Users/wang/Documents/Codex/2026-08-30/wo/dice-game/docs/research/` | 三阶段会话复盘与研究交接 | 只抽取方法，不展开游戏代码 |
+| `/Users/wang/Documents/ChatGPT/chrome-ai-tab-grouper/docs/` | Tabloom Agent 调研轨迹、开发复盘、设计与实施计划 | 外部只读元案例；不以插件功能为主线 |
 
 桌面的 `docs1.zip` 与 `docs2.zip` SHA-256 完全一致，属于同一份材料。
 
@@ -116,5 +130,6 @@ AI 的价值不只是替人搜索，而是把“定义问题、发现参考、�
 4. 案例二：从几十个视频到可检索知识库
 5. 案例三：从 Deck.gl 生成失败到文档—源码—实验链
 6. 短案例：用 Dice 复盘保存负知识和任务交接
-7. 验证闭环：关键事实、关键未知和匹配媒介
-8. 如何把一次调研沉淀为下一次可复用的能力
+7. Tabloom 元案例：让错误、用户反馈与真实边界生成下一轮信息缺口
+8. 验证闭环：关键事实、关键未知和匹配媒介
+9. 如何把一次调研沉淀为下一次可复用的能力

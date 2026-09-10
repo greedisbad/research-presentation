@@ -1,0 +1,64 @@
+{
+  "capturedAt": "2026-09-05T13:01:46Z",
+  "video": {
+    "bvid": "BV1DVwLz2EGv",
+    "url": "https://www.bilibili.com/video/BV1DVwLz2EGv",
+    "title": "裸辞回国做独立游戏，花了2万8摸索出的AI编程工作流",
+    "owner": "tyk233",
+    "publishedAt": "2026-03-16T07:53:43Z",
+    "cid": 36736469364,
+    "durationSecondsFromApi": 1367
+  },
+  "platformEvidence": {
+    "viewApiSha256": "b62f72ea4e9c2288dcd066b44de71509c3583fc10f38f286a423fc975860b12f",
+    "playerApiSha256": "38337142da0bf5dd02f2b3391c4fee63fb9af44485db7806d1a275bad39692b0",
+    "publicSubtitleCount": 0,
+    "pageFetchStatus": 412
+  },
+  "audio": {
+    "committed": false,
+    "localPath": "tmp/video-evidence/BV1DVwLz2EGv/audio/裸辞回国做独立游戏，花了2万8摸索出的AI编程工作流.m4a",
+    "format": "m4a / AAC",
+    "bytes": 19447197,
+    "durationSecondsFromFfprobe": 1366.076145,
+    "sha256": "fc1566095b2dd14d3ca0c5d9bdb6ac571e667fe3695ddf4ac58f338f512be288"
+  },
+  "transcription": {
+    "scope": "three 90-second samples, not the full video",
+    "engine": "faster-whisper 1.2.1",
+    "model": "base",
+    "device": "CPU int8",
+    "language": "zh",
+    "rawTranscriptCommitted": false,
+    "rawTranscriptSha256": "3f1fd67df5fa709e9b958ad55896f7e6f2a68375ab9b2f5e740d11fdc49f4257",
+    "samples": [
+      {
+        "startSeconds": 0,
+        "endSeconds": 90,
+        "audioSha256": "b2723279b62b12f03e8e38ef630aaf19a2d6027b8b8195c83bec4dbcc1eda70f"
+      },
+      {
+        "startSeconds": 300,
+        "endSeconds": 390,
+        "audioSha256": "aa1a1971664edaa882b42d4f4245e91a86a718058e49930a3a320ce35fbea1c9"
+      },
+      {
+        "startSeconds": 1200,
+        "endSeconds": 1290,
+        "audioSha256": "8a56f71a7b2ed1f4c3165fed47089cd540562120c35f34a11374e5214a563e36"
+      }
+    ]
+  },
+  "externalCorroboration": {
+    "url": "https://tyksworks.com/posts/ai-coding-workflow-zh/",
+    "publishedDate": "2026-03-13",
+    "relationship": "same creator's article covering the video's main workflow"
+  },
+  "limitations": [
+    "No public subtitle track was exposed by the player API.",
+    "Only 270 seconds were transcribed locally.",
+    "The base ASR model produced visible errors in dates, names, products, and technical terms.",
+    "No human listening audit was available in this run.",
+    "Raw audio and ASR output remain local and are not included in the public repository."
+  ]
+}

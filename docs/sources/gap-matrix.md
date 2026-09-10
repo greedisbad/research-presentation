@@ -9,8 +9,8 @@
 | AI 编程收益依赖任务和组织环境 | DORA 2025、METR RCT、微软现场实验 | 高 | 工具版本与人群差异大 | 并列呈现，不给统一效率数字 |
 | 仓库内知识和反馈回路提高 Agent 能力 | OpenAI Harness、Sora Android、Anthropic best practices | 中高 | 厂商自述，有选择偏差 | 用本地 WPS 案例佐证 |
 | AI 可从资料搜索进入科学/工程执行 | Google ERA、AlphaEvolve、OpenAI scientific computing | 高 | 先进实验与日常开发差距大 | 只用于展示上限与设计原则 |
-| 视频可转换为 source-grounded 语料 | NotebookLM 官方文档、本地 B 站管线；V01 证据切片 | 中高 | 当前压缩包缺原始音频、转写、日志与 API 响应，无法独立复核 123/123 和逐字时间戳 | 找回一个原始样本补链；否则只展示流程和外证回链，不称完整证据链 |
-| “不造轮子”应理解为局部模式复用 | WPS 11 项目调研→可行方案→实现映射 | 高 | 下载包缺原始 Git 历史，部分版本信息不可恢复 | 继续补 commit/tag 或明确证据上限 |
+| 视频可转换为 source-grounded 语料 | NotebookLM 官方文档、本地 B 站管线；V01；V02 已恢复一个 BV 的平台 JSON、音频和 270 秒抽样 ASR | 中高 | 仍无法复核旧批次 123/123；抽样未经人耳回听；base ASR 对日期与专名错误明显 | 正文展示单样本降级链和错误；逐字引用前人工回听，旧批量数字继续标本地记录 |
+| “不造轮子”应理解为局部模式复用 | WPS 11 项目调研→可行方案→Theme/SlideSpec/apply_template→58 项测试与构建 | 高 | 下载包缺原始 Git 历史；Browser mock 不能证明 WPS 真机与视觉质量 | 上台展示筛选与协议化；真机结果继续标待验收 |
 | 公开仓库不等于可直接复制或依赖 | GitHub Licensing、Dependency Graph、OpenSSF、OSV；PPTAgent/PptxGenJS/Marp 实例 | 高 | 自动评分和漏洞库存在盲区；不是法律意见 | 已补真实样例；下一步在 WPS 做 PptxGenJS spike |
 | Code/Issue/PR/Release 可组成实现证据链 | GitHub Code Search、Issue Search、Blame、Release 文档 | 高 | 并非所有项目用 GitHub Release | 在 WPS 或外部库上跑通一个完整例子 |
 | 搜索 Agent 会遭遇间接提示注入 | NIST AI 600-1、Anthropic、Microsoft、OWASP | 高 | 防御持续变化，没有单项措施可保证安全 | 设计一个无害注入演示与工具层阻断 |
@@ -25,4 +25,7 @@
 | 技术调研需要在信息觅食与意义建构之间往返 | Pirolli & Card 2005；本项目资料卡、账本和缺口矩阵 | 高（理论结构） | 原研究面向情报分析员，不直接测 AI 技术调研 | 以 Deck.gl 的失败触发重新拆题作为本地过程证据，不宣称效率因果 |
 | AI 阅读源码应由问题树驱动并组合多种证据 | Ko、Sillito、LaToza、Wyrich；Deck.gl/WPS 本地案例 | 高（人类程序理解）/中（AI 迁移） | 经典研究工具环境较旧，AI 跨工具综合的收益尚无本项目对照 | 在新陌生库实验中记录问题树、错误跳转、人工修正和最终验证 |
 | AI 调研应保存来源、转换活动与责任主体的证据谱系 | W3C PROV-O；PRISMA-S；P01 对 Deck.gl、WPS、视频三条主张的谱系审计 | 高（标准概念）/中（工程迁移） | 两套规范都不直接评价 AI 技术调研质量；记录完整不代表结论正确；尚无独立冷读者测试 | 三条谱系已完成自审；下一步测试他人能否据此回查并记录卡点 |
-| AI 在大仓库中应分层定位并让初次结果驱动后续检索，而非一次塞入全部上下文 | RepoCoder、Agentless、SWE-agent；Deck.gl/WPS 本地案例 | 中高 | 三项研究任务是代码补全或修复，不是通用技术调研；具体收益绑定模型、基准和接口 | 在小型陌生仓库记录各轮查询、候选收窄率、误跳转和验证结果 |
+| AI 在大仓库中应分层定位并让初次结果驱动后续检索，而非一次塞入全部上下文 | RepoCoder、Agentless、SWE-agent；Deck.gl/WPS；X01 p-limit 陌生仓库实验 | 中高 | 三项研究任务是代码补全或修复；X01 仓库很小且没有人工对照，不能推断效率收益 | 在更大陌生仓库记录候选收窄率与误跳转；X01 已证明流程可执行 |
+| 技术调研应从信息缺口出发，并按问题类型路由证据 | Tabloom 16 阶段轨迹、T01；现有 WPS/Deck.gl 案例 | 中高 | Tabloom 阶段 1–15 部分为事后重建；没有与无路由流程做时间/质量对照 | 正文作为方法规则，不宣称效率因果；后续用 Research Log 前瞻记录 |
+| 结构合法不等于 AI 结果具有业务价值 | Tabloom grouping 校验、真实 API 固定假数据实验、T02 | 中高 | 原始用户运行输出未单独归档；供应商响应会波动；当次事实不能外推 | 保留四层 evaluator；演示前用假数据重跑，不使用真实标签或 Key 日志 |
+| Agent 调研轨迹可用外部对象审计而无需伪造隐藏推理 | Tabloom 研究轨迹、Git/文档/测试、Reader Testing、决策日志模板 | 中 | Reader Testing 原始输出只在历史对话；模板尚未在新项目前瞻使用 | 下一次项目从第一天填写日志，比较事后重建缺口 |

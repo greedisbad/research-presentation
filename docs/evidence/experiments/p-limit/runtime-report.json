@@ -1,0 +1,131 @@
+{
+  "source": "tmp/p-limit/index.js",
+  "question": "What happens when concurrency is lowered below activeCount?",
+  "observed": {
+    "activeTasksCancelled": false,
+    "queuedTaskStartedWhileActiveCountAtOrAboveNewLimit": false,
+    "queuedTasksResumeWhenActiveCountDropsBelowNewLimit": true
+  },
+  "events": [
+    {
+      "event": "start",
+      "task": 1,
+      "activeCount": 3,
+      "pendingCount": 2,
+      "concurrency": 3
+    },
+    {
+      "event": "start",
+      "task": 2,
+      "activeCount": 3,
+      "pendingCount": 2,
+      "concurrency": 3
+    },
+    {
+      "event": "start",
+      "task": 3,
+      "activeCount": 3,
+      "pendingCount": 2,
+      "concurrency": 3
+    },
+    {
+      "event": "initial-capacity-reached",
+      "task": null,
+      "activeCount": 3,
+      "pendingCount": 2,
+      "concurrency": 3
+    },
+    {
+      "event": "lowered-to-one",
+      "task": null,
+      "activeCount": 3,
+      "pendingCount": 2,
+      "concurrency": 1
+    },
+    {
+      "event": "end",
+      "task": 1,
+      "activeCount": 3,
+      "pendingCount": 2,
+      "concurrency": 1
+    },
+    {
+      "event": "after-task-1",
+      "task": null,
+      "activeCount": 2,
+      "pendingCount": 2,
+      "concurrency": 1
+    },
+    {
+      "event": "end",
+      "task": 2,
+      "activeCount": 2,
+      "pendingCount": 2,
+      "concurrency": 1
+    },
+    {
+      "event": "after-task-2",
+      "task": null,
+      "activeCount": 1,
+      "pendingCount": 2,
+      "concurrency": 1
+    },
+    {
+      "event": "end",
+      "task": 3,
+      "activeCount": 1,
+      "pendingCount": 2,
+      "concurrency": 1
+    },
+    {
+      "event": "start",
+      "task": 4,
+      "activeCount": 1,
+      "pendingCount": 1,
+      "concurrency": 1
+    },
+    {
+      "event": "after-task-3",
+      "task": null,
+      "activeCount": 1,
+      "pendingCount": 1,
+      "concurrency": 1
+    },
+    {
+      "event": "end",
+      "task": 4,
+      "activeCount": 1,
+      "pendingCount": 1,
+      "concurrency": 1
+    },
+    {
+      "event": "start",
+      "task": 5,
+      "activeCount": 1,
+      "pendingCount": 0,
+      "concurrency": 1
+    },
+    {
+      "event": "after-task-4",
+      "task": null,
+      "activeCount": 1,
+      "pendingCount": 0,
+      "concurrency": 1
+    },
+    {
+      "event": "end",
+      "task": 5,
+      "activeCount": 1,
+      "pendingCount": 0,
+      "concurrency": 1
+    },
+    {
+      "event": "complete",
+      "task": null,
+      "activeCount": 0,
+      "pendingCount": 0,
+      "concurrency": 1
+    }
+  ],
+  "passed": true
+}
