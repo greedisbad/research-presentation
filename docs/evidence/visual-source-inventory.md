@@ -39,6 +39,26 @@
 | X01 | README 词汇—源码符号—上游测试—本地事件序列 | `READY-CROP` + `DIAGRAM` | 60 秒迁移证据 A |
 | A01 | “提供引用供用户验证”被误升级为“系统已检查引用” | `READY-CROP` + `DIAGRAM` | 审计示例 B |
 | P01 | Deck.gl / WPS / 视频的 FULL / PARTIAL / 断点比较 | `READY-CROP` + `DIAGRAM` | 附录 B |
+| AIR01 | 官方机型/尺寸与视觉参考 → 参数化 Blender → 可编辑工程；747/货运渲染图 | `READY-SCREENSHOT` + `READY-CROP` | 长版 A，现场短插页 |
+| EX01 | 14 候选 → 许可/语义/CDN 筛选 → 6 个同数据演示；索引与宽表截图 | `READY-SCREENSHOT` + `READY-CROP` | 方法段 S 候选 |
+
+## 2026-09-16 新增本地视觉案例
+
+### AIR01：事实、图片参考与可编辑三维资产
+
+- 项目复盘：`/Users/wang/Documents/ChatGPT/aircraft-modeling/IMPLEMENTATION-NOTES.md`，第 1–89 行是来源、图片与生成链；第 90–129 行是失败闭环和验证边界。
+- 数据入口：原项目 `src/data/fleet.ts` 保存四个代表机型的展示参数和官网 URL；`scripts/build_aircraft.py` 将外形参数翻译成几何。
+- 已归档画面：[`747-blender-preview.png`](../../assets/cases/aircraft/747-blender-preview.png)、[`cargo-blender-preview.png`](../../assets/cases/aircraft/cargo-blender-preview.png)。两图是本地 Blender 渲染，不是官网照片。
+- 推荐画法：一张“事实来源 / 外观参考 / 创作性假设 / 运行证据”的四栏谱系；背景可用 747 渲染，不能把它标注成工程准确模型。
+- 证据边界：渲染证明当次资产可见，不证明品牌授权、精确机务造型或动画持续。原项目的官网 SVG 进入了模型贴图，公开演讲前仍需核对使用范围。
+
+### EX01：复杂表格选型实验
+
+- 项目复盘：`/Users/wang/Documents/ChatGPT/web-excel/IMPLEMENTATION-NOTES.md`，第 1–67 行是需求与筛选，第 68–127 行是失败闭环、性能口径和后续 Univer 评估。
+- 原始筛选和实验：原项目 `docs/02-research.md`、`docs/03-cdn.md`、`docs/05-validation.md`、`docs/browser-results.json`、`docs/interaction-results.json`。
+- 已归档画面：[`index.png`](../../assets/cases/web-excel/index.png)、[`jspreadsheet.png`](../../assets/cases/web-excel/jspreadsheet.png)、[`vxe.png`](../../assets/cases/web-excel/vxe.png)。均为原项目 `.cache/` 当次 Chrome 截图的副本。
+- 推荐裁切：索引页的 14 候选/6 演示/能力边界；Jspreadsheet 用户选区合并操作区；VXE 业务表格外观。整张索引页过长，不宜不裁切直接放进 16:9 幻灯片。
+- 证据边界：截图只证明外观；行移动、合并和筛选要由实例状态/结果 JSON 佐证。2026-09-12 的单机 CDN 和初始化数据不做普遍可达性或性能排行榜。
 
 ## Deck.gl
 
