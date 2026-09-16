@@ -73,6 +73,7 @@ AI 的价值不只是替人搜索，而是把“定义问题、发现参考、�
 | [证据切片优先级与重复观点审计](docs/evidence/priority-and-overlap-audit.md) | 15 个切片的 S/A/B/D、重复簇和唯一主观点归属 | 核心 |
 | [S 级主张证据审计](docs/evidence/S-level-claim-audit-2026-09-08.md) | 5 个核心切片的 FULL/PARTIAL/NONE、可安全上台表述与冻结前动作 | 核心 |
 | [WPS 真机证据采集协议](docs/evidence/runtime/wps/true-host-capture-protocol.md) | 本机宿主版本、固定输入、截图/报告字段与成功失败门禁 | 待执行 |
+| [WPS 历史真机截图](docs/evidence/W05-WPS历史真机截图.md) | 五张 2026 年 5 月 WPS 客户端截图、上台用途与当前验证边界 | 推荐 |
 | [OpenAI Deep Research 官方页快照](docs/sources/snapshots/openai-deep-research-help-2026-09-08.md) | 访问日官方能力边界与 A01 可引用范围 | 备选 |
 | [易变事实复核](docs/sources/volatile-fact-check-2026-09-08.md) | Deck.gl/Chrome/WPS/B 站的版本、链接、许可证与数字冻结检查 | 核心 |
 | [外部研究冻结清单](docs/29-外部研究冻结清单.md) | 已满足的问题槽位、停止理由、解冻条件与剩余实验缺口 | 核心 |

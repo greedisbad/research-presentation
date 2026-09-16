@@ -31,7 +31,8 @@
 | W01 | 11 个参考项目经宿主约束后分为四类可迁移资产 | `READY-CROP` + `DIAGRAM` | 长版/前置 A |
 | W02 | Prompt 约束与工具 schema 约束的前后对照 | `READY-CROP` + `DIAGRAM` | 主体/转场 A |
 | W03 | 相邻 API 假设—WPS 反证—修复—项目规则 | `READY-CROP` + `DIAGRAM` | 跨案例支持 B |
-| W04 | 候选筛选—Token/Schema—adapter—自动门禁—WPS 真机缺口 | `READY-CROP` + `NEEDS-CAPTURE` | 主体 S |
+| W04 | 候选筛选—Token/Schema—adapter—自动门禁—当前 WPS 真机缺口 | `READY-CROP` + `NEEDS-CAPTURE` | 主体 S |
+| W05 | 2026 年 5 月 WPS 客户端内多页生成与进度记录 | `READY-SCREENSHOT`（历史） | 主体可用，不能替代 W04 当前门禁 |
 | V01 | 65 查询—候选—ASR—问题视图，并把缺失原始转写标成断点 | `READY-CROP` + `DIAGRAM` | 规模化前后景 A |
 | V02 | 412—API—无字幕—音频—抽样 ASR—作者文章回链 | `READY-CROP` + `DIAGRAM` | 主体 S |
 | T01 | 问题类型到官方文档/用户/源码/运行/Git/Skill 的路由表 | `READY-CROP` + `DIAGRAM` | 方法论 S |
@@ -135,7 +136,8 @@
 - 工具到 adapter：`wps-plugin-ppt/src/agent/tools.ts` 中 `apply_template`。
 - 当次门禁：[`runtime-report.json`](runtime/wps/runtime-report.json)。
 - 推荐裁切：报告中 theme smoke、49/58 项测试和构建结果，与 `wpsHostRun: not-run` 或等价缺口并列。
-- 必补截图：若 WPS 案例进入正文，冻结前在目标 WPS 版本中保存一张实际生成结果与版本信息；在此之前不由 mock 截图代替真机证据。
+- 历史素材：用户追加的 2026 年 5 月 WPS 真机截图见 [`W05`](W05-WPS历史真机截图.md)，可作当时的结果画面；它们没有当前版本号和运行日志。
+- 必补截图：若要声称当前版本通过宿主验收，仍须在目标 WPS 版本中保存实际生成结果与版本信息；不由历史截图或 mock 代替当前门禁。
 
 ## 视频
 
