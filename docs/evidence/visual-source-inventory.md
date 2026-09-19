@@ -42,6 +42,7 @@
 | P01 | Deck.gl / WPS / 视频的 FULL / PARTIAL / 断点比较 | `READY-CROP` + `DIAGRAM` | 附录 B |
 | AIR01 | 官方机型/尺寸与视觉参考 → 参数化 Blender → 可编辑工程；747/货运渲染图 | `READY-SCREENSHOT` + `READY-CROP` | 长版 A，现场短插页 |
 | EX01 | 14 候选 → 许可/语义/CDN 筛选 → 6 个同数据演示；索引与宽表截图 | `READY-SCREENSHOT` + `READY-CROP` | 方法段 S 候选 |
+| AIR02 | 顺丰舱位图稀有代码 → contour 术语 → 数值指纹 → 几何约束与待确认项 | `READY-CROP` + `DIAGRAM` + `NEEDS-CAPTURE` | 搜索方法 A |
 
 ## 2026-09-16 新增本地视觉案例
 
@@ -60,6 +61,15 @@
 - 已归档画面：[`index.png`](../../assets/cases/web-excel/index.png)、[`jspreadsheet.png`](../../assets/cases/web-excel/jspreadsheet.png)、[`vxe.png`](../../assets/cases/web-excel/vxe.png)。均为原项目 `.cache/` 当次 Chrome 截图的副本。
 - 推荐裁切：索引页的 14 候选/6 演示/能力边界；Jspreadsheet 用户选区合并操作区；VXE 业务表格外观。整张索引页过长，不宜不裁切直接放进 16:9 幻灯片。
 - 证据边界：截图只证明外观；行移动、合并和筛选要由实例状态/结果 JSON 佐证。2026-09-12 的单机 CDN 和初始化数据不做普遍可达性或性能排行榜。
+
+### AIR02：B747 货舱专业资料检索
+
+- 案例提炼：[`35-案例-B747货舱资料检索.md`](../35-案例-B747货舱资料检索.md)。
+- 完整过程：[`B747-400F_information_retrieval_method.md`](../B747-400F_information_retrieval_method.md)，包含从位置代码到 contour code、数值指纹、下舱 configuration 和来源分层的检索演化。
+- 结果快照：[`B747-400F_SF_cargo_positions_contours.md`](../sources/local/B747-400F_SF_cargo_positions_contours.md)，从外部项目逐字节复制，保留事实、推断和待确认项。
+- 推荐重画：只画一条 `舱位图代码 → 低频共现查询 → H4M/HPL → CKair/Manual → envelope + confidence` 路径；不展示全部 29 个舱位。
+- `NEEDS-CAPTURE`：顺丰原始舱位图、CKair contour 图及 PDF 页面尚未作为本地视觉素材归档。正式制作前应核对链接与展示权限，并保留原始来源页脚。
+- 证据边界：公开资料足以支持预判模型，不能替代顺丰内部 W&B / Cargo Loading Manual；左右单侧折点、Q 位高度、Bulk 精确边界等仍未确认。
 
 ## Deck.gl
 
