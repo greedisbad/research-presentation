@@ -1,0 +1,95 @@
+{
+  "project": "worktime-interaction",
+  "outDir": "worktime-interaction",
+  "viewport": { "width": 1000, "height": 940 },
+  "note": "viewport 定为 1000x940 是刻意取舍：index.html 入口页是桌面布局（.page 宽 min(100%-32px,1220px)，.grid 在 >900px 时为三列），需要 ≥900px 才能三方案并排；而三个实现页是移动原型（.shell 宽 min(100%,430px) 居中、body 底色 #ececec），会被渲染成居中的手机形列，属预期的「原型外框」效果。纯静态多页原型（无 package.json、无 dist），四个 HTML 都在项目根目录，file:// 直接打开，无需 server。项目核心 = 同一个「每周自动填报工时」需求的 3 套交互方案对比：index.html 是方案入口，auto-fill.html（方案01 精致卡片版）、auto-fill-legacy.html（方案02 经典表单版）、auto-fill-hybrid.html（方案03 混合版）是三个实现。⚠️ 三个实现页都从 cdn.jsdelivr.net 加载 Vue3 + Vant4（CSS 在第 7 行，JS 在页尾），且 #app 带 v-cloak —— 若本机访问不了 jsdelivr，页面会白屏，必须先确认 CDN 可达。选择器取自各页真实存在的 class 与 aria-label（.setting-card / .weekday-grid .weekday / .add-project / .total--bad / .sheet / [aria-label=\"编辑通用安排\"]）。",
+  "steps": [
+    {
+      "action": "goto",
+      "url": "file:///Users/wang/Documents/ChatGPT/worktime-interaction/index.html",
+      "name": "打开方案入口页「自动填报交互方案」"
+    },
+    { "action": "wait", "ms": 800 },
+
+    {
+      "action": "screenshot",
+      "shot": "01-入口-三套交互方案对比.png",
+      "name": "入口：一页对比 3 套交互方案（方案 01 精致卡片版 / 方案 02 经典表单版 / 方案 03 混合版），每张卡带 aria-label「打开…」与「进入方案 →」",
+      "fullPage": true
+    },
+
+    {
+      "action": "goto",
+      "url": "file:///Users/wang/Documents/ChatGPT/worktime-interaction/auto-fill-hybrid.html",
+      "name": "进入方案 03 混合版"
+    },
+    { "action": "waitFor", "selector": ".status-card", "name": "等待 Vue+Vant 挂载（v-cloak 移除）" },
+    { "action": "wait", "ms": 1000 },
+
+    {
+      "action": "screenshot",
+      "shot": "02-方案03混合版-配置已生效主界面.png",
+      "name": "方案 03 混合版主界面：状态卡『配置已生效 / 每周自动填报上一周工时 / 下次执行：9 月 14 日 09:00』+ 通用安排卡 + 「某天安排不同？直接点击星期设置独立安排」的星期宫格",
+      "fullPage": false
+    },
+
+    {
+      "action": "click",
+      "selector": ".setting-card",
+      "name": "点「编辑通用安排」打开底部编辑抽屉"
+    },
+    { "action": "waitFor", "selector": ".sheet", "name": "等待编辑抽屉 .sheet 出现" },
+    { "action": "wait", "ms": 800 },
+
+    {
+      "action": "screenshot",
+      "shot": "03-混合版-编辑抽屉与占比校验.png",
+      "name": "深层交互一步：底部 .sheet 编辑抽屉展开（标题「通用安排」/「未单独设置的日期均使用此安排」），内含「项目 / 专项任务 / 备注 / 投入占比」四个 Vant 字段、倒角总计「校验通过 100%」与「保存安排 / 取消 / 删除独立安排」",
+      "fullPage": false
+    },
+
+    {
+      "action": "click",
+      "selector": ".add-project",
+      "name": "点「添加项目」新增一行"
+    },
+    { "action": "wait", "ms": 700 },
+
+    {
+      "action": "screenshot",
+      "shot": "04-混合版-添加项目与占比失衡提示.png",
+      "name": "深层交互二步：抽屉内多项目行（可删除第 N 项），底部合计条切到 .total--bad 状态——投入占比不等于 100% 时给出中文校验提示并禁用「保存安排」",
+      "fullPage": false
+    },
+
+    {
+      "action": "goto",
+      "url": "file:///Users/wang/Documents/ChatGPT/worktime-interaction/auto-fill.html",
+      "name": "进入方案 01 精致卡片版"
+    },
+    { "action": "waitFor", "selector": ".status-card", "name": "等待 Vue+Vant 挂载" },
+    { "action": "wait", "ms": 1000 },
+
+    {
+      "action": "screenshot",
+      "shot": "05-方案01精致卡片版-主界面.png",
+      "name": "方案 01 精致卡片版：同一需求的卡片式实现（同样的『配置已生效 / 每周自动填报上一周工时 / 下次执行』状态卡与「通用安排 100%」摘要卡），用于和方案 03 做视觉对比",
+      "fullPage": false
+    },
+
+    {
+      "action": "goto",
+      "url": "file:///Users/wang/Documents/ChatGPT/worktime-interaction/auto-fill-legacy.html",
+      "name": "进入方案 02 经典表单版"
+    },
+    { "action": "waitFor", "selector": "#app", "name": "等待 Vue+Vant 挂载" },
+    { "action": "wait", "ms": 1000 },
+
+    {
+      "action": "screenshot",
+      "shot": "06-方案02经典表单版-主界面.png",
+      "name": "方案 02 经典表单版：传统列表式表单实现（通用安排行 + 逐日「编辑周一安排…」列表项），与卡片版/混合版构成三选一的取舍证据",
+      "fullPage": false
+    }
+  ]
+}

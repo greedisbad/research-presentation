@@ -1,0 +1,96 @@
+{
+  "project": "ai-earn-research",
+  "outDir": "ai-earn-research",
+  "engine": "evidence-shot.mjs",
+  "note": "本项目是纯研究仓库：无 package.json、无 HTML/Vue/React 入口、无 dist，且全仓库 grep 不到 Dice / Tabloom / 大话骰，因此不能跑 capture.mjs。改用 evidence-shot.mjs 裁切真实文件。用途对应演讲稿第 46 页「一个最小的项目研究包」（画面占位：『本研究仓库 README 导航的一小块，作为真实示例』）与第 50 页「项目记住为什么」。第 41 页的 Dice / Tabloom 不在本仓库，见 research-presentation/docs/18-案例-Dice调研记忆与任务交接.md 与 26-案例-Tabloom信息搜集与决策轨迹.md。",
+  "items": [
+    {
+      "shot": "01-研究包-目标与核心约束.png",
+      "name": "最小研究包的「目标与约束」：研究对象、三个待答问题，以及先定标准再搜索、证据分层的硬约束",
+      "title": "最小研究包（一）：目标与硬约束",
+      "sourceLabel": "ai-earn-research/README.md:1-21",
+      "sourcePath": "/Users/wang/Documents/ChatGPT/ai-earn-research/README.md",
+      "from": 1,
+      "to": 21,
+      "width": 1100,
+      "note": "对应第 46 页屏幕文字第一项「目标与约束」。研究者先写死「先定义问题和筛选标准，再搜索和下载视频」，后续所有候选才可比。<b>这是人先给标准，不是模型自适应。</b>"
+    },
+    {
+      "shot": "02-研究包-目录约定与导航.png",
+      "name": "仓库目录约定、第一轮完成标准与 README 末尾的十一条导航入口",
+      "title": "最小研究包（二）：目录约定与导航",
+      "sourceLabel": "ai-earn-research/README.md:168-210",
+      "sourcePath": "/Users/wang/Documents/ChatGPT/ai-earn-research/README.md",
+      "from": 168,
+      "to": 210,
+      "width": 1100,
+      "note": "演讲稿第 46 页画面占位点名要的那一块。文件不需要是知识库：<b>Markdown + CSV + Git 提交</b>已经让下一位读者能从 README 直接走到资料卡、评论笔记、核验矩阵和行动路线。"
+    },
+    {
+      "shot": "03-证据分级与裁决状态.png",
+      "name": "六级证据分级表，以及「已核验 / 部分支持 / 未核验 / 证据冲突」四态裁决",
+      "title": "最小研究包（三）：已确认 / 已排除 / 待验证",
+      "sourceLabel": "ai-earn-research/README.md:142-153",
+      "sourcePath": "/Users/wang/Documents/ChatGPT/ai-earn-research/README.md",
+      "from": 142,
+      "to": 153,
+      "width": 1100,
+      "note": "对应第 46 页「已确认 / 已排除 / 待验证」。关键在最后一句：<b>无法验证不等于虚假，但不能作为确定事实写入结论</b>——研究状态被写进项目，而不是留在脑子里。"
+    },
+    {
+      "shot": "04-核验矩阵-真实裁决.png",
+      "name": "外部核验矩阵 CSV 表头与前三行：同一条视频的主张分别拿到「部分支持」和「证据冲突」",
+      "title": "已确认 / 已排除 / 待验证 落在同一张表上",
+      "sourceLabel": "ai-earn-research/research/synthesis/verification-matrix.csv:1-4",
+      "sourcePath": "/Users/wang/Documents/ChatGPT/ai-earn-research/research/synthesis/verification-matrix.csv",
+      "from": 1,
+      "to": 4,
+      "width": 1500,
+      "note": "真实 CSV 裁切。整表共 10 条主张（V01–V10），最终统计为已核验 2、部分支持 5、未核验 2、证据冲突 1。这里展示前 3 条：<b>V03 Canva「完美防盗版」被官方帮助页判为证据冲突</b>，即视频的绝对化表述被否定并留在表里。"
+    },
+    {
+      "shot": "05-失败日志-停止条件.png",
+      "name": "素材获取失败日志：不绕过访问限制，以及长音频单请求被截断后的根因与修复",
+      "title": "否定了什么、为什么停手：失败也写进项目",
+      "sourceLabel": "ai-earn-research/research/logs/acquisition-failures.md:1-20",
+      "sourcePath": "/Users/wang/Documents/ChatGPT/ai-earn-research/research/logs/acquisition-failures.md",
+      "from": 1,
+      "to": 20,
+      "width": 1100,
+      "note": "第 50 页「否定了什么」的真实载体。两处值得停留：<b>「裁决：停止下载尝试，不绕过访问限制」</b>是明确的人工边界；<b>「API 返回成功，但仅得到 1,831 字」</b>是接口成功而内容截断的实例——HTTP 成功不等于拿到了东西。"
+    },
+    {
+      "shot": "06-资料卡-来源与时间戳.png",
+      "name": "单视频资料卡：页面链接、发布日期、采集日期、研究问题，以及带时间戳的关键内容候选",
+      "title": "来源与版本：每条主张都能回到时间戳",
+      "sourceLabel": "ai-earn-research/research/video-notes/BV1ArkeBrEXx.md:1-27",
+      "sourcePath": "/Users/wang/Documents/ChatGPT/ai-earn-research/research/video-notes/BV1ArkeBrEXx.md",
+      "from": 1,
+      "to": 27,
+      "width": 1100,
+      "note": "对应第 46 页「来源与版本」。资料卡同时记录可见的利益关系：<b>「约 02:59 明确提供 16% 优惠链接，构成可见推广利益关系」</b>——来源的立场和来源本身一起存下来。"
+    },
+    {
+      "shot": "07-资料卡-核验表与缺口.png",
+      "name": "同一张资料卡末段：逐条核验表（含「不采用」裁决）与风险、利益关系、缺口",
+      "title": "已确认 / 已排除 / 待验证：逐条主张的裁决",
+      "sourceLabel": "ai-earn-research/research/video-notes/BV1ArkeBrEXx.md:35-49",
+      "sourcePath": "/Users/wang/Documents/ChatGPT/ai-earn-research/research/video-notes/BV1ArkeBrEXx.md",
+      "from": 35,
+      "to": 49,
+      "width": 1100,
+      "note": "「中国个人必须先注册海外公司才能开始验证数字产品」被判为<b>不采用</b>——被否定的推断也留在项目里，下次不必重新推一遍。这正是第 50 页说的「项目记住自己为什么这样做」。"
+    },
+    {
+      "shot": "08-ASR验收-边界声明.png",
+      "name": "转写对照与覆盖量检查表：真实运行结果，以及「字符数不能作为准确率指标」的边界",
+      "title": "验收与运行结果：解释为什么可以暂时行动",
+      "sourceLabel": "ai-earn-research/research/logs/asr-comparison.md:1-17",
+      "sourcePath": "/Users/wang/Documents/ChatGPT/ai-earn-research/research/logs/asr-comparison.md",
+      "from": 1,
+      "to": 17,
+      "width": 1100,
+      "note": "对应第 46 页「验收与运行结果」。同时是证据边界的示范：<b>「人耳复核：否」写在表头</b>，且明说字符数「只能用于发现严重截断，不能作为准确率指标」——验收结论自带适用范围。"
+    }
+  ]
+}

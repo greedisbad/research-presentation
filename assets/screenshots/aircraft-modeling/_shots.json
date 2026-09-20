@@ -1,0 +1,39 @@
+{
+  "project": "aircraft-modeling",
+  "ranAt": "2026-09-20T11:11:31.277Z",
+  "shots": [
+    {
+      "file": "aircraft-modeling/01-机队探索-747.png",
+      "name": "机队探索场景：B747 全货机模型 + 顶栏三场景导航 + 右侧工具栏 + 底部机型卡片",
+      "src": "live"
+    },
+    {
+      "file": "aircraft-modeling/02-侧视线框.png",
+      "name": "侧视角 + 线框视图：机身/机翼/货舱结构轮廓",
+      "src": "live"
+    },
+    {
+      "file": "aircraft-modeling/03-切换机型767.png",
+      "name": "切换到 B767-300BCF 后的机型参数与模型",
+      "src": "live"
+    },
+    {
+      "file": "aircraft-modeling/04-起飞时刻-动画中.png",
+      "name": "起飞时刻：动画播放中，底部时间轴与阶段刻度",
+      "src": "live"
+    },
+    {
+      "file": "aircraft-modeling/05-货运视界-装机动画.png",
+      "name": "货运视界：货物打板与装机动画进行中",
+      "src": "live"
+    },
+    {
+      "file": "aircraft-modeling/06-机型档案弹窗.png",
+      "name": "机型档案：官网来源、参数与 GLB 下载入口",
+      "src": "live"
+    }
+  ],
+  "errors": [
+    "STEP 28 \"等待档案弹窗\" 失败: locator.waitFor: Timeout 30000ms exceeded."
+  ]
+}

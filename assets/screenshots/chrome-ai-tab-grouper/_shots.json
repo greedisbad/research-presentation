@@ -1,0 +1,44 @@
+{
+  "project": "chrome-ai-tab-grouper",
+  "ranAt": "2026-09-20T11:21:52.421Z",
+  "shots": [
+    {
+      "file": "chrome-ai-tab-grouper/01-入口-整理台左右双栏.png",
+      "name": "入口主界面：「当前标签 8」真实浏览器状态列表（GitHub PR / Figma / OAuth 文档 / localhost / staging / 邮箱 / Jira / Meet，带代码·设计·文档·本地等标签）对「整理方案 8」预览区，底部状态栏『3 个分组 · 8 个标签』+ 隐私说明『将发送标题与 URL 到 DeepSeek』",
+      "src": "live"
+    },
+    {
+      "file": "chrome-ai-tab-grouper/02-三种整理模式-优化现有分组.png",
+      "name": "核心机制：三档整理模式（整理未分组 / 优化现有分组 / 完全重新分组）切换，方案说明随之改为『AI 会提出改名、合并和拆分建议』，分组卡上出现『AI 新建』『建议改名』徽标",
+      "src": "live"
+    },
+    {
+      "file": "chrome-ai-tab-grouper/03-多选左侧标签.png",
+      "name": "深层交互第一步：左侧连点多行进入选中态（.selected），中间「→」搬运按钮可用",
+      "src": "live"
+    },
+    {
+      "file": "chrome-ai-tab-grouper/04-移入方案-分组计数与toast.png",
+      "name": "深层交互结果：两个标签写入第一个分组，分组计数与底部摘要重算，右下角 #toast 弹出『已将 N 个标签加入第一个分组』",
+      "src": "live"
+    },
+    {
+      "file": "chrome-ai-tab-grouper/05-新建空分组-拖拽投放区.png",
+      "name": "手动兜底路径：新增空分组，徽标为「手动新建」，分组体显示拖拽投放区『把标签拖到这里』（dropzone 空态）",
+      "src": "live"
+    },
+    {
+      "file": "chrome-ai-tab-grouper/06-设置抽屉-模型与整理偏好.png",
+      "name": "深层交互第二步：Settings 抽屉『模型与整理偏好』（内部工具 · 配置仅保存在当前浏览器）、连接状态『● 配置可用（模拟）』与「重新测试」、恢复默认/保存设置",
+      "src": "live"
+    },
+    {
+      "file": "chrome-ai-tab-grouper/07-应用到Chrome-已应用.png",
+      "name": "落地动作：主按钮变为「已应用」+ 加载态，toast『已创建 3 个 Chrome 原生分组（模拟）』—— 体现「先预览、应用后才改 Chrome」的承诺",
+      "src": "live"
+    }
+  ],
+  "errors": [
+    "Cannot set properties of null (setting 'textContent')"
+  ]
+}

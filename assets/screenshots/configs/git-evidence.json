@@ -1,0 +1,22 @@
+{
+  "project": "git",
+  "outDir": "git",
+  "items": [
+    {
+      "shot": "01-一次真实提交与改动.png",
+      "title": "Commit Message 像历史目录，改动才是事实",
+      "sourceLabel": "research-presentation · git show 6cb3e9c（真实输出）",
+      "sourcePath": "/tmp/gitshow.txt",
+      "width": 1100,
+      "note": "对应 P44：提交标题帮助下一位 Agent 定位「哪一次在做什么」，但<b>标题不是事实终点</b>——要打开 diff 与测试确认改了什么、为什么。本条为真实提交，无敏感信息。"
+    },
+    {
+      "shot": "02-git-log-oneline.png",
+      "title": "一段真实 `git log --oneline`",
+      "sourceLabel": "research-presentation · git log --oneline（真实输出，前 14 条）",
+      "sourcePath": "/tmp/gitlog.txt",
+      "width": 1100,
+      "note": "对应 P50。⚠️ 稿子原文写「选择无敏感信息的 Dice 或本项目提交」——<b>Dice 无对应仓库</b>，此处用<b>本研究仓库自身</b>的提交。Git 历史不是完整 reasoning，worktree 也不替代测试与审查。"
+    }
+  ]
+}

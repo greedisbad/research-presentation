@@ -1,0 +1,94 @@
+{
+  "project": "cba-demo-3d",
+  "outDir": "cba-demo-3d",
+  "viewport": { "width": 1440, "height": 940 },
+  "note": "入口用单文件构建 dist/cba-3d.html，无需 dev server。点击路径取自项目自带 scripts/flight-browser-check.mjs。分两组：① 入口与表格；② 选 921-61512334（39 件汽车阀）走完整工作台流程。",
+  "steps": [
+    {
+      "action": "goto",
+      "url": "file:///Users/wang/Documents/ChatGPT/cba-demo-3d/dist/cba-3d.html",
+      "name": "打开构建产物"
+    },
+    { "action": "clearStorage", "name": "清 localStorage，回到默认 48 票" },
+    { "action": "reload", "name": "重载" },
+    { "action": "waitFor", "selector": "[data-testid=\"manifest-grid\"]", "name": "等待航班表" },
+    { "action": "wait", "ms": 800 },
+
+    {
+      "action": "screenshot",
+      "shot": "01-入口-航班表与舱位图.png",
+      "name": "STEP 01 入口：48 票运单表、B747 舱位俯视图、容量指标（102,990 kg / 48 票）",
+      "fullPage": true
+    },
+
+    {
+      "action": "fill",
+      "selector": ".search-field input",
+      "value": "921-61512334",
+      "name": "搜索 921-61512334（汽车阀 39 件）"
+    },
+    { "action": "wait", "ms": 900 },
+    {
+      "action": "screenshot",
+      "shot": "02-表格搜索筛选.png",
+      "name": "按运单号筛选到单票，下方底部统计随之变化",
+      "fullPage": true
+    },
+
+    {
+      "action": "click",
+      "selector": "[data-testid=\"manifest-grid\"] .tabulator-row:first-child .tabulator-cell:first-child",
+      "name": "勾选该票"
+    },
+    { "action": "wait", "ms": 400 },
+    { "action": "click", "selector": "button:has-text(\"合并并排舱\")", "name": "点击「合并并排舱」" },
+    { "action": "waitFor", "selector": "[data-testid=\"group-workspace\"]", "name": "进入 STEP 02 工作台" },
+    { "action": "wait", "ms": 1500 },
+
+    {
+      "action": "screenshot",
+      "shot": "03-工作台-未排舱.png",
+      "name": "STEP 02 工作台：B747 舱位图 + 透视/俯/正/侧四联视图 + 左侧货物卡与集装板（尚未摆放）",
+      "fullPage": true
+    },
+
+    {
+      "action": "click",
+      "selector": "[data-testid=\"group-workspace\"] button[aria-label^=\"3 M3 CR\"]",
+      "name": "点击舱位 3·M3·CR 选中"
+    },
+    { "action": "wait", "ms": 800 },
+    {
+      "action": "screenshot",
+      "shot": "04-选中舱位3.png",
+      "name": "选中舱位 3 · Q6 后的工作台视图",
+      "fullPage": true
+    },
+
+    {
+      "action": "dragTo",
+      "from": ".group-cargo-card:not(.bulk-cargo-card)",
+      "to": ".scene-panel",
+      "name": "拖动货物规格卡到场景 → 自动试排剩余全部件数"
+    },
+    { "action": "wait", "ms": 6000 },
+
+    {
+      "action": "screenshot",
+      "shot": "05-自动试排完成.png",
+      "name": "自动试排完成：货物摆满舱位，四联视图与指标条更新（实体件数、货重、可保存提示）",
+      "fullPage": true
+    },
+
+    { "action": "click", "selector": "button:has-text(\"确认分配\")", "name": "点击「确认分配」写回表格" },
+    { "action": "waitFor", "selector": "[data-testid=\"manifest-grid\"]", "name": "回到表格" },
+    { "action": "wait", "ms": 1500 },
+
+    {
+      "action": "screenshot",
+      "shot": "06-写回表格.png",
+      "name": "确认回表：Contour 列出现 3(Q6) 等舱位归属，底部统计同步",
+      "fullPage": true
+    }
+  ]
+}

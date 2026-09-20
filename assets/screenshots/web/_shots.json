@@ -1,0 +1,17 @@
+{
+  "project": "web-evidence",
+  "ranAt": "2026-09-20T12:28:21.083Z",
+  "shots": [
+    {
+      "file": "web-evidence/01-位置代码共现检索.png",
+      "name": "多个位置代码共现检索：\"B747-400F\" \"LR\" \"LL\" \"PL\" contour —— 结果类型收窄到专业资料",
+      "src": "live"
+    },
+    {
+      "file": "web-evidence/02-site限定站点检索.png",
+      "name": "site: 操作符限定在顺丰航空官网内检索，配合低频位置代码",
+      "src": "live"
+    }
+  ],
+  "errors": []
+}

@@ -1,0 +1,37 @@
+{
+  "project": "cba-demo-3d",
+  "ranAt": "2026-09-20T11:08:17.038Z",
+  "shots": [
+    {
+      "file": "cba-demo-3d/01-入口-航班表与舱位图.png",
+      "name": "STEP 01 入口：48 票运单表、B747 舱位俯视图、容量指标（102,990 kg / 48 票）",
+      "src": "live"
+    },
+    {
+      "file": "cba-demo-3d/02-表格搜索筛选.png",
+      "name": "按运单号筛选到单票，下方底部统计随之变化",
+      "src": "live"
+    },
+    {
+      "file": "cba-demo-3d/03-工作台-未排舱.png",
+      "name": "STEP 02 工作台：B747 舱位图 + 透视/俯/正/侧四联视图 + 左侧货物卡与集装板（尚未摆放）",
+      "src": "live"
+    },
+    {
+      "file": "cba-demo-3d/04-选中舱位3.png",
+      "name": "选中舱位 3 · Q6 后的工作台视图",
+      "src": "live"
+    },
+    {
+      "file": "cba-demo-3d/05-自动试排完成.png",
+      "name": "自动试排完成：货物摆满舱位，四联视图与指标条更新（实体件数、货重、可保存提示）",
+      "src": "live"
+    },
+    {
+      "file": "cba-demo-3d/06-写回表格.png",
+      "name": "确认回表：Contour 列出现 3(Q6) 等舱位归属，底部统计同步",
+      "src": "live"
+    }
+  ],
+  "errors": []
+}

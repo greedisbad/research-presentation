@@ -1,0 +1,36 @@
+{
+  "project": "web-excel",
+  "outDir": "web-excel",
+  "items": [
+    {
+      "shot": "08-CDN检查记录.png",
+      "title": "CDN 检查记录：16 项全部 200",
+      "sourceLabel": "web-excel/docs/cdn-results.json:1-45",
+      "sourcePath": "/Users/wang/Documents/ChatGPT/web-excel/docs/cdn-results.json",
+      "from": 1,
+      "to": 45,
+      "width": 1250,
+      "note": "对应 P25「四道闸门」：<b>200 只过第二道（存在）</b>，不证明格式与运行。本页只截前四条；完整记录 16 条全为 200。<b>URL 需在 PPT 里遮挡</b>——字段较长，直接投影会干扰阅读。"
+    },
+    {
+      "shot": "09-实例状态JSON.png",
+      "title": "实例状态 JSON：合并后保存下来的状态",
+      "sourceLabel": "web-excel/docs/interaction-results.json:1-33",
+      "sourcePath": "/Users/wang/Documents/ChatGPT/web-excel/docs/interaction-results.json",
+      "from": 1,
+      "to": 33,
+      "width": 1100,
+      "note": "对应 P40：<b>一个绿勾，旁边是可以核对的实例状态</b>。jspreadsheet 把合并结果存成 <code>{\"B1\": [2,2]}</code>——人读得懂，也回得去。"
+    },
+    {
+      "shot": "10-状态字段对比-暴露的问题.png",
+      "title": "同一个「取消合并」，六个库报出六种形状",
+      "sourceLabel": "web-excel/docs/browser-results.json:2683-2714（vxe 条目）",
+      "sourcePath": "/Users/wang/Documents/ChatGPT/web-excel/docs/browser-results.json",
+      "from": 2683,
+      "to": 2714,
+      "width": 1250,
+      "note": "对应 P41「左结果 JSON、右宽表，各圈一个问题」。可圈的问题：vxe 的 mergeState 把<b>整份列对象与筛选器内部字段</b>一起 dump 出来，读不出「合并对不对」；此外<b>六个库的 hide（列设置）全部没有 pass 字段</b>——这条路径没有被自动验证。JSON 报「通过」不等于结论成立。"
+    }
+  ]
+}

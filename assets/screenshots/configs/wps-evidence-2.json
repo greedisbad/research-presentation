@@ -1,0 +1,26 @@
+{
+  "project": "wps-ai-plugin",
+  "outDir": "wps-ai-plugin",
+  "items": [
+    {
+      "shot": "09-映射表-参考资产到代码.png",
+      "title": "参考资产 → 代码与验证的映射",
+      "sourceLabel": "research-presentation/docs/02A-WPS参考到代码映射.md:5-16",
+      "sourcePath": "/Users/wang/Documents/ChatGPT/research-presentation/docs/02A-WPS参考到代码映射.md",
+      "from": 5,
+      "to": 16,
+      "width": 1500,
+      "note": "回答「AI 找到的资料，最终在哪里改变了项目？」。每一行都带<b>实现位置与验证方式</b>；演示度 S/A 表示可否在浏览器适配层复现。"
+    },
+    {
+      "shot": "10-11个候选项目.png",
+      "title": "Phase 02 的 11 个候选项目",
+      "sourceLabel": "wps-ai-plugin-main/.planning/phases/02-ppt-design-research/02-RESEARCH.md:11-23",
+      "sourcePath": "/Users/wang/Downloads/wps-ai-plugin-main/.planning/phases/02-ppt-design-research/02-RESEARCH.md",
+      "from": 11,
+      "to": 23,
+      "width": 1500,
+      "note": "⚠️ 原表列是 <b>#/项目/Git 地址/Stars/核心方向/对 WPS 价值</b>，与 P15 稿子要的「宿主、输出、可编辑性、可借资产」四列<b>并不一致</b>；且原表带 Stars，而稿子纪律要求「正式制作不需要展示 Star 数；若展示必须在冻结日重查」。建议只用左三列，或用它对照说明「初筛维度 ≠ 最终筛选维度」。"
+    }
+  ]
+}

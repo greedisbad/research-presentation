@@ -1,0 +1,116 @@
+{
+  "project": "aircraft-modeling",
+  "outDir": "aircraft-modeling",
+  "viewport": { "width": 1440, "height": 940 },
+  "note": "React+Vite 应用，dist 用绝对路径资源，需 HTTP 服务：vite preview --port 4181。三个场景（机队探索/起飞时刻/货运视界）+ 线框、机型档案。",
+  "steps": [
+    { "action": "goto", "url": "http://127.0.0.1:4181/", "name": "打开预览服务" },
+    { "action": "waitFor", "selector": "canvas", "name": "等待 3D 画布" },
+    { "action": "wait", "ms": 3500 },
+
+    {
+      "action": "screenshot",
+      "shot": "01-机队探索-747.png",
+      "name": "机队探索场景：B747 全货机模型 + 顶栏三场景导航 + 右侧工具栏 + 底部机型卡片",
+      "fullPage": true
+    },
+
+    {
+      "action": "click",
+      "selector": ".camera-views button:has-text(\"侧视\")",
+      "name": "切到侧视相机"
+    },
+    { "action": "wait", "ms": 1200 },
+    {
+      "action": "click",
+      "selector": "button[aria-label=\"线框视图\"]",
+      "name": "打开线框视图"
+    },
+    { "action": "wait", "ms": 1500 },
+    {
+      "action": "screenshot",
+      "shot": "02-侧视线框.png",
+      "name": "侧视角 + 线框视图：机身/机翼/货舱结构轮廓",
+      "fullPage": true
+    },
+    {
+      "action": "click",
+      "selector": "button[aria-label=\"线框视图\"]",
+      "name": "关闭线框"
+    },
+    { "action": "wait", "ms": 800 },
+
+    {
+      "action": "click",
+      "selector": "button[aria-label=\"选择 767-300BCF\"]",
+      "timeout": 8000,
+      "name": "切换机型到 767 货机"
+    },
+    { "action": "wait", "ms": 3500 },
+    {
+      "action": "screenshot",
+      "shot": "03-切换机型767.png",
+      "name": "切换到 B767-300BCF 后的机型参数与模型",
+      "fullPage": true
+    },
+
+    {
+      "action": "click",
+      "selector": "nav[aria-label=\"展示场景\"] button:nth-child(2)",
+      "name": "切换到「起飞时刻」场景"
+    },
+    { "action": "waitFor", "selector": "section[aria-label=\"动画播放控制\"]", "name": "等待时间轴出现" },
+    { "action": "wait", "ms": 1500 },
+    {
+      "action": "click",
+      "selector": "button[aria-label=\"播放动画\"]",
+      "name": "播放起飞动画"
+    },
+    { "action": "wait", "ms": 4500 },
+
+    {
+      "action": "screenshot",
+      "shot": "04-起飞时刻-动画中.png",
+      "name": "起飞时刻：动画播放中，底部时间轴与阶段刻度",
+      "fullPage": true
+    },
+
+    {
+      "action": "click",
+      "selector": "nav[aria-label=\"展示场景\"] button:nth-child(3)",
+      "name": "切换到「货运视界」场景"
+    },
+    { "action": "wait", "ms": 4000 },
+    {
+      "action": "click",
+      "selector": "button[aria-label=\"播放动画\"]",
+      "name": "播放货运动画"
+    },
+    { "action": "wait", "ms": 5000 },
+
+    {
+      "action": "screenshot",
+      "shot": "05-货运视界-装机动画.png",
+      "name": "货运视界：货物打板与装机动画进行中",
+      "fullPage": true
+    },
+
+    {
+      "action": "click",
+      "selector": "button.spec-link",
+      "name": "打开机型档案弹窗"
+    },
+    { "action": "wait", "ms": 1500 },
+    {
+      "action": "waitFor",
+      "selector": "[role=\"dialog\"]",
+      "name": "等待档案弹窗"
+    },
+    {
+      "action": "screenshot",
+      "shot": "06-机型档案弹窗.png",
+      "name": "机型档案：官网来源、参数与 GLB 下载入口",
+      "fullPage": true
+    }
+  ]
+}

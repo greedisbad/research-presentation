@@ -1,0 +1,24 @@
+{
+  "project": "web-excel",
+  "outDir": "web-excel",
+  "note": "补采 P31(L979) 要的 Jspreadsheet 用户选区合并区域。用页面自带的「预选 2×2 并合并」按钮复现真实合并动作，再截表格区域。静态站用 python3 -m http.server 4182 托管。",
+  "steps": [
+    { "action": "goto", "url": "http://127.0.0.1:4182/demos/jspreadsheet.html", "name": "打开 Jspreadsheet 演示页" },
+    { "action": "waitFor", "selector": "#preset:not([disabled])", "timeout": 20000, "name": "等待适配器初始化完成（按钮解禁）" },
+    { "action": "wait", "ms": 1200 },
+    {
+      "action": "screenshot",
+      "shot": "11-Jspreadsheet-合并前.png",
+      "name": "合并前：默认表格与工具栏全部可点",
+      "fullPage": false
+    },
+    { "action": "click", "selector": "#preset", "name": "点击「预选 2×2 并合并」" },
+    { "action": "wait", "ms": 2000 },
+    {
+      "action": "screenshot",
+      "shot": "12-Jspreadsheet-选区合并后.png",
+      "name": "**选区合并后**：B1:C2 合并为一个单元格，操作日志记录坐标读取与原生合并 API 调用",
+      "fullPage": false
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "project": "web-excel",
+  "ranAt": "2026-09-20T12:34:40.185Z",
+  "shots": [
+    {
+      "file": "web-excel/11-Jspreadsheet-合并前.png",
+      "name": "合并前：默认表格与工具栏全部可点",
+      "src": "live"
+    },
+    {
+      "file": "web-excel/12-Jspreadsheet-选区合并后.png",
+      "name": "**选区合并后**：B1:C2 合并为一个单元格，操作日志记录坐标读取与原生合并 API 调用",
+      "src": "live"
+    }
+  ],
+  "errors": []
+}

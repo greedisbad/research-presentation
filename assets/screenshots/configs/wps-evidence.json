@@ -1,0 +1,46 @@
+{
+  "project": "wps-ai-plugin",
+  "outDir": "wps-ai-plugin",
+  "items": [
+    {
+      "shot": "05-LEARNINGS-批量调用困境.png",
+      "title": "Prompt 已要求批量，模型仍逐段调用",
+      "sourceLabel": "wps-ai-plugin-main/.planning/phases/09-excel-word-agent/09-LEARNINGS.md:50-55",
+      "sourcePath": "/Users/wang/Downloads/wps-ai-plugin-main/.planning/phases/09-excel-word-agent/09-LEARNINGS.md",
+      "from": 50,
+      "to": 55,
+      "width": 1100,
+      "note": "真实 <b>09-LEARNINGS.md</b> 裁切。「60 个正文段落需要 60 次工具调用」是本次本地运行的观察，不外推为普遍服从率。"
+    },
+    {
+      "shot": "06-tools-schema修复.png",
+      "title": "结构性修复：getIndices() 同时接受单值与数组",
+      "sourceLabel": "wps-plugin-word/src/agent/tools.ts:179-186",
+      "sourcePath": "/Users/wang/Downloads/wps-ai-plugin-main/wps-plugin-word/src/agent/tools.ts",
+      "from": 179,
+      "to": 186,
+      "width": 1100,
+      "note": "把「请批量操作」的希望从 Prompt 下沉到 <b>Schema 与代码校验</b>：一次调用即可覆盖多个段落。"
+    },
+    {
+      "shot": "07-Phase07-PLAN.png",
+      "title": "Phase 07 PLAN：把「已放弃」写进项目",
+      "sourceLabel": "wps-ai-plugin-main/.planning/phases/07-ppt-charts/07-PLAN.md",
+      "sourcePath": "/Users/wang/Downloads/wps-ai-plugin-main/.planning/phases/07-ppt-charts/07-PLAN.md",
+      "from": 1,
+      "to": 28,
+      "width": 1100,
+      "note": "失败路线也被记录成项目资产：下一轮不必重来。"
+    },
+    {
+      "shot": "08-ribbon四文件规则.png",
+      "title": "WPS 真机踩坑后固化的规则",
+      "sourceLabel": "wps-ai-plugin-main/AGENTS.md",
+      "sourcePath": "/Users/wang/Downloads/wps-ai-plugin-main/AGENTS.md",
+      "from": 1,
+      "to": 24,
+      "width": 1100,
+      "note": "新按钮必须贯穿 XML、handler、router 与 pane——这条规则来自真机上「按钮点了没反应」的修复。"
+    }
+  ]
+}

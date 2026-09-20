@@ -1,0 +1,43 @@
+{
+  "project": "wps-ai-plugin",
+  "outDir": "wps-ai-plugin",
+  "viewport": { "width": 1440, "height": 940 },
+  "note": "WPS 插件本体在 WPS Office 内运行，无法在无头浏览器里复现真机宿主环境。这里截的是插件自己的 Vue 界面（dev server 端口 3889，含浏览器适配层 browser-word-adapter）。真机截图需人工在 WPS 里操作后补。",
+  "steps": [
+    { "action": "goto", "url": "http://127.0.0.1:3889/#/", "name": "打开插件默认页" },
+    { "action": "wait", "ms": 2500 },
+    {
+      "action": "screenshot",
+      "shot": "01-插件默认页.png",
+      "name": "WPS 插件默认页（Root）：宿主环境为 WPS Office，此处为浏览器适配层渲染",
+      "fullPage": true
+    },
+
+    { "action": "goto", "url": "http://127.0.0.1:3889/#/taskpane", "name": "任务窗格路由" },
+    { "action": "wait", "ms": 2500 },
+    {
+      "action": "screenshot",
+      "shot": "02-任务窗格-未连接.png",
+      "name": "任务窗格（TaskPane）：浏览器中未连接 WPS 宿主的初始状态",
+      "fullPage": true
+    },
+
+    { "action": "goto", "url": "http://127.0.0.1:3889/#/aipane", "name": "AI 助手路由" },
+    { "action": "wait", "ms": 2500 },
+    {
+      "action": "screenshot",
+      "shot": "03-AI助手窗格.png",
+      "name": "AI 助手窗格（AiPane）：对话式操作入口",
+      "fullPage": true
+    },
+
+    { "action": "goto", "url": "http://127.0.0.1:3889/#/dialog", "name": "对话框路由" },
+    { "action": "wait", "ms": 2500 },
+    {
+      "action": "screenshot",
+      "shot": "04-对话框.png",
+      "name": "对话框（Dialog）：WPS 内弹窗形态",
+      "fullPage": true
+    }
+  ]
+}

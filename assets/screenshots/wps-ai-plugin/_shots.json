@@ -1,0 +1,27 @@
+{
+  "project": "wps-ai-plugin",
+  "ranAt": "2026-09-20T11:12:48.441Z",
+  "shots": [
+    {
+      "file": "wps-ai-plugin/01-插件默认页.png",
+      "name": "WPS 插件默认页（Root）：宿主环境为 WPS Office，此处为浏览器适配层渲染",
+      "src": "live"
+    },
+    {
+      "file": "wps-ai-plugin/02-任务窗格-未连接.png",
+      "name": "任务窗格（TaskPane）：浏览器中未连接 WPS 宿主的初始状态",
+      "src": "live"
+    },
+    {
+      "file": "wps-ai-plugin/03-AI助手窗格.png",
+      "name": "AI 助手窗格（AiPane）：对话式操作入口",
+      "src": "live"
+    },
+    {
+      "file": "wps-ai-plugin/04-对话框.png",
+      "name": "对话框（Dialog）：WPS 内弹窗形态",
+      "src": "live"
+    }
+  ],
+  "errors": []
+}

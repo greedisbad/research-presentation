@@ -1,0 +1,33 @@
+{
+  "project": "web-evidence",
+  "outDir": "web",
+  "viewport": { "width": 1440, "height": 940 },
+  "note": "检索过程证据。Google 对无头浏览器返回反爬验证页（已实测），改用 Bing。查询词取自 docs/B747-400F_information_retrieval_method.md 的真实记录。",
+  "steps": [
+    {
+      "action": "goto",
+      "url": "https://www.bing.com/search?q=%22B747-400F%22+%22LR%22+%22LL%22+%22PL%22+contour&setlang=zh-CN",
+      "name": "Bing 检索：多个位置代码共现"
+    },
+    { "action": "wait", "ms": 4500 },
+    {
+      "action": "screenshot",
+      "shot": "01-位置代码共现检索.png",
+      "name": "多个位置代码共现检索：\"B747-400F\" \"LR\" \"LL\" \"PL\" contour —— 结果类型收窄到专业资料",
+      "fullPage": true
+    },
+
+    {
+      "action": "goto",
+      "url": "https://www.bing.com/search?q=site%3Asf-airlines.com+%22B747-400F%22+%22A1%22+%22PL%22+%22QR%22&setlang=zh-CN",
+      "name": "Bing 检索：site: 限定站点 + 三个位置代码"
+    },
+    { "action": "wait", "ms": 4500 },
+    {
+      "action": "screenshot",
+      "shot": "02-site限定站点检索.png",
+      "name": "site: 操作符限定在顺丰航空官网内检索，配合低频位置代码",
+      "fullPage": true
+    }
+  ]
+}

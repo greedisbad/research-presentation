@@ -1,0 +1,37 @@
+{
+  "project": "download-codex",
+  "ranAt": "2026-09-20T11:21:34.635Z",
+  "shots": [
+    {
+      "file": "download-codex/01-入口-封面与九步流程.png",
+      "name": "入口：封面标题「在中国下载和使用 Codex」+ Windows/约 15 分钟/更新于 2026-09-12 元信息 + 右侧终端示意（~/Documents/codex-demo、已创建 hello.md）+ 八步流程导航",
+      "src": "live"
+    },
+    {
+      "file": "download-codex/02-章节-在Windows上下载安装.png",
+      "name": "第 02 章「在 Windows 上下载安装」：正文 + 左侧目录高亮当前章（避免下载到同名应用的关键提示）",
+      "src": "live"
+    },
+    {
+      "file": "download-codex/03-首用-一键复制提示词.png",
+      "name": "第 07 章「完成第一次使用」：#demo-prompt 提示词代码块 + 已点击的「复制提示词」按钮（页面唯一可交互控件，带复制反馈）",
+      "src": "live"
+    },
+    {
+      "file": "download-codex/04-订阅-官方渠道与第三方代充.png",
+      "name": "第 08 章核心价值页：官方渠道 / 第三方渠道双卡对比（银行卡付款 vs 作者用过的代充 + 「打开代充网站 ↗」外链）",
+      "src": "live"
+    },
+    {
+      "file": "download-codex/05-订阅-官方付款四步与风险提示.png",
+      "name": "同章下半：官方付款步骤 4 条 + Visa 提示 + 关于第三方代充的账号风险提示 + 付款后确认",
+      "src": "live"
+    },
+    {
+      "file": "download-codex/06-阅读进度条到底.png",
+      "name": "读到文末：顶部 #progress 阅读进度条走满、右侧目录高亮「09 常见问题」并露出 FAQ 条目 —— 体现长文档的进度反馈设计",
+      "src": "live"
+    }
+  ],
+  "errors": []
+}

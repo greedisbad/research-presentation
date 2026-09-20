@@ -1,0 +1,47 @@
+{
+  "project": "deckgl-rotation",
+  "ranAt": "2026-09-20T11:22:42.417Z",
+  "shots": [
+    {
+      "file": "deckgl-rotation/01-入口-四条实验路线.png",
+      "name": "入口页：DECK.GL 9.1.12 · ROTATION PROVING GROUND，四张路线卡（Update Triggers / Attribute Transitions / Shader Uniform / Radians Baseline），即整个验证项目的全貌",
+      "src": "live"
+    },
+    {
+      "file": "deckgl-rotation/02-路线01-运行中诊断面板-t0.png",
+      "name": "路线 01 运行中（t0）：左下 DIAGNOSTICS 面板显示「旋转已检测 · 像素持续变化」、静态层初始化=1、像素变化 N/M、图层提交持续增长、帧数——这就是「目标行为发生了」的一帧",
+      "src": "live"
+    },
+    {
+      "file": "deckgl-rotation/03-路线01-同一页面-t1.png",
+      "name": "路线 01 同一页面 2.5 秒后（t1）：画面几乎是同一张图，唯一硬差别是「角度」读数与帧数。与 02 配对，说明截图=t0、动画=t0…tn",
+      "src": "live"
+    },
+    {
+      "file": "deckgl-rotation/04-路线01-点击图标picking成功.png",
+      "name": "点击图标后浮出 PICK OK · 台风 · 海燕 提示：picking 未被逐帧动画破坏——但 picking 只能证明对象存在，不能证明它在转",
+      "src": "live"
+    },
+    {
+      "file": "deckgl-rotation/05-路线01-暂停后t0.png",
+      "name": "暂停瞬间：body 置 data-paused=true，按钮变为「继续」，角度读数定格在某值",
+      "src": "live"
+    },
+    {
+      "file": "deckgl-rotation/06-路线01-暂停3秒后角度冻结.png",
+      "name": "暂停 3 秒后：帧数仍在累加（动画循环没停），但「角度」读数与 05 完全一致——「暂停后状态是否真的停止」这条信号，必须两张图并排才能看出来",
+      "src": "live"
+    },
+    {
+      "file": "deckgl-rotation/07-路线04-弧度与度数并排对照.png",
+      "name": "路线 04：同一角度值并排跑两份——左侧 ERROR / RADIANS（getAngle 里多乘了 Math.PI/180），右侧 CORRECT / DEGREES。把「图标不转」拆成数据语义与对象边界问题的最小对照画面",
+      "src": "live"
+    },
+    {
+      "file": "deckgl-rotation/08-路线03-GPU路线提交次数为0.png",
+      "name": "路线 03：像素变化照样成立，但「图层提交」恒为 0（角度改由 shader uniform 逐帧驱动，不重算逐实例 attribute）。与 02 的高提交数形成性能路线对照，对应「当前版本 shader module 怎样声明和传参」这一信息缺口",
+      "src": "live"
+    }
+  ],
+  "errors": []
+}

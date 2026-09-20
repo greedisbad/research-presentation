@@ -1,0 +1,59 @@
+{
+  "project": "web-evidence",
+  "outDir": "web",
+  "viewport": { "width": 1440, "height": 940 },
+  "note": "演讲稿 P09/P10 需要的检索过程证据：B747 案例的真实低频共现查询与命中的原始资料页。查询词取自 docs/B747-400F_information_retrieval_method.md 的真实记录。",
+  "steps": [
+    {
+      "action": "goto",
+      "url": "https://www.google.com/search?q=site%3Asf-airlines.com+%22B747-400F%22+%22A1%22+%22PL%22+%22QR%22&hl=zh-CN",
+      "name": "真实查询：site:sf-airlines.com \"B747-400F\" \"A1\" \"PL\" \"QR\""
+    },
+    { "action": "wait", "ms": 4000 },
+    {
+      "action": "screenshot",
+      "shot": "01-低频共现查询-检索结果.png",
+      "name": "低频 token 共现检索：三个位置代码与机型同时出现，把结果收窄到专业资料",
+      "fullPage": true
+    },
+
+    {
+      "action": "goto",
+      "url": "https://www.google.com/search?q=%22B747-400F%22+%22LR%22+%22LL%22+%22PL%22+contour&hl=zh-CN",
+      "name": "真实查询：\"B747-400F\" \"LR\" \"LL\" \"PL\" contour"
+    },
+    { "action": "wait", "ms": 4000 },
+    {
+      "action": "screenshot",
+      "shot": "02-多个位置代码共现.png",
+      "name": "多个位置代码共现查询：比单独搜 B747-400F 更精准",
+      "fullPage": true
+    },
+
+    {
+      "action": "goto",
+      "url": "https://www.asiandragonintl.com/inventory/other/2024/dragon-166535B.pdf",
+      "name": "打开命中的原始资料（PDF）"
+    },
+    { "action": "wait", "ms": 6000 },
+    {
+      "action": "screenshot",
+      "shot": "03-命中原始PDF-第一页.png",
+      "name": "命中的原始资料页：数字指纹回到源文件核对，保留来源页脚",
+      "fullPage": false
+    },
+
+    {
+      "action": "goto",
+      "url": "https://www.sf-airlines.com/",
+      "name": "顺丰航空官网"
+    },
+    { "action": "wait", "ms": 4000 },
+    {
+      "action": "screenshot",
+      "shot": "04-顺丰航空官网.png",
+      "name": "顺丰航空官网：B747 案例资料的官方来源方",
+      "fullPage": false
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "project": "download-codex",
+  "outDir": "download-codex",
+  "viewport": { "width": 1440, "height": 940 },
+  "note": "纯静态单文件 index.html（无 package.json、无 dist、无外部 CDN），直接 file:// 打开即可，无需任何 server。选择器取自 index.html 里真实存在的 nav.flow / aside.toc 锚点、section.chapter id、#demo-prompt 与 button.copy-button。长文页面用视口截图（fullPage:false）保证文字可读，不走 fullPage 全页长图。",
+  "steps": [
+    {
+      "action": "goto",
+      "url": "file:///Users/wang/Documents/ChatGPT/download-codex/index.html",
+      "name": "打开《在中国下载和使用 Codex》新手手册"
+    },
+    { "action": "wait", "ms": 900 },
+
+    {
+      "action": "screenshot",
+      "shot": "01-入口-封面与九步流程.png",
+      "name": "入口：封面标题「在中国下载和使用 Codex」+ Windows/约 15 分钟/更新于 2026-09-12 元信息 + 右侧终端示意（~/Documents/codex-demo、已创建 hello.md）+ 八步流程导航",
+      "fullPage": false
+    },
+
+    {
+      "action": "click",
+      "selector": "nav.flow a[href=\"#install\"]",
+      "name": "点流程条「02 安装应用」跳到第二章"
+    },
+    { "action": "wait", "ms": 1400 },
+
+    {
+      "action": "screenshot",
+      "shot": "02-章节-在Windows上下载安装.png",
+      "name": "第 02 章「在 Windows 上下载安装」：正文 + 左侧目录高亮当前章（避免下载到同名应用的关键提示）",
+      "fullPage": false
+    },
+
+    {
+      "action": "click",
+      "selector": "nav.flow a[href=\"#first-run\"]",
+      "name": "点「07 首次使用」跳到第一次使用章节"
+    },
+    { "action": "wait", "ms": 1400 },
+    {
+      "action": "click",
+      "selector": "button.copy-button[data-copy=\"demo-prompt\"]",
+      "name": "点「复制提示词」按钮（页面唯一的交互控件）"
+    },
+    { "action": "wait", "ms": 500 },
+
+    {
+      "action": "screenshot",
+      "shot": "03-首用-一键复制提示词.png",
+      "name": "第 07 章「完成第一次使用」：#demo-prompt 提示词代码块 + 已点击的「复制提示词」按钮（页面唯一可交互控件，带复制反馈）",
+      "fullPage": false
+    },
+
+    {
+      "action": "click",
+      "selector": "nav.flow a[href=\"#billing\"]",
+      "name": "点「08 按需订阅」跳到会员章节"
+    },
+    { "action": "wait", "ms": 1400 },
+
+    {
+      "action": "screenshot",
+      "shot": "04-订阅-官方渠道与第三方代充.png",
+      "name": "第 08 章核心价值页：官方渠道 / 第三方渠道双卡对比（银行卡付款 vs 作者用过的代充 + 「打开代充网站 ↗」外链）",
+      "fullPage": false
+    },
+
+    {
+      "action": "screenshot",
+      "shot": "05-订阅-官方付款四步与风险提示.png",
+      "name": "同章下半：官方付款步骤 4 条 + Visa 提示 + 关于第三方代充的账号风险提示 + 付款后确认",
+      "fullPage": false
+    },
+
+    {
+      "action": "click",
+      "selector": "aside.toc a[href=\"#faq\"]",
+      "name": "点左侧目录「09　常见问题」跳到 FAQ（注意：FAQ 只存在于 aside.toc，顶部 nav.flow 八步里没有 #faq）"
+    },
+    { "action": "wait", "ms": 1600 },
+    {
+      "action": "press",
+      "selector": "body",
+      "key": "End",
+      "name": "按 End 滚到文末，让 #progress 阅读进度条走满"
+    },
+    { "action": "wait", "ms": 900 },
+
+    {
+      "action": "screenshot",
+      "shot": "06-阅读进度条到底.png",
+      "name": "读到文末：顶部 #progress 阅读进度条走满、右侧目录高亮「09 常见问题」并露出 FAQ 条目 —— 体现长文档的进度反馈设计",
+      "fullPage": false
+    }
+  ]
+}
