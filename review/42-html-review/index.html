@@ -1,0 +1,420 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AI 辅助技术调研实践｜逐页审稿</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --ink: #1e2521;
+        --muted: #6b746d;
+        --line: #d9dfd9;
+        --paper: #f6f7f3;
+        --card: #ffffff;
+        --accent: #1f6f53;
+        --accent-soft: #e4f0e8;
+      }
+
+      * { box-sizing: border-box; }
+
+      html { scroll-behavior: smooth; }
+
+      body {
+        margin: 0;
+        color: var(--ink);
+        background: var(--paper);
+        font: 15px/1.65 ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      }
+
+      button, input, textarea { font: inherit; }
+
+      .topbar {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        min-height: 58px;
+        padding: 10px 24px;
+        border-bottom: 1px solid var(--line);
+        background: rgba(246, 247, 243, .94);
+        backdrop-filter: blur(12px);
+      }
+
+      .topbar h1 {
+        margin: 0;
+        font-size: 16px;
+        font-weight: 700;
+        white-space: nowrap;
+      }
+
+      .topbar p {
+        margin: 0 auto 0 0;
+        color: var(--muted);
+        font-size: 13px;
+      }
+
+      .save-status {
+        color: var(--muted);
+        font-size: 12px;
+        white-space: nowrap;
+      }
+
+      .save-status.is-saving { color: #9a6413; }
+      .save-status.is-error { color: #a53d30; }
+
+      .button {
+        border: 1px solid var(--line);
+        border-radius: 7px;
+        padding: 7px 11px;
+        color: var(--ink);
+        background: var(--card);
+        cursor: pointer;
+      }
+
+      .button:hover { border-color: var(--accent); }
+      .button.primary { border-color: var(--accent); color: #fff; background: var(--accent); }
+
+      main {
+        width: min(1540px, calc(100% - 40px));
+        margin: 0 auto;
+        padding: 28px 0 80px;
+      }
+
+      .chapter {
+        display: grid;
+        grid-template-columns: minmax(360px, 46%) minmax(0, 1fr);
+        min-height: 560px;
+        margin: 0 0 26px;
+        overflow: hidden;
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        background: var(--card);
+        scroll-margin-top: 78px;
+      }
+
+      .visual-panel {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        min-width: 0;
+        padding: 18px;
+        background: #eef1eb;
+      }
+
+      .visual-label {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 10px;
+        color: var(--muted);
+        font-size: 12px;
+        letter-spacing: .04em;
+      }
+
+      .visual-label strong { color: var(--accent); }
+
+      .visuals {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        align-items: start;
+        gap: 12px;
+      }
+
+      .visual-card {
+        margin: 0;
+        overflow: hidden;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: #fff;
+      }
+
+      .visual-card img {
+        display: block;
+        width: 100%;
+        height: auto;
+        max-height: 620px;
+        object-fit: contain;
+        background: #fff;
+      }
+
+      .visual-card figcaption {
+        padding: 7px 9px;
+        border-top: 1px solid var(--line);
+        color: var(--muted);
+        font-size: 12px;
+      }
+
+      .empty-visual {
+        display: grid;
+        min-height: 420px;
+        place-items: center;
+        border: 1px dashed #aebbb0;
+        border-radius: 8px;
+        color: var(--muted);
+        text-align: center;
+        background: rgba(255,255,255,.5);
+      }
+
+      .empty-visual span { max-width: 260px; }
+
+      .image-note {
+        margin: auto 0 0;
+        padding-top: 12px;
+        border-top: 1px solid var(--line);
+        color: var(--muted);
+        font-size: 12px;
+      }
+
+      .editor-panel {
+        display: flex;
+        flex-direction: column;
+        min-width: 0;
+        padding: 22px 26px 24px;
+      }
+
+      .chapter-heading {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 12px;
+      }
+
+      .chapter-number {
+        flex: 0 0 auto;
+        color: var(--accent);
+        font-weight: 700;
+        font-variant-numeric: tabular-nums;
+      }
+
+      .chapter-title {
+        width: 100%;
+        min-width: 0;
+        border: 0;
+        border-bottom: 1px solid transparent;
+        padding: 3px 0;
+        color: var(--ink);
+        outline: 0;
+        background: transparent;
+        font-size: 22px;
+        font-weight: 750;
+      }
+
+      .chapter-title:focus {
+        border-bottom-color: var(--accent);
+      }
+
+      .chapter-body {
+        flex: 1;
+        width: 100%;
+        min-height: 470px;
+        resize: vertical;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        padding: 14px 16px;
+        color: var(--ink);
+        outline: 0;
+        background: #fff;
+        font: 14px/1.7 ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+      }
+
+      .chapter-body:focus {
+        border-color: var(--accent);
+        box-shadow: 0 0 0 3px var(--accent-soft);
+      }
+
+      .chapter-footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        margin-top: 12px;
+        color: var(--muted);
+        font-size: 12px;
+      }
+
+      .back-to-top { color: var(--accent); text-decoration: none; }
+
+      @media (max-width: 880px) {
+        .topbar { flex-wrap: wrap; padding: 10px 16px; }
+        .topbar p { order: 3; flex-basis: 100%; }
+        main { width: min(100% - 20px, 680px); padding-top: 14px; }
+        .chapter { grid-template-columns: 1fr; }
+        .visual-panel { min-height: 220px; }
+        .empty-visual { min-height: 180px; }
+        .chapter-body { min-height: 360px; }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="topbar" id="top">
+      <h1>AI 辅助技术调研实践｜逐页审稿</h1>
+      <p>左侧图片 / 右侧全量文字；修改后自动保存到 localhost</p>
+      <span class="save-status" id="save-status" role="status">正在读取…</span>
+      <button class="button" id="save-now" type="button">立即保存</button>
+      <button class="button primary" id="export-md" type="button">导出 Markdown</button>
+    </header>
+
+    <main id="chapters" aria-live="polite"></main>
+
+    <script>
+      const LOCAL_BACKUP_KEY = 'ai-research-presentation-review-v1';
+      let state = null;
+      let saveTimer = null;
+      let saveInFlight = null;
+
+      const chaptersElement = document.querySelector('#chapters');
+      const statusElement = document.querySelector('#save-status');
+      const exportButton = document.querySelector('#export-md');
+      const saveNowButton = document.querySelector('#save-now');
+
+      function setStatus(text, kind = '') {
+        statusElement.textContent = text;
+        statusElement.className = `save-status ${kind}`;
+      }
+
+      function escapeHtml(value) {
+        return String(value)
+          .replaceAll('&', '&amp;')
+          .replaceAll('<', '&lt;')
+          .replaceAll('>', '&gt;')
+          .replaceAll('"', '&quot;')
+          .replaceAll("'", '&#039;');
+      }
+
+      function renderVisuals(chapter) {
+        if (!chapter.images?.length) {
+          return `<div class="empty-visual"><span>暂无图片<br>此页先保留空位，后续可改成 DOM 图形或补截图。</span></div>`;
+        }
+        return chapter.images.map((image) => `
+          <figure class="visual-card">
+            <img src="${escapeHtml(image.file)}" alt="${escapeHtml(image.label || chapter.title)}" loading="lazy">
+            <figcaption>${escapeHtml(image.label || '项目截图')}</figcaption>
+          </figure>
+        `).join('');
+      }
+
+      function render() {
+        chaptersElement.innerHTML = state.chapters.map((chapter) => `
+          <section class="chapter" id="page-${chapter.page}">
+            <div class="visual-panel">
+              <div class="visual-label"><strong>第 ${String(chapter.page).padStart(2, '0')} 页</strong><span>图片备份 / 审稿占位</span></div>
+              <div class="visuals">${renderVisuals(chapter)}</div>
+              ${chapter.imageNote ? `<p class="image-note">图片说明：${escapeHtml(chapter.imageNote)}</p>` : ''}
+            </div>
+            <div class="editor-panel">
+              <div class="chapter-heading">
+                <span class="chapter-number">${String(chapter.page).padStart(2, '0')}｜</span>
+                <input class="chapter-title" data-page="${chapter.page}" aria-label="第 ${chapter.page} 页标题" value="${escapeHtml(chapter.title)}">
+              </div>
+              <textarea class="chapter-body" data-page="${chapter.page}" aria-label="第 ${chapter.page} 页全量文字">${escapeHtml(chapter.body)}</textarea>
+              <div class="chapter-footer">
+                <span>页面文字、画面建议、口播均可直接修改</span>
+                <a class="back-to-top" href="#top">回到顶部 ↑</a>
+              </div>
+            </div>
+          </section>
+        `).join('');
+
+        chaptersElement.querySelectorAll('.chapter-title').forEach((input) => {
+          input.addEventListener('input', () => {
+            updateChapter(Number(input.dataset.page), { title: input.value });
+          });
+        });
+        chaptersElement.querySelectorAll('.chapter-body').forEach((textarea) => {
+          textarea.addEventListener('input', () => {
+            updateChapter(Number(textarea.dataset.page), { body: textarea.value });
+          });
+        });
+      }
+
+      function updateChapter(page, patch) {
+        const chapter = state.chapters.find((item) => item.page === page);
+        Object.assign(chapter, patch);
+        queueSave();
+      }
+
+      function queueSave() {
+        setStatus('待保存…', 'is-saving');
+        window.clearTimeout(saveTimer);
+        saveTimer = window.setTimeout(() => saveState(), 450);
+      }
+
+      async function saveState() {
+        if (saveInFlight) await saveInFlight;
+        setStatus('保存中…', 'is-saving');
+        const snapshot = JSON.stringify(state);
+        saveInFlight = fetch('/api/state', {
+          method: 'PUT',
+          headers: { 'content-type': 'application/json' },
+          body: snapshot,
+        }).then(async (response) => {
+          if (!response.ok) throw new Error(`保存失败：${response.status}`);
+          const result = await response.json();
+          localStorage.setItem(LOCAL_BACKUP_KEY, snapshot);
+          setStatus(`已保存 ${new Date(result.updatedAt).toLocaleTimeString()}`);
+        }).catch((error) => {
+          localStorage.setItem(LOCAL_BACKUP_KEY, snapshot);
+          setStatus('localhost 保存失败，已写入浏览器本地备份', 'is-error');
+          console.error(error);
+        }).finally(() => {
+          saveInFlight = null;
+        });
+        await saveInFlight;
+      }
+
+      function buildMarkdown() {
+        const sections = state.chapters.map((chapter) => {
+          const heading = `### ${String(chapter.page).padStart(2, '0')}｜${chapter.title.trim()}`;
+          return `${heading}\n\n${chapter.body.trim()}\n`;
+        });
+        return `# AI 辅助技术调研实践｜逐页演讲稿（审稿导出）\n\n${sections.join('\n')}`;
+      }
+
+      window.buildMarkdown = buildMarkdown;
+
+      function exportMarkdown() {
+        const markdown = buildMarkdown();
+        const blob = new Blob([markdown], { type: 'text/markdown;charset=utf-8' });
+        const url = URL.createObjectURL(blob);
+        const link = document.createElement('a');
+        link.href = url;
+        link.download = 'AI辅助技术调研实践-逐页演讲稿-审稿导出.md';
+        link.click();
+        URL.revokeObjectURL(url);
+      }
+
+      async function loadState() {
+        try {
+          const response = await fetch('/api/state', { cache: 'no-store' });
+          if (!response.ok) throw new Error(`读取失败：${response.status}`);
+          state = await response.json();
+          localStorage.setItem(LOCAL_BACKUP_KEY, JSON.stringify(state));
+          setStatus('已读取 localhost 保存');
+        } catch (error) {
+          const local = localStorage.getItem(LOCAL_BACKUP_KEY);
+          if (!local) throw error;
+          state = JSON.parse(local);
+          setStatus('localhost 不可用，已读取浏览器备份', 'is-error');
+        }
+        render();
+      }
+
+      exportButton.addEventListener('click', exportMarkdown);
+      saveNowButton.addEventListener('click', () => saveState());
+      document.addEventListener('keydown', (event) => {
+        if ((event.metaKey || event.ctrlKey) && event.key.toLowerCase() === 's') {
+          event.preventDefault();
+          saveState();
+        }
+      });
+
+      loadState().catch((error) => {
+        setStatus('无法读取审稿数据', 'is-error');
+        chaptersElement.innerHTML = `<p>请用 <code>node server.mjs</code> 启动本地服务后刷新页面。<br>${escapeHtml(error.message)}</p>`;
+      });
+    </script>
+  </body>
+</html>
