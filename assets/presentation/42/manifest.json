@@ -302,6 +302,26 @@
       "kind": "evidence-screenshot",
       "status": "ready",
       "original": "assets/screenshots/git/01-一次真实提交与改动.png"
+    },
+    {
+      "id": "dice-early",
+      "file": "source/p21-dice-early.png",
+      "kind": "project-screenshot",
+      "status": "ready-with-boundary",
+      "original": "/Users/wang/Documents/Codex/2026-08-30/wo/dice-game/dice-demo-turn.png",
+      "source_commit": "4e6b2a09f1e89ef79e86980aa197ebfa4507c9d4",
+      "captured_at": "2026-09-22",
+      "notes": "从 Dice 仓库早期视觉版本的独立 worktree 检出并保留的真实项目画面；画面暗、人物接近占位几何、HUD 偏调试面板。不是当前亮色酒馆与 KayKit 角色优化版。"
+    },
+    {
+      "id": "dice-optimized",
+      "file": "source/p21-dice-optimized.png",
+      "kind": "project-screenshot",
+      "status": "ready-with-boundary",
+      "original": "/Users/wang/Documents/Codex/2026-08-30/wo/dice-game",
+      "source_commit": "577db3807cc0bd1a4c48c64abf2cc34416130b0b",
+      "captured_at": "2026-09-22",
+      "notes": "从 Dice 后续 KayKit/亮色酒馆版本启动本地页面后截取的真实运行画面；用于和早期占位版本做视觉反馈对照，不代表完整产品验收。"
     }
   ],
   "slides": [
@@ -325,7 +345,7 @@
     {"page": 18, "title": "继续看目标版本源码", "mode": "evidence-ladder", "assets": ["deckgl-shader", "deckgl-units"]},
     {"page": 19, "title": "最好看的不一定最适合", "mode": "route-comparison", "assets": ["deckgl-units", "deckgl-gpu"], "notes": "四路线卡片由 HTML/CSS 呈现。"},
     {"page": 20, "title": "单张截图不能证明它在旋转", "mode": "runtime-proof-ring", "assets": ["deckgl-t0", "deckgl-t1", "deckgl-picking", "deckgl-paused", "deckgl-frozen"]},
-    {"page": 21, "title": "先看 Codex 完成后的现场", "mode": "unavailable-plus-existing", "assets": [], "notes": "Codex 完成任务截图与 Dice 前后截图当前未归档，不伪造；可先用现场录屏或后续人工采集。"},
+    {"page": 21, "title": "先看 Codex 完成后的现场", "mode": "unavailable-plus-existing", "assets": ["dice-early", "dice-optimized"], "notes": "Dice 早期版本与后续 KayKit/亮色酒馆版本截图已补入；Codex 完成任务截图仍未归档，不伪造。"},
     {"page": 22, "title": "从公开资料走到 Blender 工程", "mode": "asset-lineage", "assets": ["aircraft-source", "747-blender", "cargo-blender"]},
     {"page": 23, "title": "陌生平台先找到入口", "mode": "prototype-to-extension", "assets": ["project-map-tabloom", "tabloom-applied"], "notes": "Chrome 官方文档与原型卡片由 HTML/CSS 表达。"},
     {"page": 24, "title": "不要教 GPT-6 做事", "mode": "html-card", "assets": []},

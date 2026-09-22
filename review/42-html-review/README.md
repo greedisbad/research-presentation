@@ -21,5 +21,6 @@ node server.mjs
 - 如果 localhost 暂时不可用，会额外写入浏览器 `localStorage`，页面顶部会显示当前保存状态。
 - `导出 Markdown` 会把当前所有章节按 `### 页码｜标题` 导出为一个 Markdown 文件。
 - 暂时没有可靠图片或适合 DOM 绘制的页面保留空位，不影响文字审稿。
+- 第 21 页已补入 Dice Git 早期视觉版本与后续 KayKit/亮色酒馆版本截图；Codex 完成任务截图仍保留空位并在页内注明边界。
 
 审稿修改直接保存在本目录的 `review-state.json`；需要丢弃修改时，可用 Git 恢复这个文件。
