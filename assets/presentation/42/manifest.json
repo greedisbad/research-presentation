@@ -1,0 +1,340 @@
+{
+  "presentation": "AI 辅助技术调研实践",
+  "source_document": "docs/42-口播反馈重写版逐页演讲稿.md",
+  "generated_at": "2026-09-22",
+  "asset_root": "assets/presentation/42",
+  "status_legend": {
+    "ready": "可以直接放入 HTML",
+    "ready-with-boundary": "可以使用，但必须保留来源或非真机/示意边界",
+    "html-diagram": "建议由 HTML/CSS 绘制，不需要图片文件",
+    "unavailable": "当前没有可靠原始画面，不伪造"
+  },
+  "assets": [
+    {
+      "id": "project-map-wps",
+      "file": "source/p02-project-map-wps.png",
+      "kind": "project-screenshot",
+      "status": "ready-with-boundary",
+      "original": "assets/screenshots/wps-ai-plugin/01-插件默认页.png",
+      "notes": "浏览器适配层渲染，非 WPS Office 真机截图。"
+    },
+    {
+      "id": "project-map-aircraft",
+      "file": "source/p02-project-map-aircraft.png",
+      "kind": "project-screenshot",
+      "status": "ready",
+      "original": "assets/screenshots/aircraft-modeling/01-机队探索-747.png"
+    },
+    {
+      "id": "project-map-web-excel",
+      "file": "source/p02-project-map-web-excel.png",
+      "kind": "project-screenshot",
+      "status": "ready",
+      "original": "assets/screenshots/web-excel/01-选型实验室首页.png"
+    },
+    {
+      "id": "project-map-deckgl",
+      "file": "source/p02-project-map-deckgl.png",
+      "kind": "project-screenshot",
+      "status": "ready",
+      "original": "assets/screenshots/deckgl-rotation/01-入口-四条实验路线.png"
+    },
+    {
+      "id": "project-map-tabloom",
+      "file": "source/p02-project-map-tabloom.png",
+      "kind": "project-screenshot",
+      "status": "ready",
+      "original": "assets/screenshots/chrome-ai-tab-grouper/01-入口-整理台左右双栏.png"
+    },
+    {
+      "id": "wps-candidates",
+      "file": "source/p04-wps-candidates.png",
+      "kind": "evidence-screenshot",
+      "status": "ready-with-boundary",
+      "original": "assets/screenshots/wps-ai-plugin/10-11个候选项目.png",
+      "notes": "展示初筛表，不把 Stars 或初筛列当成最终评审结论。"
+    },
+    {
+      "id": "wps-asset-mapping",
+      "file": "source/p05-wps-asset-mapping.png",
+      "kind": "evidence-screenshot",
+      "status": "ready",
+      "original": "assets/screenshots/wps-ai-plugin/09-映射表-参考资产到代码.png"
+    },
+    {
+      "id": "wps-learnings",
+      "file": "source/p07-wps-learnings.png",
+      "kind": "evidence-screenshot",
+      "status": "ready",
+      "original": "assets/screenshots/wps-ai-plugin/05-LEARNINGS-批量调用困境.png"
+    },
+    {
+      "id": "wps-tools-schema",
+      "file": "source/p07-wps-tools-schema.png",
+      "kind": "evidence-screenshot",
+      "status": "ready",
+      "original": "assets/screenshots/wps-ai-plugin/06-tools-schema修复.png"
+    },
+    {
+      "id": "wps-plan",
+      "file": "source/p07-wps-plan.png",
+      "kind": "evidence-screenshot",
+      "status": "ready",
+      "original": "assets/screenshots/wps-ai-plugin/07-Phase07-PLAN.png"
+    },
+    {
+      "id": "wps-rules",
+      "file": "source/p07-wps-rules.png",
+      "kind": "evidence-screenshot",
+      "status": "ready",
+      "original": "assets/screenshots/wps-ai-plugin/08-ribbon四文件规则.png"
+    },
+    {
+      "id": "microsoft-word-api",
+      "file": "web/p06-microsoft-word-api.png",
+      "kind": "web-screenshot",
+      "status": "ready-with-boundary",
+      "source_url": "https://learn.microsoft.com/en-us/javascript/api/word/",
+      "captured_at": "2026-09-22",
+      "notes": "Microsoft Learn Word JavaScript API Preview 的 word package 页面。"
+    },
+    {
+      "id": "wps-addin-overview",
+      "file": "web/p06-wps-addin-overview.png",
+      "kind": "web-screenshot",
+      "status": "ready-with-boundary",
+      "source_url": "https://open.wps.cn/documents/app-integration-dev/wps365/client/wpsoffice/wps-integration-mode/wps-addin-development/addin-overview",
+      "captured_at": "2026-09-22",
+      "notes": "WPS 开放平台加载项概述；页面主体加载不完整时仍保留导航和标题，不把它当成 Range/Paragraph 细节证据。"
+    },
+    {
+      "id": "cargo-entry",
+      "file": "source/p08-cargo-entry.png",
+      "kind": "project-screenshot",
+      "status": "ready",
+      "original": "assets/screenshots/cba-demo-3d/01-入口-航班表与舱位图.png"
+    },
+    {
+      "id": "search-evidence",
+      "file": "source/p09-search-evidence.png",
+      "kind": "web-screenshot",
+      "status": "ready-with-boundary",
+      "original": "assets/screenshots/web/01-位置代码共现检索.png",
+      "notes": "历史检索反例；不要叙述成 Google 或 Bing 方法已稳定奏效。"
+    },
+    {
+      "id": "cargo-manual",
+      "file": "source/p09-cargo-manual.png",
+      "kind": "web-screenshot",
+      "status": "ready",
+      "original": "assets/screenshots/web/03-命中原始PDF-第一页.png"
+    },
+    {
+      "id": "sf-source",
+      "file": "source/p09-sf-source.png",
+      "kind": "web-screenshot",
+      "status": "ready",
+      "original": "assets/screenshots/web/04-顺丰航空官网.png"
+    },
+    {
+      "id": "cargo-result",
+      "file": "source/p10-cargo-result.png",
+      "kind": "project-screenshot",
+      "status": "ready",
+      "original": "assets/screenshots/cba-demo-3d/05-自动试排完成.png"
+    },
+    {
+      "id": "excel-research",
+      "file": "source/p12-excel-research.png",
+      "kind": "evidence-screenshot",
+      "status": "ready-with-boundary",
+      "original": "assets/screenshots/web-excel/07-候选研究表-细节.png",
+      "notes": "研究表是筛选证据，不等同于完整自动化验收。"
+    },
+    {
+      "id": "excel-index-detail",
+      "file": "source/p13-excel-index-detail.png",
+      "kind": "project-screenshot",
+      "status": "ready",
+      "original": "assets/screenshots/web-excel/06-六方案卡片索引-细节.png"
+    },
+    {
+      "id": "jspreadsheet",
+      "file": "source/p13-jspreadsheet.png",
+      "kind": "project-screenshot",
+      "status": "ready",
+      "original": "assets/screenshots/web-excel/02-Jspreadsheet演示.png"
+    },
+    {
+      "id": "tabulator",
+      "file": "source/p13-tabulator.png",
+      "kind": "project-screenshot",
+      "status": "ready",
+      "original": "assets/screenshots/web-excel/03-Tabulator演示.png"
+    },
+    {
+      "id": "vxe",
+      "file": "source/p13-vxe.png",
+      "kind": "project-screenshot",
+      "status": "ready",
+      "original": "assets/screenshots/web-excel/04-VXE演示.png"
+    },
+    {
+      "id": "vtable",
+      "file": "source/p13-vtable.png",
+      "kind": "project-screenshot",
+      "status": "ready",
+      "original": "assets/screenshots/web-excel/05-VTable演示.png"
+    },
+    {
+      "id": "cdn-check",
+      "file": "source/p14-cdn-check.png",
+      "kind": "evidence-screenshot",
+      "status": "ready-with-boundary",
+      "original": "assets/screenshots/web-excel/08-CDN检查记录.png",
+      "notes": "证明地址存在，不证明浏览器格式、公司网络和真实运行全部通过。"
+    },
+    {
+      "id": "deckgl-t0",
+      "file": "source/p20-deckgl-t0.png",
+      "kind": "runtime-screenshot",
+      "status": "ready",
+      "original": "assets/screenshots/deckgl-rotation/02-路线01-运行中诊断面板-t0.png"
+    },
+    {
+      "id": "deckgl-t1",
+      "file": "source/p20-deckgl-t1.png",
+      "kind": "runtime-screenshot",
+      "status": "ready",
+      "original": "assets/screenshots/deckgl-rotation/03-路线01-同一页面-t1.png",
+      "notes": "与 t0 配对使用，单张图不证明持续旋转。"
+    },
+    {
+      "id": "deckgl-picking",
+      "file": "source/p20-deckgl-picking.png",
+      "kind": "runtime-screenshot",
+      "status": "ready",
+      "original": "assets/screenshots/deckgl-rotation/04-路线01-点击图标picking成功.png"
+    },
+    {
+      "id": "deckgl-paused",
+      "file": "source/p20-deckgl-paused.png",
+      "kind": "runtime-screenshot",
+      "status": "ready",
+      "original": "assets/screenshots/deckgl-rotation/05-路线01-暂停后t0.png"
+    },
+    {
+      "id": "deckgl-frozen",
+      "file": "source/p20-deckgl-frozen.png",
+      "kind": "runtime-screenshot",
+      "status": "ready",
+      "original": "assets/screenshots/deckgl-rotation/06-路线01-暂停3秒后角度冻结.png"
+    },
+    {
+      "id": "deckgl-shader",
+      "file": "source/p18-deckgl-shader.png",
+      "kind": "evidence-screenshot",
+      "status": "ready",
+      "original": "docs/evidence/runtime/deckgl/03-shader-animation.png"
+    },
+    {
+      "id": "deckgl-units",
+      "file": "source/p18-deckgl-units.png",
+      "kind": "runtime-screenshot",
+      "status": "ready",
+      "original": "assets/screenshots/deckgl-rotation/07-路线04-弧度与度数并排对照.png"
+    },
+    {
+      "id": "deckgl-gpu",
+      "file": "source/p19-deckgl-gpu.png",
+      "kind": "runtime-screenshot",
+      "status": "ready-with-boundary",
+      "original": "assets/screenshots/deckgl-rotation/08-路线03-GPU路线提交次数为0.png",
+      "notes": "像素变化成立，但图层提交数为 0；适合说明多通道证据之间的差异。"
+    },
+    {
+      "id": "747-blender",
+      "file": "source/p22-747-blender.png",
+      "kind": "render",
+      "status": "ready-with-boundary",
+      "original": "assets/cases/aircraft/747-blender-preview.png",
+      "notes": "本地 Blender 渲染，不是官网照片，也不证明工程精度。"
+    },
+    {
+      "id": "cargo-blender",
+      "file": "source/p22-cargo-blender.png",
+      "kind": "render",
+      "status": "ready-with-boundary",
+      "original": "assets/cases/aircraft/cargo-blender-preview.png",
+      "notes": "概念演示资产；不标注为机务工程图。"
+    },
+    {
+      "id": "aircraft-source",
+      "file": "source/p22-aircraft-source.png",
+      "kind": "project-screenshot",
+      "status": "ready",
+      "original": "assets/screenshots/aircraft-modeling/06-机型档案弹窗.png"
+    },
+    {
+      "id": "tabloom-applied",
+      "file": "source/p23-tabloom-applied.png",
+      "kind": "project-screenshot",
+      "status": "ready",
+      "original": "assets/screenshots/chrome-ai-tab-grouper/07-应用到Chrome-已应用.png"
+    },
+    {
+      "id": "project-memory",
+      "file": "source/p25-project-memory.png",
+      "kind": "evidence-screenshot",
+      "status": "ready",
+      "original": "assets/screenshots/ai-earn-research/02-研究包-目录约定与导航.png"
+    },
+    {
+      "id": "git-log",
+      "file": "source/p25-git-log.png",
+      "kind": "evidence-screenshot",
+      "status": "ready",
+      "original": "assets/screenshots/git/02-git-log-oneline.png"
+    },
+    {
+      "id": "git-change",
+      "file": "source/p29-git-change.png",
+      "kind": "evidence-screenshot",
+      "status": "ready",
+      "original": "assets/screenshots/git/01-一次真实提交与改动.png"
+    }
+  ],
+  "slides": [
+    {"page": 1, "title": "AI 过上了打工人梦想中的生活", "mode": "html-card", "assets": [], "notes": "社交媒体帖子样式卡片由 HTML/CSS 绘制，不把梗图当核心证据。"},
+    {"page": 2, "title": "近期项目复盘", "mode": "image-map", "assets": ["project-map-wps", "project-map-aircraft", "project-map-web-excel", "project-map-deckgl", "project-map-tabloom"], "notes": "ECharts 项目没有可靠截图，使用明确标注的 HTML 示意卡。"},
+    {"page": 3, "title": "WPS AI 插件", "mode": "image-plus-labels", "assets": ["project-map-wps"], "notes": "标注为浏览器适配层渲染，非 WPS 真机。"},
+    {"page": 4, "title": "候选池不是 AI 凭空生成的", "mode": "image-plus-diagram", "assets": ["wps-candidates"], "notes": "候选关系与说明文字用 HTML/CSS 补足。"},
+    {"page": 5, "title": "没有一个库是答案", "mode": "image-plus-diagram", "assets": ["wps-asset-mapping"], "notes": "四类可借资产由 HTML/CSS 拼装图呈现。"},
+    {"page": 6, "title": "相邻生态是线索，不是事实", "mode": "paired-web-screenshots", "assets": ["microsoft-word-api", "wps-addin-overview"], "notes": "需要把 Range/Paragraph 的精确字段当作待验证点，不从这两张首页截图过度推断。"},
+    {"page": 7, "title": "WPS 留下的不是 AI 写了个插件", "mode": "evidence-mosaic", "assets": ["wps-learnings", "wps-tools-schema", "wps-plan", "wps-rules"], "notes": "右侧最终插件画面沿用 project-map-wps；三层漏斗由 HTML/CSS 绘制。"},
+    {"page": 8, "title": "带不回家的 Excel", "mode": "html-reconstructed-table", "assets": ["cargo-entry"], "notes": "内部 Excel 必须是明确标注的脱敏重构，数字来自公开资料或使用破折号。"},
+    {"page": 9, "title": "逐轮学会行业语言", "mode": "evidence-timeline", "assets": ["search-evidence", "cargo-manual", "sf-source"], "notes": "搜索截图只作为反例/过程证据；主证据使用原始 PDF 和公开官网。"},
+    {"page": 10, "title": "把资料变成产品结构", "mode": "three-column-evidence", "assets": ["cargo-manual", "cargo-result"], "notes": "中间结构化配置由 HTML/CSS 表达。"},
+    {"page": 11, "title": "从找资料到技术选型", "mode": "transition", "assets": ["cargo-result", "project-map-web-excel"], "notes": "两张项目图作为前后案例锚点。"},
+    {"page": 12, "title": "定义淘汰条件", "mode": "filter-diagram", "assets": ["excel-research"], "notes": "三道筛网由 HTML/CSS 绘制。"},
+    {"page": 13, "title": "六个同题 HTML", "mode": "screenshot-grid", "assets": ["excel-index-detail", "jspreadsheet", "tabulator", "vxe", "vtable"]},
+    {"page": 14, "title": "CDN 返回 200 也可能拿错东西", "mode": "evidence-plus-diagram", "assets": ["cdn-check"], "notes": "补充文件格式、公司网络、浏览器运行三道门禁。"},
+    {"page": 15, "title": "ECharts 页面不变", "mode": "html-diagram", "assets": [], "notes": "没有公开公司截图，使用标注“示意，非公司截图”的脱敏图。"},
+    {"page": 16, "title": "去问当前项目", "mode": "html-code-card", "assets": [], "notes": "代码片段直接用 HTML code block，来源指向当前项目 node_modules/版本证据。"},
+    {"page": 17, "title": "Deck.gl 页面能打开不代表目标行为发生", "mode": "paired-runtime", "assets": ["deckgl-t0", "deckgl-t1"]},
+    {"page": 18, "title": "继续看目标版本源码", "mode": "evidence-ladder", "assets": ["deckgl-shader", "deckgl-units"]},
+    {"page": 19, "title": "最好看的不一定最适合", "mode": "route-comparison", "assets": ["deckgl-units", "deckgl-gpu"], "notes": "四路线卡片由 HTML/CSS 呈现。"},
+    {"page": 20, "title": "单张截图不能证明它在旋转", "mode": "runtime-proof-ring", "assets": ["deckgl-t0", "deckgl-t1", "deckgl-picking", "deckgl-paused", "deckgl-frozen"]},
+    {"page": 21, "title": "先看 Codex 完成后的现场", "mode": "unavailable-plus-existing", "assets": [], "notes": "Codex 完成任务截图与 Dice 前后截图当前未归档，不伪造；可先用现场录屏或后续人工采集。"},
+    {"page": 22, "title": "从公开资料走到 Blender 工程", "mode": "asset-lineage", "assets": ["aircraft-source", "747-blender", "cargo-blender"]},
+    {"page": 23, "title": "陌生平台先找到入口", "mode": "prototype-to-extension", "assets": ["project-map-tabloom", "tabloom-applied"], "notes": "Chrome 官方文档与原型卡片由 HTML/CSS 表达。"},
+    {"page": 24, "title": "不要教 GPT-6 做事", "mode": "html-card", "assets": []},
+    {"page": 25, "title": "不要把项目记忆押在聊天记录里", "mode": "paired-evidence", "assets": ["project-memory", "git-log"]},
+    {"page": 26, "title": "给小模型一套能行动的工具", "mode": "html-tool-orbit", "assets": [], "notes": "文件、终端、浏览器、网络资料、Git 五块由 HTML/CSS 绘制。"},
+    {"page": 27, "title": "隔离实验，让现实来裁决", "mode": "html-lab-diagram", "assets": ["excel-index-detail", "deckgl-t0"], "notes": "独立 HTML 与 worktree 的关系由 HTML/CSS 绘制。"},
+    {"page": 28, "title": "把过去、现在和未来一起告诉 AI", "mode": "html-timeline", "assets": []},
+    {"page": 29, "title": "让项目本身成为下一位 Agent 的老师", "mode": "file-tree-plus-evidence", "assets": ["project-memory", "git-change"]},
+    {"page": 30, "title": "判断仍然很贵", "mode": "html-card", "assets": []},
+    {"page": 31, "title": "下一次不用从零开始", "mode": "html-loop-plus-background", "assets": ["project-map-wps", "project-map-aircraft", "project-map-web-excel", "project-map-deckgl", "project-memory"], "notes": "最后的社交媒体卡片与五步闭环由 HTML/CSS 绘制。"}
+  ]
+}
