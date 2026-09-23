@@ -4,6 +4,9 @@ tmp/
 # Local presentation build artifacts
 dist/
 output/
+node_modules/
+public/demos/
+.superpowers/
 
 # Isolated execution worktrees
 .worktrees/
