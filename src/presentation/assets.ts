@@ -1,11 +1,19 @@
 import wpsClient from '../../assets/cases/wps/history-2026-05/2026-05-24-japan-progress.png'
-import cbaHome from '../../assets/screenshots/cba-demo-3d/01-入口-航班表与舱位图.png'
 import excelHome from '../../assets/screenshots/web-excel/06-六方案卡片索引-细节.png'
 import deckT0 from '../../assets/screenshots/deckgl-rotation/02-路线01-运行中诊断面板-t0.png'
 import deckT1 from '../../assets/screenshots/deckgl-rotation/03-路线01-同一页面-t1.png'
 import deckPick from '../../assets/screenshots/deckgl-rotation/04-路线01-点击图标picking成功.png'
 import aircraft from '../../assets/screenshots/aircraft-modeling/08-Blender标定渲染-747四分之三视角.png'
 import diceEarly from '../../assets/presentation/42/source/p21-dice-early.png'
-import diceAfter from '../../assets/presentation/42/source/p21-dice-optimized.png'
+import microsoftWordApi from '../../assets/presentation/42/web/p06-microsoft-word-api.png'
+import wpsAddinOverview from '../../assets/presentation/42/web/p06-wps-addin-overview.png'
+import cbaTable from '../../assets/screenshots/cba-demo-3d/02-表格搜索筛选.png'
+import sfCargoChart from '../../assets/presentation/42/web/sf-b747-cargo-position-chart.png'
+import cargoSearch from '../../assets/presentation/42/source/p09-search-evidence.png'
+import cargoManual from '../../assets/presentation/42/source/p09-cargo-manual.png'
+import cbaResult from '../../assets/screenshots/cba-demo-3d/05-自动试排完成.png'
+import diceLatest from '../../assets/presentation/42/source/p21-dice-latest.png'
+import echartsBefore from '../../assets/presentation/42/source/echarts-4-9-missing-endpoints.png'
+import echartsExplicit from '../../assets/presentation/42/source/echarts-6-explicit.png'
 
-export const media = { wpsClient, cbaHome, excelHome, deckT0, deckT1, deckPick, aircraft, diceEarly, diceAfter }
+export const media = { wpsClient, excelHome, deckT0, deckT1, deckPick, aircraft, diceEarly, microsoftWordApi, wpsAddinOverview, cbaTable, sfCargoChart, cargoSearch, cargoManual, cbaResult, diceLatest, echartsBefore, echartsExplicit }
