@@ -145,7 +145,7 @@ button,a{font:inherit}
 .ds-thinking-top{display:flex;align-items:center;gap:12px;color:#c3c9cc;font:600 20px/1.2 var(--sans)}
 .ds-atom{color:#5d8cff;font:500 29px/1 Arial,sans-serif}
 .ds-chevron{margin-left:7px;color:#9aa1a4;font:500 25px/1 Arial,sans-serif}
-.ds-thought-copy{display:grid;grid-template-columns:24px minmax(0,1fr);gap:12px;align-items:start;padding-left:9px;color:#c4c9cc;font:400 24px/1.55 var(--sans)}
+.ds-thought-copy{display:grid;grid-template-columns:24px minmax(0,1fr);gap:12px;align-items:start;margin-left:7px;padding:0 0 0 12px;border-left:2px solid #3b3e40;color:#c4c9cc;font:400 24px/1.55 var(--sans)}
 .ds-thought-copy p{margin:0}
 .ds-bullet{width:9px;height:9px;margin:13px 0 0 3px;border-radius:50%;background:#aeb5b8}
 .ds-event-summary{font-size:20px;line-height:1.45}
