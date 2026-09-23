@@ -50,6 +50,24 @@
 
 这不意味着旧参考失去价值。PageAgent 仍可能是理解 Agent Loop 的好材料；PPTAgent、设计 Skill 仍可能提供内容协议与布局思路。**变化是：今天已经可以先研究直接同题的 WPS 插件，再用相邻项目补它没有解决的局部问题。**
 
+## 为什么当时没有找到这些项目：有依据的解释与猜测
+
+最有依据的解释是**当时的搜索任务与这次的反事实问题不同**。2026-05-23 的 [Phase 01 上下文](../tmp/wps-ai-plugin-main/.planning/phases/01-ppt-agent-panel/01-CONTEXT.md)写明：要在**已有** WPS 插件中新增 PPT Agent 面板，范围内是 PPT 插件和共享组件，Word/Excel 在范围外，并指定 PageAgent 代码作为参考。2026-05-26 的 [Phase 02 上下文](../tmp/wps-ai-plugin-main/.planning/phases/02-ppt-design-research/02-CONTEXT.md)又明确转向“让 AI 生成的 PPT 更美观”，要求搜索 PPT 生成项目、设计 Skill 和排版经验。由此得到 11 个 PPT 相关候选是符合阶段任务的；不能把这 11 项直接当成一次“三宿主 WPS AI 插件”全网选型失败的记录。
+
+在此之外，还有几种**可能**使直接同题项目被漏掉的原因，强度各不相同：
+
+| 可能原因 | 支持它的观察 | 不能据此断言什么 |
+|---|---|---|
+| **先验线索影响了扩展方向**（较强推测） | Phase 01 把 PageAgent 的循环、工具 Schema 和事件系统列为规范参考；Phase 02 预先点名 PptxGenJS 和本地 `ppt-master`，最终清单也集中在幻灯片生成与设计。[Phase 01](../tmp/wps-ai-plugin-main/.planning/phases/01-ppt-agent-panel/01-CONTEXT.md)、[Phase 02](../tmp/wps-ai-plugin-main/.planning/phases/02-ppt-design-research/02-CONTEXT.md) | 没有保存当时所有搜索词和结果页，不能说 AI “只会复述关键词”，也不能确定某个直接项目曾出现在结果中却被忽略。 |
+| **搜索表达与仓库命名不一致**（中等推测） | 本轮用 `WPS Office add-in AI agent`、`WPS MCP`、中文“WPS 智能体插件”等组合，才把 [WPS-AI](https://github.com/lewis-hui1202/WPS-AI)与 [OpenCode WPS](https://github.com/lnxsun/opencode-wps)归入同一候选池；旧 Phase 02 的关键词重心是 PPT 美化。 | 无法重放当时的搜索引擎索引与排序，不能证明换一个词当时一定能找到这两个仓库。 |
+| **直接项目可能较新，或后来才扩展到三宿主**（待核验） | 今天看到的是仓库当前状态；例如 [OpenCode WPS 更新日志](https://github.com/lnxsun/opencode-wps/blob/main/CHANGELOG.md)记录了 2026 年 8—9 月的持续开发。 | 更新日志日期不是仓库创建日期。未核对 2026-05-26 的提交、版本和当时 README，不能声称这两个项目当时尚不存在。 |
+| **小众项目与宣传用语使发现更困难**（弱推测） | 直接项目可能用 `addon`、`JSAPI`、`MCP`、`Office Agent` 等不同词描述自己；宽泛的“AI PPT”搜索则容易落到生成 PPTX 的项目。 | 这里只解释一种可能的检索机制，没有当时的排名、点击和排除日志，不能把它列为已证实的主因。 |
+| **模型与搜索能力的差异**（个人经历，未隔离变量） | 讲者回忆当时让模型扩大搜索，结果仍多围绕给定线索转述；本轮使用更明确的宿主与任务条件，并逐个复核仓库。 | 两次之间同时变化了查询、项目生态和搜索工具；不能把结果差异单独归因于模型变强。 |
+
+时间因素还需要一个**反证约束**：[另一个 WPS 表格 AI 插件](https://github.com/claude-office-skills/claude-office-plugin)的项目[更新日志](https://github.com/claude-office-skills/claude-office-plugin/blob/main/CHANGELOG.md)自称 2026 年 2 月已有 WPS 表格宿主与 AI 操作能力。这只是单宿主项目，更新日志也不是独立的公开时间证明；但足以提醒我们，不能用“当时根本没有 WPS AI 插件”概括整个生态。要判断某个特定仓库在 2026-05-26 是否已经公开且与需求相符，仍需查它当时的提交、发布记录和历史 README。
+
+**适合口播的简短判断：**“现在回看，最确定的不是 AI 当时漏掉了一个现成答案，而是我们那几轮研究主要在解决 PPT Agent 和 PPT 美化两个局部问题。今天把问题改为‘从零寻找三宿主 WPS AI 插件’，搜到的项目自然更贴题；项目出现时间、检索词和模型能力各贡献了多少，目前没有证据拆开。”
+
 ### 最有用的反例：Pi for Excel 的 WPS 记录
 
 这份记录并未简单宣称“支持 WPS”。它把 WPS 表格工具分成已实现与明确不支持的部分，写出 `write_cells` 的回读校验，同时公开某些 WPS 安装环境中 Ribbon 按钮不触发的失败。随后用官方样例和不同架构的 WPS 构建做隔离复测。这里的事实范围是**该仓库所记录的特定构建与测试环境**，而不是所有 WPS 用户的通用规律。[工具支持矩阵与实验记录](https://github.com/anhquan1301/AI-for-excel/blob/main/docs/wps-support.md)。
