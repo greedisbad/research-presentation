@@ -63,6 +63,10 @@ export function createStage(slides: Slide[], mode: 'full' | 'single'): void {
   document.querySelector('#next')!.addEventListener('click', () => show(current + 1))
   document.querySelector('#contents')!.addEventListener('click', toggleContents)
   addEventListener('resize', scale)
+  addEventListener('hashchange', () => {
+    const page = Number(location.hash.match(/^#p(\d+)$/)?.[1] ?? 1)
+    if (Number.isFinite(page) && page - 1 !== current) show(page - 1)
+  })
   addEventListener('keydown', (event) => {
     if (event.key === 'Escape') { toc.hidden = true; return }
     if (!toc.hidden) return

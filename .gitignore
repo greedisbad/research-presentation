@@ -5,7 +5,6 @@ tmp/
 dist/
 output/
 node_modules/
-public/demos/
 .superpowers/
 
 # Isolated execution worktrees

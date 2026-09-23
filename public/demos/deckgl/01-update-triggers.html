@@ -1,0 +1,17 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>路线 01 · Update Triggers</title><link rel="stylesheet" href="lab.css"><script src="https://unpkg.com/deck.gl@9.1.12/dist.min.js"></script></head>
+<body data-title="路线 01 · 属性失效驱动" data-route="COMPOSITE / UPDATE TRIGGERS">
+<script src="lab-common.js"></script><script>
+try {
+  const {state}=Lab;
+  class AnimatedTyphoonLayer extends deck.CompositeLayer {
+    initializeState(){this.setState({angle:0});this._last=performance.now();const run=now=>{const dt=Math.min(50,now-this._last);this._last=now;if(state.running){state.angle=(state.angle+dt*.055)%360;this.setState({angle:state.angle});state.submits++}this._raf=requestAnimationFrame(run)};this._raf=requestAnimationFrame(run)}
+    finalizeState(){cancelAnimationFrame(this._raf)}
+    renderLayers(){const angle=this.state.angle;return new deck.IconLayer({...Lab.iconProps(),id:`${this.props.id}-icons`,getAngle:d=>angle*d.speed,updateTriggers:{getAngle:[angle]}})}
+  }
+  AnimatedTyphoonLayer.layerName='AnimatedTyphoonLayer';
+  const animated=new AnimatedTyphoonLayer({id:'typhoon-animation'});
+  const deckgl=Lab.makeDeck([Lab.staticLayer(),animated]);
+  Lab.controls(delta=>{state.angle+=delta;animated.setState({angle:state.angle})});
+  (function ui(){Lab.tick(deckgl);requestAnimationFrame(ui)})();
+} catch(e){Lab.fail(e)}
+</script></body></html>

@@ -1,0 +1,23 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>路线 03 · Shader Uniform</title><link rel="stylesheet" href="lab.css"><script src="https://unpkg.com/deck.gl@9.1.12/dist.min.js"></script></head>
+<body data-title="路线 03 · GPU 时间驱动" data-route="LAYER EXTENSION / SHADER">
+<script src="lab-common.js"></script><script>
+try {
+  const {state}=Lab;
+  const spinModule={name:'spin',vs:'uniform spinUniforms { float angle; } spin;',getUniforms:opts=>({angle:opts?.angle||0}),uniformTypes:{angle:'f32'}};
+  class SpinExtension extends deck.LayerExtension {
+    getShaders(){return {modules:[spinModule],inject:{'vs:#main-end':`
+      vec4 spin_anchor = project_common_position_to_clipspace(geometry.position);
+      vec2 spin_delta = gl_Position.xy / gl_Position.w - spin_anchor.xy / spin_anchor.w;
+      float spin_r = spin.angle * PI / 180.0;
+      mat2 spin_m = mat2(cos(spin_r), -sin(spin_r), sin(spin_r), cos(spin_r));
+      gl_Position.xy = (spin_anchor.xy / spin_anchor.w + spin_m * spin_delta) * gl_Position.w;
+    `}}}
+    draw(){this.setShaderModuleProps({spin:{angle:state.angle}});this.setNeedsRedraw()}
+  }
+  SpinExtension.extensionName='SpinExtension';
+  const iconLayer=new deck.IconLayer({...Lab.iconProps(),id:'gpu-spinning-icons',getAngle:0,extensions:[new SpinExtension()]});
+  const deckgl=Lab.makeDeck([Lab.staticLayer(),iconLayer]);
+  Lab.controls(delta=>{state.angle+=delta;deckgl.redraw(true)});
+  let last=performance.now();(function animate(now){const dt=Math.min(50,now-last);last=now;if(state.running){state.angle=(state.angle+dt*.055)%360;state.submits=0;deckgl.redraw(true)}Lab.tick(deckgl);requestAnimationFrame(animate)})(last);
+} catch(e){Lab.fail(e)}
+</script></body></html>

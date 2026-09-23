@@ -1,0 +1,26 @@
+[
+  {
+    "model": "B737-800BCF",
+    "objects": 125,
+    "vertices": 33045,
+    "bytes": 1596628
+  },
+  {
+    "model": "B757-200F",
+    "objects": 141,
+    "vertices": 33749,
+    "bytes": 1665784
+  },
+  {
+    "model": "B767-300BCF",
+    "objects": 137,
+    "vertices": 33357,
+    "bytes": 1652664
+  },
+  {
+    "model": "B747-400ERF",
+    "objects": 204,
+    "vertices": 38871,
+    "bytes": 2063660
+  }
+]

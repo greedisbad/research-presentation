@@ -7,6 +7,7 @@
     "dev": "vite --host 127.0.0.1",
     "build:full": "vite build --config vite.config.ts",
     "build:single": "vite build --config vite.single.config.ts",
+    "refresh:demos": "node scripts/refresh-demos.mjs",
     "test": "node --test tests/*.test.mjs"
   },
   "devDependencies": {

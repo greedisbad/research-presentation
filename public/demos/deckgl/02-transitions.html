@@ -1,0 +1,17 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>路线 02 · Attribute Transitions</title><link rel="stylesheet" href="lab.css"><script src="https://unpkg.com/deck.gl@9.1.12/dist.min.js"></script></head>
+<body data-title="路线 02 · 低频过渡驱动" data-route="COMPOSITE / TRANSITIONS">
+<script src="lab-common.js"></script><script>
+try {
+  const {state}=Lab;
+  class TransitionTyphoonLayer extends deck.CompositeLayer {
+    initializeState(){this.setState({target:0});this._timer=setInterval(()=>{if(state.running){const target=this.state.target+120;this.setState({target});state.submits++;state.angle=target}},2000)}
+    finalizeState(){clearInterval(this._timer)}
+    renderLayers(){const target=this.state.target;return new deck.IconLayer({...Lab.iconProps(),id:`${this.props.id}-icons`,getAngle:d=>target*d.speed,updateTriggers:{getAngle:[target]},transitions:{getAngle:{duration:2000,easing:t=>t}}})}
+  }
+  TransitionTyphoonLayer.layerName='TransitionTyphoonLayer';
+  const animated=new TransitionTyphoonLayer({id:'typhoon-transition'});
+  const deckgl=Lab.makeDeck([Lab.staticLayer(),animated]);
+  Lab.controls(delta=>{const target=animated.state.target+delta;animated.setState({target});state.angle=target;state.submits++});
+  (function ui(){Lab.tick(deckgl,()=>{if(state.running)state.angle=(state.angle+.06)%100000});requestAnimationFrame(ui)})();
+} catch(e){Lab.fail(e)}
+</script></body></html>

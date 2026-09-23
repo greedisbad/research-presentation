@@ -1,0 +1,12 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>路线 04 · Radians Baseline</title><link rel="stylesheet" href="lab.css"><script src="https://unpkg.com/deck.gl@9.1.12/dist.min.js"></script></head>
+<body data-title="路线 04 · 单位错误对照" data-route="RADIANS × DEGREES" data-sample-x="145">
+<script src="lab-common.js"></script><script>
+try {
+  const {state}=Lab; const pair=[{position:[-145,0,0],name:'错误：弧度',speed:1},{position:[145,0,0],name:'正确：度',speed:1}];
+  const labels=new deck.TextLayer({id:'labels',data:pair,getPosition:d=>[d.position[0],d.position[1]-85,0],getText:d=>d.name.startsWith('错误')?'ERROR / RADIANS':'CORRECT / DEGREES',getSize:15,getColor:d=>d.name.startsWith('错误')?[255,101,93]:[85,243,197],getTextAnchor:'middle',pickable:false});
+  function layers(){const a=state.angle;return [Lab.staticLayer(),labels,new deck.IconLayer({...Lab.iconProps(),id:'radian-error',data:[pair[0]],getAngle:()=>a*Math.PI/180,updateTriggers:{getAngle:[a]}}),new deck.IconLayer({...Lab.iconProps(),id:'degree-correct',data:[pair[1]],getAngle:()=>a,updateTriggers:{getAngle:[a]}})]}
+  const deckgl=Lab.makeDeck(layers());
+  Lab.controls(delta=>{state.angle+=delta;deckgl.setProps({layers:layers()});state.submits++});
+  let last=performance.now();(function animate(now){const dt=Math.min(50,now-last);last=now;if(state.running){state.angle=(state.angle+dt*.055)%360;deckgl.setProps({layers:layers()});state.submits++}Lab.tick(deckgl);requestAnimationFrame(animate)})(last);
+} catch(e){Lab.fail(e)}
+</script></body></html>
