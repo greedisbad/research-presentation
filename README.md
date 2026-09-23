@@ -20,6 +20,10 @@ npm run build:single
 
 四个案例的冻结副本位于 `public/demos/`：3D 配载与飞机建模使用本地构建资源；Excel 选型与 Deck.gl 实验的原始 HTML 仍通过 CDN 加载依赖，完全断网时保留幻灯片截图讲解，不保证交互演示可用。两种构建的用途及素材边界见 [前端素材审计](assets/presentation/frontend-asset-audit.md)。
 
+### 第二轮风格试稿
+
+[六种风格比较入口](prototypes/style-round-2/index.html) 各包含相同的前三页：笑话开场、WPS 真机画面、参考项目候选池。方向包括航班运行看板、瑞士网格、电影纪录片、拼贴杂志、极简发布会、复古终端。它们与正式 24 页版本相互独立；可用 `npm run dev` 后访问 `/prototypes/style-round-2/`，也可直接打开该目录下的 `index.html`。如要重新生成，运行 `node scripts/generate-style-round-2.mjs`。
+
 ## 一句话主张
 
 AI 的价值不只是替人搜索，而是把“定义问题、发现参考、筛选证据、验证结论、转化为工程资产”串成一条可复用的技术情报流水线。
