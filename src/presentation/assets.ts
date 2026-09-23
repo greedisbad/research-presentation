@@ -5,13 +5,14 @@ import aircraft from '../../assets/screenshots/aircraft-modeling/08-Blender标�
 import diceEarly from '../../assets/presentation/42/source/p21-dice-early.png'
 import microsoftWordApi from '../../assets/presentation/42/web/p06-microsoft-word-api.png'
 import wpsAddinOverview from '../../assets/presentation/42/web/p06-wps-addin-overview.png'
-import cbaTable from '../../assets/screenshots/cba-demo-3d/02-表格搜索筛选.png'
 import sfCargoChart from '../../assets/presentation/42/web/sf-b747-cargo-position-chart.png'
-import cargoSearch from '../../assets/presentation/42/source/p09-search-evidence.png'
-import cargoManual from '../../assets/presentation/42/source/p09-cargo-manual.png'
+import cargoDimensions from '../../assets/presentation/42/web/ckair-b747-dimensions.png'
+import cargoContours from '../../assets/presentation/42/web/ckair-b747-contours.png'
+import cargoManual from '../../assets/presentation/42/web/b747-cargo-manual-page-16.png'
 import cbaResult from '../../assets/screenshots/cba-demo-3d/05-自动试排完成.png'
 import diceLatest from '../../assets/presentation/42/source/p21-dice-latest.png'
-import echartsBefore from '../../assets/presentation/42/source/echarts-4-9-missing-endpoints.png'
-import echartsExplicit from '../../assets/presentation/42/source/echarts-6-explicit.png'
+import echartsSix from '../../assets/presentation/42/source/echarts-html-6.0.0.png'
+import echartsFourDefault from '../../assets/presentation/42/source/echarts-default-4.9.0.png'
+import echartsSixDefault from '../../assets/presentation/42/source/echarts-default-6.0.0.png'
 
-export const media = { wpsClient, excelHome, projectMapDeckgl, aircraft, diceEarly, microsoftWordApi, wpsAddinOverview, cbaTable, sfCargoChart, cargoSearch, cargoManual, cbaResult, diceLatest, echartsBefore, echartsExplicit }
+export const media = { wpsClient, excelHome, projectMapDeckgl, aircraft, diceEarly, microsoftWordApi, wpsAddinOverview, sfCargoChart, cargoDimensions, cargoContours, cargoManual, cbaResult, diceLatest, echartsSix, echartsFourDefault, echartsSixDefault }

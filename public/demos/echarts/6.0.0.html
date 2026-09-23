@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>ECharts 6.0.0 · time 轴端点标签对照</title>
+<style>
+:root{--ink:#1a2825;--muted:#5a6964;--accent:#2e6659;--paper:#e6e3dc;--panel:#f9f8f3;--rule:#b8c6bc}*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:Arial,"PingFang SC",sans-serif}main{width:min(1560px,calc(100% - 72px));margin:auto;padding:36px 0 30px}header{display:flex;justify-content:space-between;align-items:flex-start;border-bottom:1px solid var(--rule);padding-bottom:22px;margin-bottom:22px}.eyebrow{display:block;color:var(--accent);font:bold 15px Menlo,monospace;letter-spacing:.1em}h1{font-size:34px;letter-spacing:-.04em;margin:12px 0 0}header p{font-size:17px;line-height:1.5;color:var(--muted);margin:9px 0 0;max-width:840px}.version{padding:12px 16px;background:var(--ink);color:#fff;font:bold 18px Menlo,monospace}.toolbar{display:flex;align-items:center;gap:14px;font-size:16px;color:var(--muted);margin-bottom:16px}select,button{font:inherit;padding:8px 12px;border:1px solid var(--rule);background:#fff;color:var(--ink)}button{cursor:pointer}.grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}.case{background:var(--panel);border:1px solid var(--rule);padding:22px;min-width:0}.case b{display:block;color:var(--accent);font:bold 15px Menlo,monospace}h2{font-size:24px;line-height:1.3;margin:10px 0 18px}.chart{width:100%;height:320px;background:white;border:1px solid #dce3dd}.diag{white-space:pre-wrap;word-break:break-all;color:var(--muted);font:12px/1.55 Menlo,monospace;min-height:100px;margin:15px 0 0}.err{color:#b52e20;font-size:15px}.foot{border-top:1px solid var(--rule);margin-top:20px;padding-top:15px;color:var(--muted);font-size:14px;line-height:1.5}
+</style></head><body><main>
+<header><div><span class="eyebrow">LOCAL HTML REPRODUCTION / ECHARTS</span><h1>time 轴的首末标签，到底有没有出现？</h1><p>同一份数据、同一张图；A 保留默认配置，B 只增加 showMinLabel / showMaxLabel。起止时间选非整点，避免把普通刻度误看成真实端点。</p></div><span class="version">v<span id="ver">加载中</span></span></header>
+<div class="toolbar"><label for="range">时间范围</label><select id="range"></select><button id="rerender">重新渲染</button><span id="err" class="err"></span></div>
+<div class="grid"><section class="case"><b>CASE A / DEFAULT</b><h2>不设置首末标签开关</h2><div id="chartA" class="chart"></div><pre id="diagA" class="diag"></pre></section><section class="case"><b>CASE B / EXPLICIT</b><h2>显式设为 true</h2><div id="chartB" class="chart"></div><pre id="diagB" class="diag"></pre></section></div>
+<p class="foot">基于用户提供的两个原始 HTML，保留数据、option、诊断脚本与 ECharts 版本；仅重排页面样式。两页均使用 SVG 渲染器便于检查轴标签。</p>
+</main><script src="https://cdn.jsdelivr.net/npm/echarts@6.0.0/dist/echarts.min.js" onerror="document.getElementById('err').textContent='ECharts CDN 加载失败'"></script><script>(function () {
+  if (typeof echarts === 'undefined') { return; }
+  document.getElementById('ver').textContent = echarts.version;
+
+  var PRESETS = [
+    { label: '6 小时（起止 :12）', start: '2024-09-23T00:12:00', end: '2024-09-23T06:12:00', step: 5 * 60 * 1000 },
+    { label: '3 天（起止 :12）', start: '2024-09-23T00:12:00', end: '2024-09-26T00:12:00', step: 30 * 60 * 1000 },
+    { label: '30 天（起止 :12）', start: '2024-09-01T00:12:00', end: '2024-10-01T00:12:00', step: 3 * 60 * 60 * 1000 },
+    { label: '跨月 3 天 5 小时（起止 :37）', start: '2024-09-28T22:37:00', end: '2024-10-02T03:37:00', step: 30 * 60 * 1000 }
+  ];
+
+  function norm(s) { return String(s).replace(/\s+/g, ''); }
+
+  function buildData(preset) {
+    var data = [];
+    var end = new Date(preset.end).getTime();
+    var i = 0;
+    for (var t = new Date(preset.start).getTime(); t <= end; t += preset.step) {
+      data.push([t, Math.round(50 + 30 * Math.sin(i / 6) + (i % 7))]);
+      i++;
+    }
+    return data;
+  }
+
+  function makeOption(data, forceShow) {
+    var axisLabel = {};
+    if (forceShow) {
+      axisLabel.showMinLabel = true;
+      axisLabel.showMaxLabel = true;
+    }
+    return {
+      animation: false,
+      tooltip: { trigger: 'axis' },
+      xAxis: {
+        type: 'time',
+        splitLine: { show: false },
+        axisLabel: axisLabel,
+        axisTick: { show: false, alignWithLabel: true }
+      },
+      yAxis: { type: 'value' },
+      series: [{ type: 'line', showSymbol: false, data: data }]
+    };
+  }
+
+  // 取绘制区下方的文本节点，按 x 归并（多行标签在不同版本下可能是 1 个 text 或多个 text），
+  // 再按 x 从左到右排序，得到 x 轴标签序列
+  function getXLabels(chart, container) {
+    var rect;
+    try {
+      rect = chart.getModel().getComponent('grid').coordinateSystem.getRect();
+    } catch (e) { return []; }
+
+    var crect = container.getBoundingClientRect();
+    var bottom = crect.top + rect.y + rect.height;
+    var nodes = [];
+    Array.prototype.forEach.call(container.querySelectorAll('text'), function (t) {
+      var txt = norm(t.textContent || '');
+      if (!txt) { return; }
+      var b = t.getBoundingClientRect();
+      if (b.top >= bottom) {
+        nodes.push({ text: txt, left: b.left - crect.left, right: b.right - crect.left, top: b.top });
+      }
+    });
+    nodes.sort(function (a, b) { return a.left - b.left || a.top - b.top; });
+
+    var labels = [];
+    nodes.forEach(function (n) {
+      var last = labels[labels.length - 1];
+      if (last && Math.abs(n.left - last.left) < 2) {
+        last.text += n.text;
+        last.right = Math.max(last.right, n.right);
+      } else {
+        labels.push({ text: n.text, left: n.left, right: n.right });
+      }
+    });
+    return labels;
+  }
+
+  function extentText(chart) {
+    try {
+      var ex = chart.getModel().getComponent('xAxis').axis.scale.getExtent();
+      return new Date(ex[0]).toLocaleString() + '  ~  ' + new Date(ex[1]).toLocaleString();
+    } catch (e) { return '读取失败'; }
+  }
+
+  // 端点标签必然贴在绘制区边界上（首个标签左对齐于轴起点，末个标签右对齐于轴终点），
+  // 因此用「标签边缘到绘制区边界的距离」判定，不依赖标签文本格式
+  function diagnose(chart, container) {
+    var labels = getXLabels(chart, container);
+    var rect;
+    try {
+      rect = chart.getModel().getComponent('grid').coordinateSystem.getRect();
+    } catch (e) { return '读取绘制区失败'; }
+
+    var texts = labels.map(function (l) { return l.text; });
+    var dLeft = labels.length ? labels[0].left - rect.x : null;
+    var dRight = labels.length ? (rect.x + rect.width) - labels[labels.length - 1].right : null;
+
+    return [
+      '轴范围：' + extentText(chart),
+      '绘制区：x=' + rect.x.toFixed(1) + '  宽=' + rect.width.toFixed(1),
+      'x 轴标签共 ' + texts.length + ' 个（从左到右）：' +
+        texts.map(function (s) { return JSON.stringify(s); }).join(', '),
+      '最左标签左边缘距绘制区左边界 ' + (dLeft === null ? '-' : dLeft.toFixed(1)) + 'px' +
+        '；最右标签右边缘距绘制区右边界 ' + (dRight === null ? '-' : dRight.toFixed(1)) + 'px'
+    ].join('\n');
+  }
+
+  var charts = {};
+  var sel = document.getElementById('range');
+  PRESETS.forEach(function (p, i) {
+    var o = document.createElement('option');
+    o.value = i;
+    o.textContent = p.label;
+    sel.appendChild(o);
+  });
+
+  function render() {
+    var preset = PRESETS[Number(sel.value) || 0];
+    var data = buildData(preset);
+
+    [{ key: 'A', forceShow: false }, { key: 'B', forceShow: true }].forEach(function (c) {
+      var container = document.getElementById('chart' + c.key);
+      if (!charts[c.key]) {
+        charts[c.key] = echarts.init(container, null, { renderer: 'svg' });
+      }
+      charts[c.key].setOption(makeOption(data, c.forceShow), true);
+      document.getElementById('diag' + c.key).textContent = diagnose(charts[c.key], container);
+    });
+  }
+
+  sel.addEventListener('change', render);
+  document.getElementById('rerender').addEventListener('click', render);
+  window.addEventListener('resize', function () {
+    Object.keys(charts).forEach(function (k) { charts[k].resize(); });
+  });
+
+  render();
+})();</script></body></html>

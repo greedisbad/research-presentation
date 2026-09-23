@@ -104,8 +104,8 @@
       "kind": "web-screenshot",
       "status": "ready-with-boundary",
       "source_url": "https://open.wps.cn/documents/app-integration-dev/wps365/client/wpsoffice/wps-integration-mode/wps-addin-development/addin-overview",
-      "captured_at": "2026-09-22",
-      "notes": "WPS 开放平台加载项概述；页面主体加载不完整时仍保留导航和标题，不把它当成 Range/Paragraph 细节证据。"
+      "captured_at": "2026-09-24",
+      "notes": "等待 WPS 开放平台正文加载完成后重新截取；显示加载项概述正文和功能特点，不把概述页当成 Range/Paragraph 细节证据。"
     },
     {
       "id": "cargo-entry",
@@ -128,6 +128,65 @@
       "kind": "web-screenshot",
       "status": "ready",
       "original": "assets/screenshots/web/03-命中原始PDF-第一页.png"
+    },
+    {
+      "id": "ckair-b747-dimensions",
+      "file": "web/ckair-b747-dimensions.png",
+      "kind": "web-screenshot",
+      "status": "ready",
+      "source_url": "https://www.ckair.com/equipment-specification-400F.html",
+      "captured_at": "2026-09-24",
+      "notes": "中国货运航空 B747-400F 设备说明中的完整代码、位置与尺寸表；不能当作顺丰运营限制。"
+    },
+    {
+      "id": "sf-b747-cargo-position-chart",
+      "file": "web/sf-b747-cargo-position-chart.png",
+      "kind": "official-image",
+      "status": "ready",
+      "source_url": "https://www.sf-airlines.com/sf/upload/2026-07-21/17846255080528a3887529ed38db5957019f83f82ed44fd2.png",
+      "notes": "顺丰航空公开 B747 货舱舱位分布图；只提供位置与代码，不提供详细轮廓尺寸。"
+    },
+    {
+      "id": "ckair-b747-contours",
+      "file": "web/ckair-b747-contours.png",
+      "kind": "web-screenshot",
+      "status": "ready",
+      "source_url": "https://www.ckair.com/equipment-specification-400F.html",
+      "captured_at": "2026-09-24",
+      "notes": "同一官方页面的 H4M、HPL 正侧轮廓图。"
+    },
+    {
+      "id": "cargo-manual-page-16",
+      "file": "web/b747-cargo-manual-page-16.png",
+      "kind": "pdf-page-render",
+      "status": "ready-with-boundary",
+      "source_url": "https://www.asiandragonintl.com/inventory/other/2024/dragon-166535B.pdf#page=16",
+      "captured_at": "2026-09-24",
+      "notes": "公开 Cargo Handling Manual 副本的 B.16 页，用于交叉核对位置与轮廓；不替代运营方手册。"
+    },
+    {
+      "id": "echarts-html-6.0.0",
+      "file": "source/echarts-html-6.0.0.png",
+      "kind": "local-html-screenshot",
+      "status": "ready-with-boundary",
+      "original": "/Users/wang/Desktop/echarts.html",
+      "notes": "从用户提供的两段 HTML 拆出 6.0.0 页，保留数据和 option，只重排样式后实际运行截图；不是公司项目截图。"
+    },
+    {
+      "id": "echarts-default-4.9.0",
+      "file": "source/echarts-default-4.9.0.png",
+      "kind": "local-html-screenshot",
+      "status": "ready-with-boundary",
+      "original": "/Users/wang/Desktop/echarts.html",
+      "notes": "4.9.0 HTML 默认配置图表的浏览器截图；截图时隐藏诊断文本以放大图表。"
+    },
+    {
+      "id": "echarts-default-6.0.0",
+      "file": "source/echarts-default-6.0.0.png",
+      "kind": "local-html-screenshot",
+      "status": "ready-with-boundary",
+      "original": "/Users/wang/Desktop/echarts.html",
+      "notes": "6.0.0 HTML 默认配置图表的浏览器截图；截图时隐藏诊断文本以放大图表。"
     },
     {
       "id": "sf-source",
@@ -335,15 +394,15 @@
     {"page": 6, "title": "相邻生态是线索，不是事实", "mode": "paired-web-screenshots", "assets": ["microsoft-word-api", "wps-addin-overview"], "notes": "需要把 Range/Paragraph 的精确字段当作待验证点，不从这两张首页截图过度推断。"},
     {"page": 7, "title": "WPS 留下的不是“AI 写了个插件”", "mode": "evidence-mosaic", "assets": ["wps-learnings", "wps-tools-schema", "wps-plan", "wps-rules"], "notes": "右侧最终插件画面沿用 project-map-wps；三层漏斗由 HTML/CSS 绘制。"},
     {"page": 8, "title": "复杂项目不能只靠一段聊天记忆", "mode": "project-memory", "assets": ["project-map-wps", "wps-learnings", "wps-rules"], "notes": "WPS 项目画面、失败记录与项目规则可作参考；文件树在最终 HTML 中绘制。"},
-    {"page": 9, "title": "真正的起点，是一份我带不回家的 Excel", "mode": "html-reconstructed-table", "assets": ["cargo-entry"], "notes": "内部 Excel 必须是明确标注的脱敏重构，数字来自公开资料或使用破折号。"},
-    {"page": 10, "title": "AI 不是一次搜到答案，而是逐轮学会行业语言", "mode": "evidence-timeline", "assets": ["search-evidence", "cargo-manual", "sf-source"], "notes": "搜索截图只作为反例/过程证据；主证据使用原始 PDF 和公开官网。"},
+    {"page": 9, "title": "真正的起点，是一份我带不回家的 Excel", "mode": "html-reconstructed-table", "assets": ["sf-b747-cargo-position-chart"], "notes": "左侧内部 Excel 为明确标注的脱敏重构，尺寸用破折号；右侧直接放顺丰公开舱位图。"},
+    {"page": 10, "title": "AI 不是一次搜到答案，而是逐轮学会行业语言", "mode": "portrait-evidence-cards", "assets": ["ckair-b747-dimensions", "ckair-b747-contours", "cargo-manual-page-16"], "notes": "三张竖向证据图分别链接到中货航官网和公开手册；中货航尺寸不可当作顺丰正式限制。"},
     {"page": 11, "title": "找到资料还不够，要把它变成产品能用的结构", "mode": "three-column-evidence", "assets": ["cargo-manual", "cargo-result"], "notes": "中间结构化配置由 HTML/CSS 表达。"},
     {"page": 12, "title": "上一个案例帮我找资料，这一次帮我做技术选型", "mode": "transition", "assets": ["cargo-result", "project-map-web-excel"], "notes": "两张项目图作为前后案例锚点。"},
     {"page": 13, "title": "人不必逐个研究 14 个库，但必须定义淘汰条件", "mode": "filter-diagram", "assets": ["excel-research"], "notes": "三道筛网由 HTML/CSS 绘制。"},
     {"page": 14, "title": "六个同题 HTML，比六篇产品介绍更有用", "mode": "screenshot-grid", "assets": ["excel-index-detail", "jspreadsheet", "tabulator", "vxe", "vtable"]},
     {"page": 15, "title": "CDN 返回 200，也可能拿错了东西", "mode": "evidence-plus-diagram", "assets": ["cdn-check"], "notes": "补充文件格式、公司网络、浏览器运行三道门禁。"},
-    {"page": 16, "title": "ECharts 连改五六版，页面就是不变", "mode": "html-diagram", "assets": [], "notes": "没有公开公司截图，使用标注“示意，非公司截图”的脱敏图。"},
-    {"page": 17, "title": "不要继续问“ECharts 一般怎么写”，去问当前项目", "mode": "html-code-card", "assets": [], "notes": "代码片段直接用 HTML code block，来源指向当前项目 node_modules/版本证据。"},
+    {"page": 16, "title": "ECharts 连改五六版，页面就是不变", "mode": "local-html-screenshot", "assets": ["echarts-html-6.0.0"], "notes": "用用户给的原始 HTML 拆出的 6.0.0 页实际运行截图，不是公司项目截图。"},
+    {"page": 17, "title": "把两个 HTML 并排跑，再看项目自己的 node_modules", "mode": "paired-local-html-screenshots", "assets": ["echarts-default-4.9.0", "echarts-default-6.0.0"], "notes": "同一数据和 option 的默认配置图表对比，截图均可点开对应 HTML。"},
     {"page": 18, "title": "Deck.gl：页面能打开，不代表目标行为发生了", "mode": "paired-runtime", "assets": ["deckgl-t0", "deckgl-t1"]},
     {"page": 19, "title": "当文档还不够，继续看目标版本的源码", "mode": "evidence-ladder", "assets": ["deckgl-shader", "deckgl-units"]},
     {"page": 20, "title": "四个方案里，最好看的不一定最适合项目", "mode": "route-comparison", "assets": ["deckgl-units", "deckgl-gpu"], "notes": "四路线卡片由 HTML/CSS 呈现。"},
