@@ -13,7 +13,7 @@ const port = 18760 + Math.floor(Math.random() * 100);
 
 const seedState = {
   version: 1,
-  chapters: Array.from({ length: 31 }, (_, index) => ({
+  chapters: Array.from({ length: 28 }, (_, index) => ({
     page: index + 1,
     title: `测试章节 ${index + 1}`,
     body: index === 0 ? '页面任务' : '',
@@ -57,7 +57,7 @@ try {
   const stateResponse = await fetch(`http://127.0.0.1:${port}/api/state`);
   assert.equal(stateResponse.status, 200);
   const state = await stateResponse.json();
-  assert.equal(state.chapters.length, 31);
+  assert.equal(state.chapters.length, 28);
   assert.equal(state.chapters[0].page, 1);
   assert.match(state.chapters[0].body, /页面任务/);
 

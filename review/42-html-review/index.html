@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>AI 辅助技术调研实践｜逐页审稿</title>
+    <title>用 AI 完成技术参考搜索、筛选与结构化整理｜逐页审稿</title>
     <style>
       :root {
         color-scheme: light;
@@ -250,7 +250,7 @@
   </head>
   <body>
     <header class="topbar" id="top">
-      <h1>AI 辅助技术调研实践｜逐页审稿</h1>
+      <h1>用 AI 完成技术参考搜索、筛选与结构化整理｜逐页审稿</h1>
       <p>左侧图片 / 右侧全量文字；修改后自动保存到 localhost</p>
       <span class="save-status" id="save-status" role="status">正在读取…</span>
       <button class="button" id="save-now" type="button">立即保存</button>
@@ -370,7 +370,7 @@
           const heading = `### ${String(chapter.page).padStart(2, '0')}｜${chapter.title.trim()}`;
           return `${heading}\n\n${chapter.body.trim()}\n`;
         });
-        return `# AI 辅助技术调研实践｜逐页演讲稿（审稿导出）\n\n${sections.join('\n')}`;
+        return `# 《用 AI 完成技术参考搜索、筛选与结构化整理》逐页演讲稿（审稿导出）\n\n${sections.join('\n')}`;
       }
 
       window.buildMarkdown = buildMarkdown;
@@ -381,7 +381,7 @@
         const url = URL.createObjectURL(blob);
         const link = document.createElement('a');
         link.href = url;
-        link.download = 'AI辅助技术调研实践-逐页演讲稿-审稿导出.md';
+        link.download = '用AI完成技术参考搜索筛选与结构化整理-逐页演讲稿-审稿导出.md';
         link.click();
         URL.revokeObjectURL(url);
       }

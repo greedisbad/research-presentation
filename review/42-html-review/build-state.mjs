@@ -20,14 +20,16 @@ for (let index = 0; index < lines.length; index += 1) {
   const page = Number(match[1]);
   const nextHeading = lines.findIndex((line, nextIndex) => nextIndex > index && /^### /.test(line));
   const end = nextHeading === -1 ? lines.length : nextHeading;
-  const slide = manifest.slides.find((item) => item.page === page) || { assets: [], notes: '' };
+  const slide = manifest.slides.find((item) => item.page === page);
+  if (!slide) throw new Error(`manifest slide not found: ${page}`);
+  if (slide.title !== match[2].trim()) throw new Error(`manifest title differs from manuscript on page ${page}`);
   const images = slide.assets.map((assetId) => {
     const asset = manifest.assets.find((item) => item.id === assetId);
     if (!asset) throw new Error(`manifest asset not found: ${assetId}`);
     const fileName = path.posix.basename(asset.file);
     return {
       file: `images/${fileName}`,
-      label: assetId,
+      label: asset.label || assetId,
     };
   });
 
@@ -40,8 +42,8 @@ for (let index = 0; index < lines.length; index += 1) {
   });
 }
 
-if (chapters.length !== 31) {
-  throw new Error(`expected 31 chapters, got ${chapters.length}`);
+if (chapters.length !== manifest.slides.length || chapters.some((chapter, index) => chapter.page !== index + 1)) {
+  throw new Error(`manuscript and manifest page lists differ: ${chapters.length} chapters, ${manifest.slides.length} slides`);
 }
 
 const state = {
